@@ -1,0 +1,9 @@
+name = "codemax-contact"
+main = "worker.mjs"
+compatibility_date = "2026-09-25"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGINS = "https://codemax-studio.vercel.app,https://codemax.com.au,https://www.codemax.com.au"
+
+# Set TURNSTILE_SECRET_KEY, RESEND_API_KEY, CONTACT_TO and CONTACT_FROM as secrets.
