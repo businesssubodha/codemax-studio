@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/bold.css';
 const services = [
  ['Web design & development','Personalised, responsive websites that turn your ideas into a clear, engaging online experience.','Websites / Redesigns / Responsive design'],
  ['Social media kit','Build your presence with social content and reels that bring your brand into the conversation.','Social content / Reels'],
@@ -25,4 +26,21 @@ const image = (name) => `https://codemax.com.au/wp-content/uploads/2024/01/${nam
  <section class="section wrap" id="journal"><div class="section-head"><div><p class="eyebrow">04 / From the blog</p><h2>Ideas for your<br /><em>digital presence.</em></h2></div><a class="text-link" href="https://codemax.com.au/blog/">Explore the CodeMax blog ↗</a></div><div class="journal-grid"><a href="https://codemax.com.au/blog/" class="journal"><small>SEO / Mobile</small><h3>Mobile SEO for Australian websites</h3><p>Explore the role of mobile optimisation in search visibility and user experience.</p><span>Read on the blog ↗</span></a><a href="https://codemax.com.au/blog/" class="journal"><small>SEO / Local business</small><h3>Getting found in your local market</h3><p>Local search ideas for businesses looking to connect with nearby customers.</p><span>Read on the blog ↗</span></a><a href="https://codemax.com.au/blog/" class="journal"><small>SEO / Regional Australia</small><h3>Online visibility beyond the city</h3><p>Search strategies and opportunities for regional Australian businesses.</p><span>Read on the blog ↗</span></a></div></section>
  <section class="contact" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">05 / Let’s discuss</p><h2>Your future.<br /><em>Let’s build it.</em></h2><p>Tell us about your business, your ideas and what you need from your website.</p><a class="button" href="mailto:info@codemax.com.au">Email your project brief ↗</a></div><div class="contact-details"><div><small>Email us</small><a href="mailto:info@codemax.com.au">info@codemax.com.au ↗</a></div><div><small>Call us</small><a href="tel:+61494597993">0494 597 993 ↗</a></div><div><small>Our address</small><address>1341 Dandenong Rd<br />Malvern East VIC 3145</address></div></div></div></section>
 </main><footer class="wrap footer"><a class="brand" href="#top">CODEMAX</a><p>Web design & digital experiences / Melbourne</p><a href="https://codemax.com.au/blog/">Blog ↗</a><span>© {new Date().getFullYear()} CodeMax</span></footer>
+<script>
+ const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+ if (!motion.matches && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+   for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    const element = entry.target as HTMLElement;
+    element.animate([{ opacity: .3, transform: 'translateY(22px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 650, easing: 'cubic-bezier(.2,.7,.2,1)' });
+    observer.unobserve(element);
+   }
+  }, { threshold: .12 });
+  document.querySelectorAll('.section-head, .service, .project, .about-copy, .journal, .contact-details').forEach(el => observer.observe(el));
+  motion.addEventListener('change', () => {
+   if (motion.matches) { observer.disconnect(); document.getAnimations().forEach(animation => animation.cancel()); }
+  });
+ }
+</script>
 </body></html>
