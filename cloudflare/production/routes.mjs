@@ -1,3 +1,5 @@
+import blogPosts from '../../src/data/blog-posts.json' with { type: 'json' };
+
 // Public routes owned by the new studio. Other URLs stay on WordPress.
 export const servicePaths = new Set([
   "/services/web-design-melbourne/",
@@ -7,6 +9,9 @@ export const servicePaths = new Set([
   "/services/social-media-design-melbourne/",
   "/services/website-analysis-melbourne/"
 ]);
+// Published WordPress articles imported at their existing canonical paths.
+export const articlePaths = new Set(blogPosts.map(post => post.path));
+export const articleLastModified = new Map(blogPosts.map(post => [post.path, post.modified]));
 export const assetPaths = new Set([
   "/favicon.png",
   "/favicon.ico",

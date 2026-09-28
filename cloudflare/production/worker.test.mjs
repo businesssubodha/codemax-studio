@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { handleRequest, studioPath } from './worker.mjs';
 import { readFileSync } from 'node:fs';
-import { servicePaths } from './routes.mjs';
+import { servicePaths, articlePaths } from './routes.mjs';
 const env = { ENABLED: 'true', PAGES_ORIGIN: 'https://codemax-web.pages.dev' };
 const req = (path, options) => new Request('https://codemax.com.au' + path, options);
 
@@ -10,13 +10,16 @@ test('Service routing stays in sync with the site', () => {
   const services = JSON.parse(readFileSync(new URL('../../src/data/services.json', import.meta.url)));
   assert.deepEqual([...servicePaths].sort(), services.map(s => '/services/' + s.slug + '/').sort());
 });
-for (const path of ['/blog/', '/dont-miss-out-crucial-mobile-seo-services-australian-website-needs/', '/category/seo/', '/tag/design/', '/feed/', '/wp-admin/', '/wp-login.php', '/wp-json/wp/v2/posts', '/wp-content/uploads/2024/01/Food.jpg', '/robots.txt', '/sitemap.xml', '/sitemap_index.xml', '/?p=42', '/?s=website', '/?preview=true', '/?rest_route=/wp/v2/posts', '/services/old-wordpress-page/']) {
+for (const path of ['/blog/', '/category/seo/', '/tag/design/', '/feed/', '/wp-admin/', '/wp-login.php', '/wp-json/wp/v2/posts', '/wp-content/uploads/2024/01/Food.jpg', '/sitemap.xml', '/sitemap_index.xml', '/?p=42', '/?s=website', '/?preview=true', '/?rest_route=/wp/v2/posts', '/services/old-wordpress-page/']) {
   test('Keeps WordPress route: ' + path, async () => {
     const request = req(path); const response = new Response('original');
     assert.equal(studioPath(request), null);
     assert.equal(await handleRequest(request, env, async passed => { assert.equal(passed, request); return response; }), response);
   });
 }
+test('Every imported article keeps and serves its original production path', () => {
+  for (const path of articlePaths) assert.equal(studioPath(req(path)),path);
+});
 test('Forwards POST and authenticated WordPress visits untouched', async () => {
   for (const request of [req('/', {method:'POST',body:'private=data'}), req('/', {headers:{Cookie:'wordpress_logged_in_abc=private'}})]) {
     assert.equal(studioPath(request), null);
@@ -55,7 +58,7 @@ test('Submitted sitemap is valid XML on the production host without fetching Pag
   assert.equal(response.status,200);
   assert.match(response.headers.get('Content-Type'),/application\/xml/);
   assert.equal(response.headers.get('X-CodeMax-Site'),'studio');
-  assert.equal((xml.match(/<url>/g)||[]).length,servicePaths.size+1);
+  assert.equal((xml.match(/<url>/g)||[]).length,servicePaths.size+articlePaths.size+1);
   assert.match(xml,/<loc>https:\/\/codemax\.com\.au\/services\/web-design-melbourne\/</);
   assert.equal(fetched,false);
   const head = await handleRequest(req('/studio-sitemap.xml',{method:'HEAD'}),env);
@@ -65,6 +68,19 @@ test('Submitted sitemap is valid XML on the production host without fetching Pag
   // Existing WordPress sitemap endpoints continue to bypass the studio router.
   const legacy = req('/sitemap.xml');
   assert.equal(studioPath(legacy),null);
+});
+test('Robots rules are preserved and point to both original and studio sitemaps', async () => {
+  const request=req('/robots.txt');
+  const response=await handleRequest(request,env,async passed=>{
+    assert.equal(passed.url,request.url);
+    assert.equal(passed.headers.get('Cookie'),null);
+    return new Response('User-agent: *\nDisallow: /wp-admin/\nSitemap: https://codemax.com.au/sitemap_index.xml\n',{headers:{'Content-Type':'text/plain','ETag':'old'}});
+  });
+  const body=await response.text();
+  assert.match(body,/Disallow: \/wp-admin\//);
+  assert.match(body,/Sitemap: https:\/\/codemax\.com\.au\/sitemap_index\.xml/);
+  assert.match(body,/Sitemap: https:\/\/codemax\.com\.au\/studio-sitemap\.xml/);
+  assert.equal(response.headers.get('ETag'),null);
 });
 test('Canonical redirects preserve tracking parameters', async () => {
   const r=await handleRequest(new Request('https://www.codemax.com.au/services/web-design-melbourne?utm_source=test'),env,async()=>new Response('page'));

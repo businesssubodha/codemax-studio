@@ -1,7 +1,7 @@
 // Validate generated production HTML and hybrid routing before release.
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { servicePaths, assetPaths } from '../cloudflare/production/routes.mjs';
+import { servicePaths, articlePaths, assetPaths } from '../cloudflare/production/routes.mjs';
 const origin = 'https://codemax.com.au';
 const xml = readFileSync('dist/sitemap.xml', 'utf8');
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
@@ -11,7 +11,7 @@ for (const address of urls) {
  const url = new URL(address);
  assert.equal(url.origin, origin, 'Preview hostname in sitemap');
  const path = url.pathname;
- assert.ok(path === '/' || servicePaths.has(path), `Unrouted studio page: ${path}`);
+ assert.ok(path === '/' || servicePaths.has(path) || articlePaths.has(path) || (articlePaths.size && path === '/blog/'), `Unrouted studio page: ${path}`);
  const html = readFileSync('dist' + path + 'index.html', 'utf8');
  assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1, `H1: ${path}`);
  assert.ok(html.includes(`rel="canonical" href="${address}"`), `Canonical: ${path}`);
@@ -29,5 +29,6 @@ for (const address of urls) {
   assert.ok(assetPaths.has(asset), `Unrouted asset: ${asset}`);
  }
 }
-assert.equal(urls.length, servicePaths.size + 1);
+assert.equal(urls.length, servicePaths.size + articlePaths.size + 1 + (articlePaths.size ? 1 : 0));
+for (const path of articlePaths) assert.ok(urls.includes(origin + path), `Article missing from sitemap: ${path}`);
 console.log(`SEO checks passed for ${urls.length} production URLs: titles, descriptions, H1s, canonicals, indexability, schema, sitemap and asset routes.`);

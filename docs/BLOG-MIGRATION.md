@@ -1,34 +1,29 @@
-# WordPress blog migration
+# Import CodeMax articles into the redesigned website
 
-## Current state
+The live site now uses a Cloudflare Worker to serve the homepage and six service pages from the new Astro site while the old WordPress installation continues serving everything else. The imported-article path extends that same arrangement: each published post is generated on Astro at its existing canonical URL, and the Worker sends only those exact imported article paths to Astro. WordPress remains available for its dashboard, media files, feeds and non-imported routes.
 
-The new `/blog/` layout and original-path article template are ready. No original articles have been imported yet: direct WordPress/API/feed requests return HTTP 406. The empty collection displays six curated links to the original website and remains noindex. It is excluded from the sitemap until articles are imported. Keep the original WordPress site live.
+## Source export required
 
-## Obtain the source
+The public WordPress REST API, feed and sitemap endpoints are returning inaccessible responses in this environment. No WordPress export is present in the repository. To import the posts without guessing content or URLs, export them from WordPress:
 
-In the original WordPress dashboard, select **Tools → Export → All content → Download Export File**. Upload that XML for migration, or save it locally under `imports/codemax.xml`. This folder is ignored by git. Do not commit raw exports: they can include private content, comments and author email addresses. The WXR export references media but does not contain the image files themselves.
+1. Open **Tools → Export** in the CodeMax WordPress dashboard.
+2. Choose **All content** and download the WordPress `.xml` export.
+3. Attach that `.xml` file in this chat.
 
-## Import and review
+The importer only writes published, public, non-password-protected posts. It does not publish drafts, comments, private metadata, author email addresses or attachment records. Pages and other post types are listed for review rather than silently imported.
 
-Requires Python 3 and the existing Node dependencies:
+## What the import preserves and changes
 
-```sh
-npm run import:wordpress -- imports/codemax.xml
-npm run test:import
-npm run build
-```
+- Keeps each original article path, title, publication date, author name, categories, useful SEO metadata and readable article content.
+- Sanitises unsafe HTML and reports removed embeds, missing image alt text and other content that needs review.
+- Keeps WordPress media URLs on the existing WordPress origin. Keep the current WordPress hosting active for image and file requests until media has been migrated and checked.
+- Adds every imported article to the new site sitemap, includes its modification date where available, and adds that sitemap to the live `robots.txt` while preserving the existing WordPress rules and sitemap reference.
+- Routes only known imported article paths to Astro. All other WordPress URLs continue to the existing WordPress origin.
 
-The importer replaces `src/data/blog-posts.json` with public, published, non-password-protected posts. Use a complete export, not a partial batch. It preserves original permalink paths, publication dates and public author names; it copies explicit SEO titles/descriptions where available and inventories public pages separately. It never imports private metadata, comments or author email addresses.
+## Before publishing the imported articles
 
-Review `docs/blog-migration-inventory.json`, every article and all warnings before publishing. Shortcodes, conflicting routes and unsuitable permalink formats stop the import for explicit review. Active embeds are removed and reported; restore appropriate embeds deliberately. The importer is not a full WordPress renderer: classic-editor formatting, headings, tables, lazy-loaded images, captions and plugin content need comparison with the originals. Review fallback descriptions and image alt text.
+The importer produces an inventory. Review every article warning, duplicate or reserved path, image URL, missing image alt and shortcode. Compare the URL list against Search Console and both WordPress sitemaps. Check that every imported path builds as a static page, returns 200, has a self-referencing canonical and appears in both the production router and sitemap. Then inspect representative desktop/mobile pages and test internal links and images.
 
-## Before moving the production domain
+The new XML sitemap helps Google discover the pages; it does not force indexing. Google may choose not to index duplicate, low-value or thin pages, and `noindex`, 404 and redirected URLs require their own corrections. Preserve useful article content and existing backlinks; do not mass-redirect articles to the homepage.
 
-- Compare the export URL inventory against the original sitemaps and Search Console indexed pages. Include pages, categories, tags, pagination, feeds and other indexed routes; importing posts alone does not cover them.
-- Copy required media into durable hosting. Preserve `/wp-content/uploads/` paths where possible, including images currently used by the homepage. Check internal links and downloadable files.
-- Keep each indexed article at its original URL. Use individual permanent redirects only for deliberate URL changes with a relevant replacement. Never redirect all old articles to the homepage.
-- Check article content, author/date, unique title/description, canonical, BlogPosting markup, sitemap membership and HTTP 200 responses. Confirm removed content produces the intended 404/410 or relevant redirect.
-- Test the contact form and mobile layout on the deployment. Vercel preview hosts intentionally return `X-Robots-Tag: noindex, follow`; the production domain must be indexable after cutover.
-- Point DNS to Vercel only after URL and media coverage are complete. Submit the production sitemap in Search Console and monitor indexing, redirects and traffic. Keep a backup and the old hosting available for rollback.
-
-The importer does not switch DNS, download media, create redirects or declare the migration ready to launch.
+No DNS change is part of this migration. The production domain remains on the existing hybrid router, and WordPress remains available for content management and assets.
