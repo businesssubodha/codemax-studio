@@ -5,7 +5,7 @@
   "trailingSlash": true,
   "headers": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
