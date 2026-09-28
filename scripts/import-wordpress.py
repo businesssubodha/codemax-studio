@@ -14,6 +14,17 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://codemax.com.au'
+LEGACY_CONTENT_LINKS = {
+    '/contact/': '/#enquiry',
+    '/services/': '/#services',
+    '/website_9b0af0dc/': '/',
+    '/website_9b0af0dc/blog/': '/blog/',
+    '/website_9b0af0dc/services/': '/#services',
+    '/about/': '/#about',
+    '/about-us/': '/#about',
+    '/web-design/': '/services/web-design-melbourne/',
+    '/modern-website-redesign-boost-business-drive-growth/': '/website-redesign-drives-growth/',
+}
 NS = {'wp': 'http://wordpress.org/export/1.2/', 'content': 'http://purl.org/rss/1.0/modules/content/', 'dc': 'http://purl.org/dc/elements/1.1/'}
 RESERVED = {'blog', 'services', '404', 'robots.txt', 'sitemap.xml', 'wp-content', '_astro', 'assets', 'favicon.svg'}
 ALLOWED = set('p br hr h2 h3 h4 h5 h6 ul ol li a strong em b i blockquote pre code img figure figcaption table thead tbody tfoot tr th td div span section details summary sub sup del'.split())
@@ -31,6 +42,14 @@ def safe_url(value, image=False):
     if not image and u.hostname in {'ztk.cjf.mybluehost.me', 'www.codemax.com.au'}:
         value = ORIGIN + u.path + ('?' + u.query if u.query else '') + ('#' + u.fragment if u.fragment else '')
         u = urlsplit(value)
+    if not image and (u.hostname == 'codemax.com.au' or (not u.hostname and u.path.startswith('/'))):
+        path = u.path.rstrip('/') + '/' if u.path else '/'
+        if path in LEGACY_CONTENT_LINKS and not u.query:
+            destination = LEGACY_CONTENT_LINKS[path]
+            # Preserve meaningful source anchors unless the replacement already
+            # points to a specific section of the new landing page.
+            value = ORIGIN + destination + (('#' + u.fragment) if u.fragment and '#' not in destination else '')
+            u = urlsplit(value)
     if u.scheme and u.scheme.lower() not in ({'http', 'https'} if image else {'http', 'https', 'mailto', 'tel'}):
         return None
     if image:
@@ -177,6 +196,8 @@ def convert(data):
         source = item.findtext('content:encoded', '', NS)
         if '&lt;h1' in source:
             source = html.unescape(source)
+        # This was a draft video marker, not a playable video or editorial copy.
+        source = re.sub(r'<p(?:\s[^>]*)?>\s*\[YOUTUBE:\s*https?://(?:www\.)?youtube\.com/watch\?v=ABCDEFGHI\s*\]\s*</p>', '', source, flags=re.I)
         if not title or not plain(source):
             raise ValueError('Empty article: ' + path)
         # Plugin shortcodes must be rendered in WordPress before importing.

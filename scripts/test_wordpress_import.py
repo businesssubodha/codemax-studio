@@ -76,5 +76,20 @@ class ImportTests(unittest.TestCase):
         posts, _ = module.convert(export(item(content='First paragraph.\n\nSecond paragraph.')))
         self.assertEqual(posts[0]['html'], '<p>First paragraph.</p><p>Second paragraph.</p>')
 
+    def test_confirmed_legacy_links_use_live_destinations(self):
+        content = '<p><a href="https://www.codemax.com.au/contact/">Contact</a> <a href="/website_9b0af0dc/blog/">Blog</a> <a href="/services/">Services</a></p>'
+        posts, _ = module.convert(export(item(content=content)))
+        body = posts[0]['html']
+        self.assertIn('href="https://codemax.com.au/#enquiry"', body)
+        self.assertIn('href="https://codemax.com.au/blog/"', body)
+        self.assertIn('href="https://codemax.com.au/#services"', body)
+        self.assertNotIn('website_9b0af0dc', body)
+
+    def test_draft_video_marker_is_removed(self):
+        content = '<p>Useful prose.</p><p>[YOUTUBE: https://www.youtube.com/watch?v=ABCDEFGHI]</p>'
+        posts, _ = module.convert(export(item(content=content)))
+        self.assertNotIn('ABCDEFGHI', posts[0]['html'])
+        self.assertIn('Useful prose.', posts[0]['html'])
+
 if __name__ == '__main__':
     unittest.main()
