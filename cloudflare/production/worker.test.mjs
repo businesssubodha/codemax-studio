@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { handleRequest, studioPath } from './worker.mjs';
 import { readFileSync } from 'node:fs';
-import { servicePaths, articlePaths } from './routes.mjs';
+import { servicePaths, archivePaths, articlePaths } from './routes.mjs';
 const env = { ENABLED: 'true', PAGES_ORIGIN: 'https://codemax-web.pages.dev' };
 const req = (path, options) => new Request('https://codemax.com.au' + path, options);
 
@@ -10,7 +10,7 @@ test('Service routing stays in sync with the site', () => {
   const services = JSON.parse(readFileSync(new URL('../../src/data/services.json', import.meta.url)));
   assert.deepEqual([...servicePaths].sort(), services.map(s => '/services/' + s.slug + '/').sort());
 });
-for (const path of ['/blog/', '/category/seo/', '/tag/design/', '/feed/', '/wp-admin/', '/wp-login.php', '/wp-json/wp/v2/posts', '/wp-content/uploads/2024/01/Food.jpg', '/sitemap.xml', '/sitemap_index.xml', '/?p=42', '/?s=website', '/?preview=true', '/?rest_route=/wp/v2/posts', '/services/old-wordpress-page/']) {
+for (const path of ['/category/seo/', '/tag/design/', '/feed/', '/wp-admin/', '/wp-login.php', '/wp-json/wp/v2/posts', '/wp-content/uploads/2024/01/Food.jpg', '/sitemap.xml', '/sitemap_index.xml', '/?p=42', '/?s=website', '/?preview=true', '/?rest_route=/wp/v2/posts', '/services/old-wordpress-page/']) {
   test('Keeps WordPress route: ' + path, async () => {
     const request = req(path); const response = new Response('original');
     assert.equal(studioPath(request), null);
@@ -58,7 +58,7 @@ test('Submitted sitemap is valid XML on the production host without fetching Pag
   assert.equal(response.status,200);
   assert.match(response.headers.get('Content-Type'),/application\/xml/);
   assert.equal(response.headers.get('X-CodeMax-Site'),'studio');
-  assert.equal((xml.match(/<url>/g)||[]).length,servicePaths.size+articlePaths.size+1);
+  assert.equal((xml.match(/<url>/g)||[]).length,servicePaths.size+archivePaths.size+articlePaths.size+1);
   assert.match(xml,/<loc>https:\/\/codemax\.com\.au\/services\/web-design-melbourne\/</);
   assert.equal(fetched,false);
   const head = await handleRequest(req('/studio-sitemap.xml',{method:'HEAD'}),env);
@@ -92,3 +92,5 @@ test('HEAD requests return no body and assets use the new host', async () => {
   });
   assert.equal(await r.text(),'');assert.equal(r.headers.get('Content-Type'),'font/woff2');
 });
+
+test("All archive pages are routed; unknown archive pages stay at WordPress", () => { for (const path of archivePaths) assert.equal(studioPath(req(path)), path); assert.equal(studioPath(req("/blog/page/99999/")),null); });

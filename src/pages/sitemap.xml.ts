@@ -1,10 +1,10 @@
 import services from '../data/services.json';
-import { posts } from '../lib/blog';
+import { posts, pageCount, archiveUrl } from '../lib/blog';
 export function GET() {
  const entries = [
   { path: '/', modified: null },
   ...services.map(service => ({ path: '/services/' + service.slug + '/', modified: null })),
-  ...(posts.length ? [{ path: '/blog/', modified: null }, ...posts.map(post => ({ path: post.path, modified: post.modified }))] : [])
+  ...(posts.length ? [...Array.from({length:pageCount},(_,i) => ({path:archiveUrl(i+1),modified:null})), ...posts.map(post => ({ path: post.path, modified: post.modified }))] : [])
  ];
  const escapeXml = (value: string) => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
  const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + [...new Map(entries.map(entry => [entry.path, entry])).values()].map(({ path, modified }) => {

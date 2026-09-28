@@ -1,12 +1,4 @@
 ---
-import Journal from '../../layouts/Journal.astro';
-import { posts, displayDate } from '../../lib/blog';
-import links from '../../data/blog-links.json';
+import BlogArchive from '../../components/BlogArchive.astro';
 ---
-<Journal title="Web Design & SEO Articles | CodeMax Blog" description="Explore CodeMax articles about website design, mobile usability, SEO and local search for Australian businesses." noindex={posts.length === 0}>
-<section class="blog-heading wrap"><p class="eyebrow">CodeMax / Journal</p><h1>Ideas for your<br /><em>digital presence.</em></h1><p class="lead">Websites, content and the questions that help you decide what to do next.</p></section>
-<section class="blog-list wrap" aria-label="Articles">
-{posts.length ? posts.map(post => <article class="blog-card"><p class="eyebrow">{post.categories.join(' / ') || 'Websites & SEO'}</p><h2><a href={post.path}>{post.title}</a></h2><p>{post.description}</p><p class="blog-meta">By {post.author} · <time datetime={post.published}>{displayDate(post.displayDate)}</time></p><a class="blog-read" href={post.path}>Read article<span class="sr-only">: {post.title}</span></a></article>) : links.map(link => <article class="blog-card"><p class="eyebrow">{link.category}</p><h2><a href={link.url}>{link.title}</a></h2><p>{link.description}</p><a class="blog-read" href={link.url}>Read article<span class="sr-only">: {link.title}</span></a></article>)}
-</section>
-{!posts.length && <p class="blog-more wrap"><a href="https://codemax.com.au/blog/">Browse the full CodeMax article archive</a></p>}
-</Journal>
+<BlogArchive page={1} />

@@ -4,7 +4,7 @@ Audit date: 28 September 2026. All actions below use existing/free services unle
 
 ## Evidence and limits
 
-The redesigned homepage and six service pages have unique metadata, one H1, canonical production URLs, business/service structured data and a separate studio sitemap. The original WordPress blogs and sitemaps remain on their existing origin. The owner reports that the site, contact email and sitemap submission work.
+The redesigned homepage and six service pages have unique metadata, one H1, canonical production URLs, business/service structured data and a separate studio sitemap. The 382 published WordPress articles have been imported at their original URLs; WordPress remains the origin for media, dashboards and legacy routes. The owner reports that the site, contact email and sitemap submission work.
 
 Search Console was inspected for `sc-domain:codemax.com.au` on 28 September 2026. For the selected 3-month period it showed 26 clicks, 15.5K impressions, 0.2% CTR and average position 46.2. These are property-wide figures, not rankings for one target keyword. The homepage is indexed. The live test for `/services/web-design-melbourne/` said it is available and can be indexed and found valid breadcrumb data; an indexing request was submitted, but its completion is not verified. The submitted `/studio-sitemap.xml` report said “Sitemap could not be read” and 0 discovered pages, although the URL inspection live test said the URL was available. A direct browser fetch of the sitemap did not complete, so the precise fetch/parsing cause is unconfirmed.
 
@@ -21,7 +21,7 @@ Page indexing showed 658 not indexed and 52 indexed: 132 excluded by noindex, 10
 - Added a logo for social sharing metadata.
 - Added a repeatable generated-page SEO check, alongside the existing contact/router tests.
 - Changed the production router to return `/studio-sitemap.xml` directly as XML rather than fetching a second host. This addresses the reported sitemap read failure; production deployment and the next Google read remain to be verified.
-- Updated the router to append the studio sitemap to the existing WordPress `robots.txt` without replacing its crawl rules or WordPress sitemap. Once articles are imported, exact original article URLs are routed to Astro and included in the sitemap.
+- Updated the router to append the studio sitemap to the existing WordPress `robots.txt` without replacing its crawl rules or WordPress sitemap. Imported article URLs and 32 archive pages are routed to Astro and included in the sitemap.
 
 ## Competitors observed
 
@@ -72,7 +72,7 @@ No new paid subscriptions, ad spend, fabricated reviews, backlink purchases or m
 
 ## Verification
 
-Production build: passed. Contact/router tests: 28 passed, including the direct production sitemap and robots response (provider delivery remains mocked). Generated-page SEO check: passed for all 7 studio URLs. Search Console live-tested the main web-design service page and confirmed it can be indexed; the sitemap fetch status remains unresolved until deployment and a new Google read. WordPress articles cannot be imported until a WordPress WXR export is provided; the repository's import flow and hybrid routing are prepared. Deployment completion, mobile Core Web Vitals and visual page quality still need independent live checks.
+Production build: passed. Contact/router tests: 28 passed, including the direct production sitemap and robots response (provider delivery remains mocked). Generated-page SEO check: passed for all 421 studio URLs. Search Console live-tested the main web-design service page and confirmed it can be indexed; the sitemap fetch status remains unresolved until deployment and a new Google read. The supplied WordPress export yielded 382 published articles. Scheduled posts and drafts were excluded; eight importer regression tests pass. Deployment completion, mobile Core Web Vitals and visual page quality still need independent live checks.
 
 ## Sources
 

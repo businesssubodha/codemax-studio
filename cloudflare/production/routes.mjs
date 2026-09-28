@@ -1,4 +1,4 @@
-import blogPosts from '../../src/data/blog-posts.json' with { type: 'json' };
+import blogPosts from '../../src/data/blog-routes.json' with { type: 'json' };
 
 // Public routes owned by the new studio. Other URLs stay on WordPress.
 export const servicePaths = new Set([
@@ -10,6 +10,8 @@ export const servicePaths = new Set([
   "/services/website-analysis-melbourne/"
 ]);
 // Published WordPress articles imported at their existing canonical paths.
+export const blogPageSize = 12;
+export const archivePaths = new Set(blogPosts.length ? Array.from({length: Math.ceil(blogPosts.length / blogPageSize)}, (_, i) => i ? `/blog/page/${i + 1}/` : '/blog/') : []);
 export const articlePaths = new Set(blogPosts.map(post => post.path));
 export const articleLastModified = new Map(blogPosts.map(post => [post.path, post.modified]));
 export const assetPaths = new Set([

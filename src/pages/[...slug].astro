@@ -1,14 +1,15 @@
 ---
 import Journal from '../layouts/Journal.astro';
-import { posts, displayDate } from '../lib/blog';
+import { posts, displayDate, relatedPosts } from '../lib/blog';
 export function getStaticPaths() { return posts.map(post => ({ params: { slug: post.path.slice(1, -1) }, props: { post } })); }
 const { post } = Astro.props;
-const related = posts.filter(item => item.path !== post.path).slice(0,3);
+const related = relatedPosts(post);
 ---
 <Journal title={post.seoTitle} description={post.description} article={post}>
 <article class="blog-article wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">{post.title}</span></nav>
 <header class="article-heading"><p class="eyebrow">{post.categories.join(' / ') || 'CodeMax Journal'}</p><h1>{post.title}</h1><p class="blog-meta">By {post.author} · Published <time datetime={post.published}>{displayDate(post.displayDate)}</time></p></header>
+{post.featuredImage?.url && <img class="article-featured" src={post.featuredImage.url} alt={post.featuredImage.alt || ""} width="1200" height="675" decoding="async" />}
 <div class="article-body" set:html={post.html} />
 </article>
 {related.length > 0 && <section class="related-services wrap"><h2>Keep reading</h2><div>{related.map(item => <a href={item.path}>{item.title}</a>)}</div></section>}

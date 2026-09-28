@@ -63,6 +63,15 @@ class ImportTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             module.convert(export(item(content='<script>only code</script>')))
 
+    def test_bracketed_prose_is_not_a_shortcode(self):
+        posts, _ = module.convert(export(item(content='<p>[Internet] [cited 2020 May 20] [Guide]</p>')))
+        self.assertIn('[Internet]',posts[0]['html'])
+
+    def test_encoded_heading_is_readable_and_metadata_is_plain(self):
+        posts, _ = module.convert(export(item(content='<p>&lt;h1&gt;A real heading&lt;/h1&gt; Useful article.</p>')))
+        self.assertIn('<h2>A real heading</h2>',posts[0]['html'])
+        self.assertNotIn('<',posts[0]['description'])
+
     def test_classic_editor_paragraphs(self):
         posts, _ = module.convert(export(item(content='First paragraph.\n\nSecond paragraph.')))
         self.assertEqual(posts[0]['html'], '<p>First paragraph.</p><p>Second paragraph.</p>')

@@ -1,4 +1,4 @@
-import { servicePaths, articlePaths, articleLastModified, assetPaths } from './routes.mjs';
+import { servicePaths, archivePaths, articlePaths, articleLastModified, assetPaths } from './routes.mjs';
 const productionHosts = new Set(['codemax.com.au', 'www.codemax.com.au']);
 const wordpressQueryKeys = ['p', 'page_id', 'attachment_id', 'preview', 'preview_id', 'preview_nonce', 'rest_route', 'feed', 's', 'author', 'cat', 'tag', 'paged', 'post_type', 'customize_changeset_uuid'];
 
@@ -11,7 +11,7 @@ export function studioPath(request) {
   if (url.pathname === '/robots.txt') return url.pathname;
   const normalized = url.pathname.endsWith('/') ? url.pathname : url.pathname + '/';
   if (servicePaths.has(normalized)) return normalized;
-  if (articlePaths.has(normalized)) return normalized;
+  if (articlePaths.has(normalized) || archivePaths.has(normalized)) return normalized;
   if (assetPaths.has(url.pathname)) return url.pathname;
   if (/^\/_astro\/[^/]+\.(?:js|css)$/.test(url.pathname)) return url.pathname;
   // Keep the original WordPress sitemap and robots endpoints untouched.
@@ -70,7 +70,7 @@ export async function handleRequest(request, env, fetcher = fetch) {
   // WordPress's existing sitemap.xml and sitemap_index.xml untouched.
   if (incoming.pathname === '/studio-sitemap.xml') {
     const entries = [
-      ...['/', ...servicePaths].map(path => ({ path, modified: null })),
+      ...['/', ...servicePaths, ...archivePaths].map(path => ({ path, modified: null })),
       ...[...articlePaths].map(path => ({ path, modified: articleLastModified.get(path) }))
     ];
     const escapeXml = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
@@ -110,7 +110,7 @@ export async function handleRequest(request, env, fetcher = fetch) {
   responseHeaders.delete('Set-Cookie');
   responseHeaders.set('X-CodeMax-Site', 'studio');
   // Use the same canonical hostname and slash convention as the Astro pages.
-  if (incoming.hostname === 'www.codemax.com.au' || (servicePaths.has(path) && incoming.pathname !== path)) {
+  if (incoming.hostname === 'www.codemax.com.au' || ((servicePaths.has(path) || articlePaths.has(path) || archivePaths.has(path)) && incoming.pathname !== path)) {
     const canonical = new URL(incoming);
     canonical.hostname = 'codemax.com.au';
     canonical.pathname = path;

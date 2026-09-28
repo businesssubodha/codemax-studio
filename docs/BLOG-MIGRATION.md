@@ -2,15 +2,17 @@
 
 The live site now uses a Cloudflare Worker to serve the homepage and six service pages from the new Astro site while the old WordPress installation continues serving everything else. The imported-article path extends that same arrangement: each published post is generated on Astro at its existing canonical URL, and the Worker sends only those exact imported article paths to Astro. WordPress remains available for its dashboard, media files, feeds and non-imported routes.
 
-## Source export required
+## Import completed locally — 28 September 2026
 
-The public WordPress REST API, feed and sitemap endpoints are returning inaccessible responses in this environment. No WordPress export is present in the repository. To import the posts without guessing content or URLs, export them from WordPress:
+Imported 382 public published posts from the supplied WordPress WXR export. The 27 scheduled posts and 9 drafts were excluded. Eight original WordPress pages remain served by WordPress unless already replaced by the studio homepage or blog archive. Private form entries, author email addresses, comments and plugin settings are not part of the published data.
 
-1. Open **Tools → Export** in the CodeMax WordPress dashboard.
-2. Choose **All content** and download the WordPress `.xml` export.
-3. Attach that `.xml` file in this chat.
+The archive has 32 pages of 12 articles (last page has fewer). Original article paths are unchanged. The production router reads a small URL manifest rather than bundling all article HTML. The 421-entry studio sitemap contains articles, archive pages, homepage and six services.
 
-The importer only writes published, public, non-password-protected posts. It does not publish drafts, comments, private metadata, author email addresses or attachment records. Pages and other post types are listed for review rather than silently imported.
+The importer preserves article content and media URLs, maps original H1 headings to H2 under the page H1, converts YouTube embeds to safe outbound video links and resolves Markdown links. Four metadata overrides remove duplicate titles/descriptions. Topic overlap selects related articles. Featured image metadata is retained for 380 posts.
+
+Validation: static build, metadata/canonical/schema checks for all 421 URLs, importer regression tests and Worker routing/contact tests. External media could not be exhaustively verified from the build environment; it returned access errors for public URLs. Keep WordPress/Bluehost hosting active. This is a technical migration, not a factual audit of every claim in the source articles. Search Console indexing remains Google's decision.
+
+For future imports, run `npm run import:wordpress -- /path/to/export.xml`, then `npm run build`, `npm run check:seo`, `npm run test:import` and Worker tests. The source XML stays outside the repository. Metadata edits live in `src/data/blog-seo-overrides.json` and are applied on import.
 
 ## What the import preserves and changes
 

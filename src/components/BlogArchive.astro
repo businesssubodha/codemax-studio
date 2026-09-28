@@ -1,0 +1,15 @@
+---
+import Journal from '../layouts/Journal.astro';
+import { posts, pageSize, pageCount, archiveUrl, displayDate } from '../lib/blog';
+const { page = 1 } = Astro.props;
+const articles = posts.slice((page - 1) * pageSize, page * pageSize);
+const title = page === 1 ? 'Web Design & SEO Articles | CodeMax Blog' : `Web Design & SEO Articles — Page ${page} | CodeMax Blog`;
+const description = page === 1 ? 'Explore CodeMax articles about website design, mobile usability, SEO and local search for Australian businesses.' : `Browse page ${page} of the CodeMax article archive: practical reading about websites, hosting, content and search for Australian businesses.`;
+---
+<Journal title={title} description={description} noindex={!posts.length}>
+<section class="blog-heading wrap"><p class="eyebrow">CodeMax / Journal</p><h1>Ideas for your<br /><em>digital presence.</em>{page > 1 && <span class="archive-page-label">Page {page}</span>}</h1><p class="lead">Web design, SEO and digital marketing for Australian businesses.</p><p>{posts.length} articles · Page {page} of {pageCount || 1}</p></section>
+<section class="blog-list wrap" aria-label="Articles">
+{articles.map(post => <article class="blog-card"><p class="eyebrow">{post.categories.join(' / ') || 'Websites & SEO'}</p><h2><a href={post.path}>{post.title}</a></h2><p>{post.description}</p><p class="blog-meta">By {post.author} · <time datetime={post.published}>{displayDate(post.displayDate)}</time></p><a class="blog-read" href={post.path}>Read article<span class="sr-only">: {post.title}</span></a></article>)}
+</section>
+{pageCount > 1 && <nav class="blog-pagination wrap" aria-label="Blog pagination">{page > 1 && <a href={archiveUrl(page - 1)} rel="prev">Previous</a>}{Array.from({length:pageCount},(_,i) => i + 1).map(n => <a href={archiveUrl(n)} aria-label={`Page ${n}`} aria-current={page === n ? 'page' : undefined}>{n}</a>)}{page < pageCount && <a href={archiveUrl(page + 1)} rel="next">Next</a>}</nav>}
+</Journal>

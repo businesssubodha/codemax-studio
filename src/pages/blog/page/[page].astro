@@ -1,0 +1,7 @@
+---
+import BlogArchive from '../../../components/BlogArchive.astro';
+import { pageCount } from '../../../lib/blog';
+export function getStaticPaths() { return Array.from({length:Math.max(0,pageCount-1)},(_,i) => ({params:{page:String(i+2)},props:{page:i+2}})); }
+const { page } = Astro.props;
+---
+<BlogArchive page={page} />
