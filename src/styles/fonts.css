@@ -1,0 +1,4 @@
+/* Locally hosted, Latin-subset fonts; licences are in /fonts/. */
+@font-face{font-family:Inter;font-style:normal;font-weight:400 900;font-display:swap;src:url('/fonts/inter-latin.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/dm-mono-400.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/dm-mono-500.woff2') format('woff2')}

@@ -50,3 +50,9 @@ h2{font-weight:900;text-transform:uppercase;font-size:clamp(32px,4vw,60px);line-
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 .contact-honeypot{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden}.cf-turnstile{margin:18px 0;min-height:65px}#enquiry-form button:disabled{opacity:.65;cursor:wait}#form-status{overflow-wrap:anywhere}
+
+/* Legible accents on light panels, and immediate hero content paint. */
+#services h2 em,#about h2 em,#journal h2 em{color:#bd3514}
+.hero-copy{animation:none!important}
+.value-title{margin:0;font-size:clamp(32px,3.6vw,56px);line-height:1;letter-spacing:-.055em}
+@media(max-width:700px){.value-title{font-size:clamp(34px,9vw,52px)}}

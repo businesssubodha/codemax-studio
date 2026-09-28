@@ -1,4 +1,5 @@
 ---
+import '../styles/fonts.css';
 import type { BlogPost } from '../lib/blog';
 interface Props { article?: BlogPost; title: string; description: string; noindex?: boolean; service?: string; }
 const { title, description, noindex = false, service, article } = Astro.props;
@@ -29,8 +30,6 @@ const breadcrumbs = service ? { '@context': 'https://schema.org', '@type': 'Brea
 <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="48x48" />
 <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" sizes="180x180" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" />
+<link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')} />
 {breadcrumbs && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbs).replace(/</g, '\\u003c')} />}
