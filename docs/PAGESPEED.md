@@ -20,7 +20,7 @@ There is no Chrome UX Report field data available for this preview.
 
 ## Changes
 
-- Host Latin-subset Inter variable and DM Mono fonts locally, with font-display swap and a preload for the main font. Preserve the font licences.
+- Host Latin-subset Inter variable and DM Mono fonts locally, with font-display optional and a preload for the main font. Preserve the font licences.
 - Inline the small shared stylesheet to remove its extra render-blocking request.
 - Render hero copy immediately while preserving the VISIBLE glitch and other requested accents.
 - Use locally hosted WebP portfolio thumbnails at 420 and 840 pixels, responsive srcset/sizes and lazy loading. Full-design links still open the originals on WordPress.
@@ -34,3 +34,8 @@ There is no Chrome UX Report field data available for this preview.
 The Vercel preview retains its X-Robots-Tag: noindex, follow protection. Do not remove this to inflate the SEO score while the original production site remains live. Review indexability only as part of the agreed production-domain launch and blog routing plan.
 
 A perfect Lighthouse score is not a guarantee of accessibility, search rankings or real-user performance. Scores fluctuate with test conditions and third-party services. Contact delivery requires a separate real submission; audits do not send messages.
+
+## First verification and follow-up
+
+Report: https://pagespeed.web.dev/analysis/https-codemax-studio-vercel-app/s2ubuw0dck
+Mobile improved to 99 performance, 100 accessibility, 100 best practices, 69 SEO. Mobile LCP improved to 2.0 s; FCP 1.2 s; TBT 0 ms; CLS 0. Desktop exposed a 0.167 font-swap layout shift and scored 93 performance, so font-display was changed to optional before final verification. If a font arrives too late, the browser keeps a readable system fallback for that page view instead of moving already displayed content. The preloaded brand font is used when ready.
