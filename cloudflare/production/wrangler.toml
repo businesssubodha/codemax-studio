@@ -1,0 +1,18 @@
+# Separate from the working contact Worker. Deploy without production routes first.
+name = "codemax-production-router"
+main = "worker.mjs"
+compatibility_date = "2026-09-28"
+workers_dev = false
+
+[vars]
+# Set the real Pages URL after creating and verifying the Pages deployment.
+PAGES_ORIGIN = ""
+ENABLED = "false"
+
+# Add production routes only after DNS, Pages, WordPress and form checks pass:
+# [[routes]]
+# pattern = "codemax.com.au/*"
+# zone_name = "codemax.com.au"
+# [[routes]]
+# pattern = "www.codemax.com.au/*"
+# zone_name = "codemax.com.au"
