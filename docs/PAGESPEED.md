@@ -42,3 +42,21 @@ Mobile improved to 99 performance, 100 accessibility, 100 best practices, 69 SEO
 
 Second verification: https://pagespeed.web.dev/analysis/https-codemax-studio-vercel-app/jc58u6rpfo
 Desktop reached 100 performance, 100 accessibility, 100 best practices, 69 SEO, with CLS 0. Mobile scored 94/100/100/69 with CLS 0. A further change loads Turnstile when the form comes within 500 px of the viewport or receives focus/pointer interaction. Server-side verification is unchanged and a missing token still blocks submission.
+
+## Final verified result
+
+Google PageSpeed Insights report: https://pagespeed.web.dev/analysis/https-codemax-studio-vercel-app/8yg34l4ba8
+Verified deployed code commit: 7b55ae0c38f0bc5713ae998bdf1979c910b87943.
+
+| Category | Mobile | Desktop |
+| --- | ---: | ---: |
+| Performance | 100 | 100 |
+| Accessibility | 100 | 100 |
+| Best practices | 100 | 100 |
+| SEO | 69 | 69 |
+
+Mobile: FCP 0.9 s, LCP 0.9 s, TBT 0 ms, CLS 0, Speed Index 0.9 s.
+Desktop: FCP 0.3 s, LCP 0.3 s, TBT 0 ms, CLS 0, Speed Index 0.4 s.
+The sole failing scored SEO audit is intentional preview noindex; nine SEO audits passed. These are homepage lab scores for this run, not field data or a guarantee of future scores or rankings. The shared improvements apply to other templates, but those URLs have not each received an independent PageSpeed run.
+
+Live browser check: no Turnstile script at the top of the page; one script after focusing the name field; submit button enabled. No real enquiry was submitted. The nine-page production build passed and hosted fonts/images returned HTTP 200. Original WordPress blog posts and DNS remain unchanged.
