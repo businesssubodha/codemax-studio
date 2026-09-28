@@ -39,3 +39,6 @@ A perfect Lighthouse score is not a guarantee of accessibility, search rankings 
 
 Report: https://pagespeed.web.dev/analysis/https-codemax-studio-vercel-app/s2ubuw0dck
 Mobile improved to 99 performance, 100 accessibility, 100 best practices, 69 SEO. Mobile LCP improved to 2.0 s; FCP 1.2 s; TBT 0 ms; CLS 0. Desktop exposed a 0.167 font-swap layout shift and scored 93 performance, so font-display was changed to optional before final verification. If a font arrives too late, the browser keeps a readable system fallback for that page view instead of moving already displayed content. The preloaded brand font is used when ready.
+
+Second verification: https://pagespeed.web.dev/analysis/https-codemax-studio-vercel-app/jc58u6rpfo
+Desktop reached 100 performance, 100 accessibility, 100 best practices, 69 SEO, with CLS 0. Mobile scored 94/100/100/69 with CLS 0. A further change loads Turnstile when the form comes within 500 px of the viewport or receives focus/pointer interaction. Server-side verification is unchanged and a missing token still blocks submission.

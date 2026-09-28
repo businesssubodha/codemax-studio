@@ -52,9 +52,35 @@ const image = (name) => `https://codemax.com.au/wp-content/uploads/2024/01/${nam
 </section>
  <section class="contact" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">05 / Let’s discuss</p><h2>Your future.<br /><em>Let’s build it.</em></h2><p>Tell us about your business, your ideas and what you need from your website.</p><a class="button" href="mailto:info@codemax.com.au">Email your project brief <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12" /></svg></a></div><div class="contact-details"><div><small>Email us</small><a href="mailto:info@codemax.com.au">info@codemax.com.au <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12" /></svg></a></div><div><small>Call us</small><a href="tel:+61494597993">0494 597 993 <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12" /></svg></a></div><div><small>Our address</small><address>1341 Dandenong Rd<br />Malvern East VIC 3145</address></div></div></div></section>
 </main><footer class="wrap footer"><Brand href="#top" /><p>Web design & digital experiences / Melbourne</p><a href="/blog/">Blog <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12" /></svg></a><span>© {new Date().getFullYear()} CodeMax</span></footer>
-{contactReady && <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+
 <script>
  const form = document.querySelector<HTMLFormElement>('#enquiry-form');
+ // Start verification near the form, instead of competing with the initial page render.
+ if (form?.dataset.endpoint) {
+  let securityRequested = false;
+  const loadSecurity = () => {
+   if (securityRequested) return;
+   securityRequested = true;
+   const script = document.createElement('script');
+   script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+   script.async = true;
+   script.onerror = () => {
+    securityRequested = false;
+    script.remove();
+    const status = document.querySelector<HTMLElement>('#form-status');
+    if (status) status.textContent = 'The security check could not load. Focus a form field to retry, or email info@codemax.com.au.';
+   };
+   document.head.append(script);
+  };
+  form.addEventListener('focusin', loadSecurity);
+  form.addEventListener('pointerdown', loadSecurity);
+  if ('IntersectionObserver' in window) {
+   const securityObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) { loadSecurity(); securityObserver.disconnect(); }
+   }, { rootMargin: '500px' });
+   securityObserver.observe(form);
+  } else loadSecurity();
+ }
  const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
  if (submitButton) submitButton.disabled = false;
  form?.addEventListener('submit', async event => {
