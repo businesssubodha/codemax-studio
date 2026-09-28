@@ -3,7 +3,7 @@ Date: 28 September 2026
 Scope: public website review and repository improvements. No Search Console, GA4, keyword-volume, backlink or paid rank-tracking access was available. No numerical SEO score or ranking guarantee is claimed.
 
 ## Main finding
-The Astro site had crawlable HTML, image alt text, responsive CSS and a working enquiry form, but only one landing page. Missing canonical, sitemap, robots.txt, detailed service pages and direct article links limited its structure. Existing WordPress remains the live site at codemax.com.au; GitHub changes deploy to codemax-studio.vercel.app and do not update the original site.
+The Astro site had crawlable HTML, image alt text, responsive CSS and a working enquiry form, but only one landing page. Missing canonical, sitemap, robots.txt, detailed service pages and direct article links limited its structure. Launch update: a Cloudflare Worker now routes the homepage and six service pages to the new Pages deployment, while the existing WordPress blog and its URLs stay on Bluehost. See GROWTH-PLAN.md for the latest audit, evidence and access limits.
 
 ## Competitor comparison
 These are observed examples, not a ranked list or a complete market sample.

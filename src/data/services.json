@@ -18,6 +18,22 @@
       [
         "A redesign starts with your existing content",
         "Share your current website and the pages you want to keep. Existing articles, service URLs and useful images need a migration plan before a replacement goes live. We can discuss page titles, descriptions, internal links and redirects as part of that scope."
+      ],
+      [
+        "What affects the cost of a small business website?",
+        "A focused service website and an online shop need different budgets. Page count, copywriting, photography, booking or payment integrations and the condition of an existing website all affect the quote. Separate the initial design and build from domain renewal, hosting, business email, paid software and ongoing support. This makes it easier to compare proposals on the same scope."
+      ],
+      [
+        "A practical brief for your new website",
+        "Tell us your main service, the customers you want to reach and the action you want them to take. Include your existing website if you have one, pages you need, examples of designs you like, your budget and any launch deadline. If the budget is limited, prioritise a clear service page, genuine examples of your work and an easy way to request a quote."
+      ],
+      [
+        "Web design in Malvern East, serving Melbourne businesses",
+        "CodeMax is based in Malvern East. We work with Melbourne small businesses on new sites and redesigns, combining website structure, visual design and ongoing support. A local service website should explain where you work, what customers can book or request, and how to contact you. Useful local detail matters more than repeating suburb names."
+      ],
+      [
+        "A redesign example: the CodeMax website",
+        "Our own redesign pairs a new website and service pages with the existing WordPress blog. Existing articles stay at their original addresses, while the new enquiry form uses a security check before sending email. It is an example of planning around content you already have, rather than discarding it when the design changes."
       ]
     ],
     "items": [
@@ -34,8 +50,21 @@
       [
         "Can you redesign my existing website?",
         "Yes. Share its URL and explain what is not working for your visitors or your business. We can review what to retain, what to improve and how to handle the changeover."
+      ],
+      [
+        "Can you build a website for a tradie or local service business?",
+        "Yes. The brief can focus on your services, the areas you actually cover, project photos and quote requests. Tell us if you need click-to-call, booking links or separate pages for different services."
+      ],
+      [
+        "Can I keep my domain and business email?",
+        "A redesign can often retain your domain and email setup. We review the current hosting, DNS and email records before planning a change. Tell us who manages each service so the handover can be scoped correctly."
+      ],
+      [
+        "Does a new website include SEO?",
+        "Our web design scope can include crawlable pages, descriptive titles, internal links and a sitemap. Content campaigns, local business listings and ongoing reporting are separate work to agree in the quote. A new design alone cannot guarantee a ranking."
       ]
-    ]
+    ],
+    "enquiryService": "Web design & development"
   },
   {
     "slug": "seo-content-melbourne",
@@ -73,7 +102,8 @@
         "Can existing articles be improved?",
         "Yes. Share the article URLs and, if available, Search Console results. We can discuss which questions need clearer answers and which older details need reviewing."
       ]
-    ]
+    ],
+    "enquiryService": "Web marketing"
   },
   {
     "slug": "website-maintenance-melbourne",
@@ -94,6 +124,10 @@
       [
         "Keep ownership and ongoing costs clear",
         "Hosting, domain registration and business email are separate services, even when one provider manages them. We can discuss your current arrangement and what should be kept. Before moving a website, existing email and DNS records need to be accounted for."
+      ],
+      [
+        "Small updates or a larger repair?",
+        "For a content update, send the page address and the exact text or image to change. For a broken form or layout, include a screenshot, device and the steps that reproduce the problem. These details help establish the scope before a quote; passwords should only be shared through an agreed secure method."
       ]
     ],
     "items": [
@@ -111,7 +145,8 @@
         "Can you help with a website built by someone else?",
         "Share the URL and platform details first. We need to assess the existing setup and available access before confirming what support is possible."
       ]
-    ]
+    ],
+    "enquiryService": "Custom support"
   },
   {
     "slug": "graphic-design-melbourne",
@@ -149,7 +184,8 @@
         "Can the artwork match my existing website?",
         "Yes. Share your website and current brand assets so we can discuss a design direction that fits the existing identity."
       ]
-    ]
+    ],
+    "enquiryService": "Graphic design"
   },
   {
     "slug": "social-media-design-melbourne",
@@ -187,7 +223,8 @@
         "Does a content kit include posting or account management?",
         "Deliverables and account responsibilities need to be agreed in the quote. Let us know if you need content production only or additional help."
       ]
-    ]
+    ],
+    "enquiryService": "Social media kit"
   },
   {
     "slug": "website-analysis-melbourne",
@@ -208,6 +245,10 @@
       [
         "Prioritise the next changes",
         "Broken links and unclear enquiry paths may need attention before new visual effects. Content gaps, technical issues and wider redesign work should be weighed against the business goal. If you have analytics or Search Console data, it can help distinguish assumptions from observed behaviour."
+      ],
+      [
+        "What to include in your review request",
+        "Share your website address, the service you want more enquiries for and the area you serve. Mention whether visitors are not finding the website, leaving without contacting you or encountering a technical problem. Those are different issues, and each needs different evidence and a different next step."
       ]
     ],
     "items": [
@@ -225,6 +266,7 @@
         "Does a review mean I need a new website?",
         "Not necessarily. Targeted changes may address the most important problems. The review helps decide whether updates or a larger redesign make sense."
       ]
-    ]
+    ],
+    "enquiryService": "Web analysis"
   }
 ]
