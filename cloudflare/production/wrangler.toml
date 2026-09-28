@@ -1,18 +1,12 @@
-# Separate from the working contact Worker. Deploy without production routes first.
+# Production routes are managed in the Cloudflare dashboard.
 name = "codemax-production-router"
 main = "worker.mjs"
 compatibility_date = "2026-09-28"
 workers_dev = false
+keep_vars = true
 
 [vars]
-# Set the real Pages URL after creating and verifying the Pages deployment.
-PAGES_ORIGIN = ""
-ENABLED = "false"
+# Match the verified production Pages deployment.
+PAGES_ORIGIN = "https://codemax-web.pages.dev"
+ENABLED = "true"
 
-# Add production routes only after DNS, Pages, WordPress and form checks pass:
-# [[routes]]
-# pattern = "codemax.com.au/*"
-# zone_name = "codemax.com.au"
-# [[routes]]
-# pattern = "www.codemax.com.au/*"
-# zone_name = "codemax.com.au"
