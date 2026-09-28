@@ -13,7 +13,7 @@ export function studioPath(request) {
   if (assetPaths.has(url.pathname)) return url.pathname;
   if (/^\/_astro\/[^/]+\.(?:js|css)$/.test(url.pathname)) return url.pathname;
   // Keep the original WordPress sitemap and robots endpoints untouched.
-  if (url.pathname === '/studio-sitemap.xml') return '/sitemap.xml';
+  if (url.pathname === '/studio-sitemap.xml') return url.pathname;
   return null;
 }
 
@@ -30,6 +30,29 @@ export async function handleRequest(request, env, fetcher = fetch) {
     return fetcher(request);
   }
   const incoming = new URL(request.url);
+  if (incoming.hostname === 'www.codemax.com.au' && incoming.pathname === '/studio-sitemap.xml') {
+    const canonical = new URL(incoming);
+    canonical.hostname = 'codemax.com.au';
+    return new Response(null, { status: 308, headers: { Location: canonical.href } });
+  }
+  // Serve the submitted sitemap directly from the production router. This
+  // removes a second-host dependency from Google's sitemap fetch and keeps
+  // WordPress's existing sitemap.xml and sitemap_index.xml untouched.
+  if (incoming.pathname === '/studio-sitemap.xml') {
+    const urls = ['/', ...servicePaths];
+    const body = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
+      urls.map(path => `<url><loc>https://codemax.com.au${path}</loc></url>`).join('') +
+      '</urlset>';
+    return new Response(request.method === 'HEAD' ? null : body, {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/xml; charset=utf-8',
+        'Cache-Control': 'public, max-age=3600',
+        'X-CodeMax-Site': 'studio'
+      }
+    });
+  }
   const target = new URL(path, origin);
   // Static content does not need visitor cookies, auth, form data or query strings.
   const headers = new Headers();

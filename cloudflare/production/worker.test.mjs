@@ -48,10 +48,23 @@ test('Pages failures fall back to WordPress without stripping its headers', asyn
     assert.equal(calls,2);assert.equal(await r.text(),'wp');assert.equal(r.headers.get('X-Robots-Tag'),'noindex');
   }
 });
-test('New sitemap has a separate URL; old sitemaps remain on WordPress', async () => {
-  await handleRequest(req('/studio-sitemap.xml'),env,async passed=>{
-    assert.equal(passed.url,'https://codemax-web.pages.dev/sitemap.xml');return new Response('<urlset/>');
-  });
+test('Submitted sitemap is valid XML on the production host without fetching Pages', async () => {
+  let fetched = false;
+  const response = await handleRequest(req('/studio-sitemap.xml'),env,async () => { fetched = true; return new Response('unexpected'); });
+  const xml = await response.text();
+  assert.equal(response.status,200);
+  assert.match(response.headers.get('Content-Type'),/application\/xml/);
+  assert.equal(response.headers.get('X-CodeMax-Site'),'studio');
+  assert.equal((xml.match(/<url>/g)||[]).length,servicePaths.size+1);
+  assert.match(xml,/<loc>https:\/\/codemax\.com\.au\/services\/web-design-melbourne\/</);
+  assert.equal(fetched,false);
+  const head = await handleRequest(req('/studio-sitemap.xml',{method:'HEAD'}),env);
+  assert.equal(head.status,200); assert.equal(await head.text(),'');
+  const www = await handleRequest(new Request('https://www.codemax.com.au/studio-sitemap.xml'),env);
+  assert.equal(www.status,308);
+  // Existing WordPress sitemap endpoints continue to bypass the studio router.
+  const legacy = req('/sitemap.xml');
+  assert.equal(studioPath(legacy),null);
 });
 test('Canonical redirects preserve tracking parameters', async () => {
   const r=await handleRequest(new Request('https://www.codemax.com.au/services/web-design-melbourne?utm_source=test'),env,async()=>new Response('page'));
