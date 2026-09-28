@@ -1,0 +1,71 @@
+import importlib.util
+import unittest
+from pathlib import Path
+
+spec = importlib.util.spec_from_file_location('importer', Path(__file__).with_name('import-wordpress.py'))
+module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(module)
+
+def item(path='/sample-article/', status='publish', content='<p>Original useful article content.</p>', password=''):
+    return f'''<item><title>Original title</title><link>https://codemax.com.au{path}</link>
+    <wp:post_type>post</wp:post_type><wp:status>{status}</wp:status><wp:post_password>{password}</wp:post_password>
+    <wp:post_date>2026-01-03 08:00:00</wp:post_date><wp:post_date_gmt>2026-01-02 21:00:00</wp:post_date_gmt>
+    <wp:post_modified_gmt>2026-01-03 21:00:00</wp:post_modified_gmt><dc:creator>subodha</dc:creator>
+    <content:encoded><![CDATA[{content}]]></content:encoded>
+    <wp:postmeta><wp:meta_key>private_token</wp:meta_key><wp:meta_value>DO_NOT_EXPORT</wp:meta_value></wp:postmeta>
+    <wp:comment><wp:comment_author_email>private@example.com</wp:comment_author_email></wp:comment>
+    </item>'''
+
+def export(items):
+    return ('''<rss xmlns:wp="http://wordpress.org/export/1.2/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><wp:wxr_version>1.2</wp:wxr_version>
+    <wp:author><wp:author_login>subodha</wp:author_login><wp:author_display_name>Subodha De</wp:author_display_name><wp:author_email>private@example.com</wp:author_email></wp:author>'''+items+'</channel></rss>').encode()
+
+class ImportTests(unittest.TestCase):
+    def test_original_url_dates_and_author(self):
+        posts, report = module.convert(export(item('/2026/01/original-slug/')))
+        self.assertEqual(posts[0]['path'], '/2026/01/original-slug/')
+        self.assertEqual(posts[0]['published'], '2026-01-02T21:00:00Z')
+        self.assertEqual(posts[0]['displayDate'], '2026-01-03')
+        self.assertEqual(posts[0]['author'], 'Subodha De')
+        self.assertIn('Original useful article content.', posts[0]['html'])
+        self.assertFalse(report['launchReady'])
+
+    def test_private_posts_and_metadata_stay_private(self):
+        posts, report = module.convert(export(item()+item('/draft/', 'draft')+item('/private/', 'private')+item('/protected/', password='secret')))
+        self.assertEqual(len(posts), 1)
+        output = str((posts, report))
+        self.assertNotIn('DO_NOT_EXPORT', output)
+        self.assertNotIn('private@example.com', output)
+        self.assertNotIn('/protected/', output)
+
+    def test_sanitisation_and_media_inventory(self):
+        content = '<p onclick="alert(1)">Keep this</p><script>alert(1)</script><a href="javascript:alert(1)">Link</a><img src="/wp-content/uploads/photo.jpg" alt="Business owner" onerror="alert(1)"><iframe src="https://example.com"></iframe>'
+        posts, report = module.convert(export(item(content=content)))
+        body=posts[0]['html']
+        for token in ['onclick','onerror','javascript:','<script','<iframe','alert(1)']:
+            self.assertNotIn(token, body)
+        self.assertIn('Keep this',body)
+        self.assertEqual(report['mediaUrls'], ['https://codemax.com.au/wp-content/uploads/photo.jpg'])
+        self.assertTrue(report['review'])
+
+    def test_duplicate_and_unsafe_paths_stop_import(self):
+        with self.assertRaises(ValueError):
+            module.convert(export(item()+item()))
+        for path in ['/blog/', '/services/test/', '/%2e%2e/escape/', '/?p=123', '/post.html', '/no-slash']:
+            with self.subTest(path=path), self.assertRaises(ValueError):
+                module.convert(export(item(path)))
+
+    def test_shortcodes_and_empty_exports_stop_import(self):
+        with self.assertRaises(ValueError):
+            module.convert(export(item(content='[gallery ids="1,2"]')))
+        with self.assertRaises(ValueError):
+            module.convert(export(item(status='draft')))
+        with self.assertRaises(ValueError):
+            module.convert(export(item(content='<script>only code</script>')))
+
+    def test_classic_editor_paragraphs(self):
+        posts, _ = module.convert(export(item(content='First paragraph.\n\nSecond paragraph.')))
+        self.assertEqual(posts[0]['html'], '<p>First paragraph.</p><p>Second paragraph.</p>')
+
+if __name__ == '__main__':
+    unittest.main()

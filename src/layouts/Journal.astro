@@ -1,0 +1,15 @@
+---
+import Seo from '../components/Seo.astro';
+import '../styles/global.css';
+import '../styles/bold.css';
+import '../styles/seo.css';
+import '../styles/blog.css';
+const { title, description, article, noindex = false } = Astro.props;
+---
+<!doctype html><html lang="en-AU"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><Seo title={title} description={description} article={article} noindex={noindex} /></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="header wrap"><a class="brand" href="/">CODEMAX</a><nav aria-label="Main navigation"><a href="/#services">Services</a><a href="/#work">Portfolio</a><a href="/#about">About</a><a href="/blog/" aria-current={article ? undefined : 'page'}>Blog</a></nav><a class="button small" href="/#enquiry">Let’s talk</a></header>
+<main id="main"><slot /></main>
+<section class="service-contact wrap"><p class="eyebrow">From reading to doing</p><h2>What’s next for your website?</h2><p>Discuss web design, content and support with our Melbourne studio.</p><a class="button" href="/#enquiry">Tell us about your project</a></section>
+<footer class="wrap footer"><a class="brand" href="/">CODEMAX</a><a href="/services/seo-content-melbourne/">SEO content services</a><a href="mailto:info@codemax.com.au">info@codemax.com.au</a><span>© {new Date().getFullYear()} CodeMax</span></footer>
+</body></html>

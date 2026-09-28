@@ -1,18 +1,23 @@
 ---
-interface Props { title: string; description: string; noindex?: boolean; service?: string; }
-const { title, description, noindex = false, service } = Astro.props;
+import type { BlogPost } from '../lib/blog';
+interface Props { article?: BlogPost; title: string; description: string; noindex?: boolean; service?: string; }
+const { title, description, noindex = false, service, article } = Astro.props;
 const origin = 'https://codemax.com.au';
 const canonical = new URL(Astro.url.pathname, origin).href;
 const business = { '@type': 'ProfessionalService', '@id': origin + '/#business', name: 'CodeMax', url: origin + '/', telephone: '+61494597993', email: 'info@codemax.com.au', address: { '@type': 'PostalAddress', streetAddress: '1341 Dandenong Rd', addressLocality: 'Malvern East', addressRegion: 'VIC', postalCode: '3145', addressCountry: 'AU' }, areaServed: { '@type': 'City', name: 'Melbourne' }, founder: { '@type': 'Person', name: 'Subodha De' } };
-const graph = [business, { '@type': 'WebSite', '@id': origin + '/#website', url: origin + '/', name: 'CodeMax', inLanguage: 'en-AU', publisher: { '@id': business['@id'] } }, { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: title, description, inLanguage: 'en-AU', isPartOf: { '@id': origin + '/#website' }, about: { '@id': business['@id'] } }];
-if (service) graph.push({ '@type': 'Service', name: service, url: canonical, provider: { '@id': business['@id'] }, areaServed: { '@type': 'City', name: 'Melbourne' } } as any);
-const breadcrumbs = service ? { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' }, { '@type': 'ListItem', position: 2, name: service, item: canonical }] } : null;
+const graph: Record<string, unknown>[] = [business, { '@type': 'WebSite', '@id': origin + '/#website', url: origin + '/', name: 'CodeMax', inLanguage: 'en-AU', publisher: { '@id': business['@id'] } }, { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: title, description, inLanguage: 'en-AU', isPartOf: { '@id': origin + '/#website' }, about: { '@id': business['@id'] } }];
+if (service) graph.push({ '@type': 'Service', name: service, url: canonical, provider: { '@id': business['@id'] }, areaServed: { '@type': 'City', name: 'Melbourne' } });
+if (article) graph.push({ '@type': 'BlogPosting', '@id': canonical + '#article', headline: article.title, description, datePublished: article.published, ...(article.modified ? { dateModified: article.modified } : {}), author: { '@type': article.author === 'CodeMax' ? 'Organization' : 'Person', name: article.author }, publisher: { '@id': business['@id'] }, mainEntityOfPage: { '@id': canonical + '#webpage' } });
+const articleBreadcrumbs = article ? { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' }, { '@type': 'ListItem', position: 2, name: 'Blog', item: origin + '/blog/' }, { '@type': 'ListItem', position: 3, name: article.title, item: canonical }] } : null;
+const breadcrumbs = service ? { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: origin + '/' }, { '@type': 'ListItem', position: 2, name: service, item: canonical }] } : articleBreadcrumbs;
 ---
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex, follow" />}
-<meta property="og:type" content="website" />
+<meta property="og:type" content={article ? "article" : "website"} />
+{article && <meta property="article:published_time" content={article.published} />}
+{article?.modified && <meta property="article:modified_time" content={article.modified} />}
 <meta property="og:site_name" content="CodeMax" />
 <meta property="og:locale" content="en_AU" />
 <meta property="og:title" content={title} />

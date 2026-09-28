@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "import:wordpress": "python3 scripts/import-wordpress.py",
+    "test:import": "python3 -m unittest discover -s scripts -p 'test_*.py'"
   },
   "dependencies": {
     "@astrojs/vercel": "^8.2.0",
