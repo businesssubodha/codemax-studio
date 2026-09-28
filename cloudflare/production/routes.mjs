@@ -14,6 +14,11 @@ export const blogPageSize = 12;
 export const archivePaths = new Set(blogPosts.length ? Array.from({length: Math.ceil(blogPosts.length / blogPageSize)}, (_, i) => i ? `/blog/page/${i + 1}/` : '/blog/') : []);
 export const articlePaths = new Set(blogPosts.map(post => post.path));
 export const articleLastModified = new Map(blogPosts.map(post => [post.path, post.modified]));
+// Confirmed retired URLs with a close, live replacement on the new site.
+export const legacyRedirects = new Map([
+  ['/modern-website-redesign-boost-business-drive-growth/', '/website-redesign-drives-growth/'],
+  ['/web-design/', '/services/web-design-melbourne/']
+]);
 export const assetPaths = new Set([
   "/favicon.png",
   "/favicon.ico",

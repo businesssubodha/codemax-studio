@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { handleRequest, studioPath } from './worker.mjs';
 import { readFileSync } from 'node:fs';
-import { servicePaths, archivePaths, articlePaths } from './routes.mjs';
+import { servicePaths, archivePaths, articlePaths, legacyRedirects } from './routes.mjs';
 const env = { ENABLED: 'true', PAGES_ORIGIN: 'https://codemax-web.pages.dev' };
 const req = (path, options) => new Request('https://codemax.com.au' + path, options);
 
@@ -94,3 +94,16 @@ test('HEAD requests return no body and assets use the new host', async () => {
 });
 
 test("All archive pages are routed; unknown archive pages stay at WordPress", () => { for (const path of archivePaths) assert.equal(studioPath(req(path)), path); assert.equal(studioPath(req("/blog/page/99999/")),null); });
+
+test('Only confirmed retired URLs redirect to a relevant live destination', async () => {
+  for (const [oldPath, newPath] of legacyRedirects) {
+    assert.ok(servicePaths.has(newPath) || articlePaths.has(newPath));
+    const response = await handleRequest(req(oldPath + '?utm_source=google'), env, () => { throw new Error('Must redirect directly'); });
+    assert.equal(response.status, 301);
+    assert.equal(response.headers.get('Location'), 'https://codemax.com.au' + newPath + '?utm_source=google');
+    const loggedIn = req(oldPath, { headers: { Cookie: 'wordpress_logged_in_example=1' } });
+    assert.equal(await handleRequest(loggedIn, env, request => { assert.equal(request, loggedIn); return new Response('original'); }).then(r => r.text()), 'original');
+  }
+  const missing = req('/is-seo-still-relevant-in-2024-the-enduring-power-of-search-engine-optimisation/');
+  assert.equal(await handleRequest(missing, env, request => { assert.equal(request, missing); return new Response('WordPress'); }).then(r => r.text()), 'WordPress');
+});

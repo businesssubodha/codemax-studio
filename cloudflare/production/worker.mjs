@@ -1,4 +1,4 @@
-import { servicePaths, archivePaths, articlePaths, articleLastModified, assetPaths } from './routes.mjs';
+import { servicePaths, archivePaths, articlePaths, articleLastModified, legacyRedirects, assetPaths } from './routes.mjs';
 const productionHosts = new Set(['codemax.com.au', 'www.codemax.com.au']);
 const wordpressQueryKeys = ['p', 'page_id', 'attachment_id', 'preview', 'preview_id', 'preview_nonce', 'rest_route', 'feed', 's', 'author', 'cat', 'tag', 'paged', 'post_type', 'customize_changeset_uuid'];
 
@@ -20,6 +20,15 @@ export function studioPath(request) {
 }
 
 export async function handleRequest(request, env, fetcher = fetch) {
+  const incoming = new URL(request.url);
+  const replacement = legacyRedirects.get(incoming.pathname);
+  if (env.ENABLED === 'true' && replacement && productionHosts.has(incoming.hostname) && ['GET', 'HEAD'].includes(request.method) &&
+      !wordpressQueryKeys.some(key => incoming.searchParams.has(key)) &&
+      !/(?:^|;\s*)wordpress_logged_in_[^=]*=/.test(request.headers.get('Cookie') || '')) {
+    const destination = new URL(replacement, 'https://codemax.com.au');
+    destination.search = incoming.search;
+    return new Response(null, { status: 301, headers: { Location: destination.href } });
+  }
   const path = studioPath(request);
   // fetch(original request) on a Worker Route goes to the existing DNS origin.
   // Never attach this Worker as a Custom Domain; WordPress remains the origin.
@@ -31,7 +40,6 @@ export async function handleRequest(request, env, fetcher = fetch) {
   } catch {
     return fetcher(request);
   }
-  const incoming = new URL(request.url);
   if (incoming.pathname === '/robots.txt') {
     const upstreamRequest = new Request(incoming, {
       method: 'GET',
