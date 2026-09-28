@@ -1,4 +1,5 @@
 ---
+import Brand from '../../components/Brand.astro';
 import Seo from '../../components/Seo.astro';
 import services from '../../data/services.json';
 import '../../styles/global.css';
@@ -11,12 +12,12 @@ const { service } = Astro.props;
 <html lang="en-AU"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><Seo title={service.title} description={service.description} service={service.name} /></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="header wrap"><a class="brand" href="/">CODEMAX</a><nav aria-label="Main navigation"><a href="/#services">Services</a><a href="/#work">Portfolio</a><a href="/#about">About</a><a href="/blog/">Blog</a></nav><a class="button small" href="/#enquiry">Discuss your project</a></header>
+<header class="header wrap"><Brand href="/" /><nav aria-label="Main navigation"><a href="/#services">Services</a><a href="/#work">Portfolio</a><a href="/#about">About</a><a href="/blog/">Blog</a></nav><a class="button small" href="/#enquiry">Discuss your project</a></header>
 <main id="main">
 <section class="service-hero wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><span aria-current="page">{service.name}</span></nav><p class="eyebrow">CodeMax / Melbourne</p><h1>{service.heading}</h1><p class="lead">{service.intro}</p><a class="button" href="/#enquiry">Tell us what you need</a></section>
 <section class="service-detail wrap" aria-label="Service details"><div class="service-copy">{service.sections.map(([heading, text]) => <section><h2>{heading}</h2><p>{text}</p></section>)}</div><aside class="service-scope"><h2>What we can discuss</h2><ul>{service.items.map(item => <li>{item}</li>)}</ul><p>Tell us your priorities, budget and timing. We’ll discuss the scope that fits your business.</p><a href="/#work">Explore our design portfolio</a><a href="/#enquiry">Request a project quote</a></aside></section>
 <section class="seo-faq wrap"><h2>Questions about {service.name.toLowerCase()}</h2>{service.faq.map(([q,a]) => <details><summary>{q}</summary><p>{a}</p></details>)}</section>
 <section class="related-services wrap"><h2>Related services</h2><div>{services.filter(item => item.slug !== service.slug).map(item => <a href={'/services/' + item.slug + '/'}>{item.name}</a>)}</div></section>
 <section class="service-contact wrap"><h2>Let’s discuss your website.</h2><p>CodeMax · 1341 Dandenong Rd, Malvern East VIC 3145</p><p><a href="tel:+61494597993">0494 597 993</a> · <a href="mailto:info@codemax.com.au">info@codemax.com.au</a></p><a class="button" href="/#enquiry">Start an enquiry</a></section>
-</main><footer class="wrap footer"><a class="brand" href="/">CODEMAX</a><a href="/blog/">Read our articles</a><span>© {new Date().getFullYear()} CodeMax</span></footer>
+</main><footer class="wrap footer"><Brand href="/" /><a href="/blog/">Read our articles</a><span>© {new Date().getFullYear()} CodeMax</span></footer>
 </body></html>

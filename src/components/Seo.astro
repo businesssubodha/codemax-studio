@@ -4,7 +4,7 @@ interface Props { article?: BlogPost; title: string; description: string; noinde
 const { title, description, noindex = false, service, article } = Astro.props;
 const origin = 'https://codemax.com.au';
 const canonical = new URL(Astro.url.pathname, origin).href;
-const business = { '@type': 'ProfessionalService', '@id': origin + '/#business', name: 'CodeMax', url: origin + '/', telephone: '+61494597993', email: 'info@codemax.com.au', address: { '@type': 'PostalAddress', streetAddress: '1341 Dandenong Rd', addressLocality: 'Malvern East', addressRegion: 'VIC', postalCode: '3145', addressCountry: 'AU' }, areaServed: { '@type': 'City', name: 'Melbourne' }, founder: { '@type': 'Person', name: 'Subodha De' } };
+const business = { '@type': 'ProfessionalService', '@id': origin + '/#business', name: 'CodeMax', logo: origin + '/brand/codemax-logo.webp', url: origin + '/', telephone: '+61494597993', email: 'info@codemax.com.au', address: { '@type': 'PostalAddress', streetAddress: '1341 Dandenong Rd', addressLocality: 'Malvern East', addressRegion: 'VIC', postalCode: '3145', addressCountry: 'AU' }, areaServed: { '@type': 'City', name: 'Melbourne' }, founder: { '@type': 'Person', name: 'Subodha De' } };
 const graph: Record<string, unknown>[] = [business, { '@type': 'WebSite', '@id': origin + '/#website', url: origin + '/', name: 'CodeMax', inLanguage: 'en-AU', publisher: { '@id': business['@id'] } }, { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: title, description, inLanguage: 'en-AU', isPartOf: { '@id': origin + '/#website' }, about: { '@id': business['@id'] } }];
 if (service) graph.push({ '@type': 'Service', name: service, url: canonical, provider: { '@id': business['@id'] }, areaServed: { '@type': 'City', name: 'Melbourne' } });
 if (article) graph.push({ '@type': 'BlogPosting', '@id': canonical + '#article', headline: article.title, description, datePublished: article.published, ...(article.modified ? { dateModified: article.modified } : {}), author: { '@type': article.author === 'CodeMax' ? 'Organization' : 'Person', name: article.author }, publisher: { '@id': business['@id'] }, mainEntityOfPage: { '@id': canonical + '#webpage' } });
@@ -26,7 +26,9 @@ const breadcrumbs = service ? { '@context': 'https://schema.org', '@type': 'Brea
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="48x48" />
+<link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" sizes="180x180" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" />
