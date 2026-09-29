@@ -24,7 +24,7 @@ for (const address of urls) {
  const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
  assert.ok(schemas.length, `Missing schema: ${path}`);
  for (const [,schema] of schemas) JSON.parse(schema);
- for (const [,asset] of html.matchAll(/(?:src|href)="(\/(?:brand|fonts|portfolio)\/[^"?]+)"/g)) {
+ for (const [,asset] of html.matchAll(/(?:src|href)="(\/(?:brand|fonts|portfolio|editorial)\/[^"?]+)"/g)) {
   assert.ok(existsSync('public' + asset), `Missing asset: ${asset}`);
   assert.ok(assetPaths.has(asset), `Unrouted asset: ${asset}`);
  }

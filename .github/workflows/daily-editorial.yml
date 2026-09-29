@@ -1,0 +1,50 @@
+name: Daily CodeMax article
+on:
+  schedule:
+    # Both UTC offsets cover Melbourne standard time and daylight saving.
+    # The script releases at most one post per local day, after 9am.
+    - cron: '7 22,23 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-editorial.yml'
+      - 'content/queue/**'
+      - 'scripts/publish-editorial*'
+permissions:
+  contents: write
+concurrency:
+  group: codemax-daily-editorial
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: node --test scripts/publish-editorial.test.mjs
+      - name: Validate prepared articles
+        run: node scripts/check-editorial.mjs
+      - name: Release one due article
+        if: github.event_name != 'push'
+        run: node scripts/publish-editorial.mjs
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check:seo
+      - name: Commit publication for Cloudflare deployment
+        if: github.event_name != 'push'
+        run: |
+          if git diff --quiet -- src/data/editorial-posts.json src/data/editorial-routes.json; then
+            exit 0
+          fi
+          git config user.name 'CodeMax Publisher'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/editorial-posts.json src/data/editorial-routes.json
+          git commit -m 'Publish next scheduled CodeMax article'
+          git push origin HEAD:main

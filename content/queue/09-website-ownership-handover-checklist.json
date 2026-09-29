@@ -1,0 +1,23 @@
+{
+  "path": "/website-ownership-handover-checklist/",
+  "sourceUrl": "https://codemax.com.au/website-ownership-handover-checklist/",
+  "title": "Who Controls Your Website? The Handover Checklist Owners Need",
+  "seoTitle": "Website Handover: Accounts and Access Checklist | CodeMax",
+  "description": "Know which website accounts, files and recovery details your business needs before changing developers or finishing a new website project.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-09",
+  "modified": null,
+  "categories": [
+    "Website planning"
+  ],
+  "featuredImage": null,
+  "html": "<p>You should be able to answer a simple operational question: if your usual developer became unavailable, could another authorised person keep the website running? That answer depends on account access, documentation and the platform you use. A practical handover makes those dependencies visible before they become an emergency.</p><h2>Inventory accounts by function</h2><p>List the domain registrar, DNS provider, hosting platform, business email, content system, form service and analytics accounts. One company may provide several of these, but they remain different functions. Record the account owner and recovery contact without placing passwords in a shared document.</p><p>Business.gov.au explains domain registration separately from setting up a website. That distinction is useful during a handover: control of the website editor does not necessarily mean control of the domain or email. Ask the supplier to show which account controls each part.</p><h2>Ask what is transferable</h2><p>Request the source files or repository where the agreement and platform allow it, along with instructions needed to build or edit the site. For a hosted builder, ask what can be exported and which features would need rebuilding elsewhere. Confirm the treatment of fonts, stock images, plugins and subscriptions.</p><p>Ownership and licensing depend on your agreement, so get unclear terms clarified in writing. The operational checklist does not decide legal ownership. Its purpose is to expose practical questions before you rely on an assumption that every part of a website can be moved unchanged.</p><h2>Verify recovery and access safely</h2><p>Use individual accounts and the smallest access each person needs. Enable multi-factor authentication where available, keep recovery methods current and avoid sharing one administrator password across a team. Australian cyber security guidance recommends MFA and backups as basic protective measures.</p><p>Check that recovery messages go to a business-controlled address that will still work if one staff member leaves. Store recovery material securely. Do not cancel the existing supplier’s access until the replacement arrangement is ready and you understand how to restore service if the change fails.</p><h2>Request a short operating guide</h2><p>A useful handover explains how to edit a page, receive an enquiry, renew services and restore from a backup. Include the names of required subscriptions and who approves changes. Ask for a demonstration of one routine edit so the document is tested against the actual site.</p><p>Keep a record of the last successful deployment and a rollback method appropriate to the platform. The handover does not need to be a large manual. It needs to make ordinary tasks and emergency contacts clear enough that the business is not dependent on one person remembering every detail.</p><h2>Put this into practice</h2><p>A useful website brief starts with a real customer task, a realistic scope and a clear next step. <a href=\"/services/web-design-melbourne/\">Explore how CodeMax can help</a>, or <a href=\"/#enquiry\">send us your website and the problem you want to solve</a>.</p><h2>Sources and further reading</h2><p><a href=\"https://business.gov.au/online-and-digital/business-website/register-a-domain-name\">business.gov.au: Register a domain name</a>. Checked 30 September 2026.</p><p><a href=\"https://www.cyber.gov.au/learn-basics/explore-basics/small-business\">Australian Cyber Security Centre: Small business basics</a>.</p>",
+  "publishDate": "2026-10-09",
+  "primaryKeyword": "website handover checklist Australia",
+  "secondaryKeywords": [
+    "website ownership access",
+    "website developer handover"
+  ],
+  "researchDate": "2026-09-30"
+}

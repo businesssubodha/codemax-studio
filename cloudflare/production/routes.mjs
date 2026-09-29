@@ -1,4 +1,6 @@
-import blogPosts from '../../src/data/blog-routes.json' with { type: 'json' };
+import importedPosts from '../../src/data/blog-routes.json' with { type: 'json' };
+import editorialPosts from '../../src/data/editorial-routes.json' with { type: 'json' };
+const blogPosts = [...importedPosts, ...editorialPosts];
 
 // Public routes owned by the new studio. Other URLs stay on WordPress.
 export const servicePaths = new Set([
@@ -20,6 +22,10 @@ export const legacyRedirects = new Map([
   ['/web-design/', '/services/web-design-melbourne/']
 ]);
 export const assetPaths = new Set([
+  "/editorial/quote-comparison.svg",
+  "/editorial/enquiry-journey.svg",
+  "/editorial/email-delivery.svg",
+  "/editorial/lead-measurement.svg",
   "/favicon.png",
   "/favicon.ico",
   "/favicon.svg",

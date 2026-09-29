@@ -1,0 +1,23 @@
+{
+  "path": "/website-maintenance-report-what-to-ask/",
+  "sourceUrl": "https://codemax.com.au/website-maintenance-report-what-to-ask/",
+  "title": "Paying for Website Maintenance? Ask for These 5 Proof Points",
+  "seoTitle": "What Should a Website Maintenance Report Include? | CodeMax",
+  "description": "Understand what a useful website maintenance report should show, including completed work, backup recovery, form checks and unresolved issues.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-13",
+  "modified": null,
+  "categories": [
+    "Website support"
+  ],
+  "featuredImage": null,
+  "html": "<p>A monthly invoice that says “website maintenance” does not explain what happened to your website. A useful report should help you understand completed work, unresolved issues and decisions that need your approval. The right scope depends on the technology and agreement, but the evidence should be understandable without being a developer.</p><h2>Ask for completed work and its result</h2><p>Request a short record of changes: what was updated, why it was needed and whether verification passed. A long list of version numbers is less useful than knowing that a booking integration was updated and its main flow still works. Include the date so changes can be connected with later issues.</p><p>Separate routine maintenance from requested improvements. Replacing a photograph, redesigning a page and investigating a third-party outage may have different costs and response times. Make those boundaries clear in the agreement rather than discovering them during an urgent request.</p><h2>Ask how recovery is verified</h2><p>A backup being present does not prove that the site can be restored successfully. Ask what is backed up, where it is held, how long it is retained and when recovery was last tested. The appropriate method varies between a static site, a hosted builder and a database-driven store.</p><p>Australian cyber security guidance recommends backups and MFA as important basic protections. Your report should describe the arrangements relevant to your website, not claim that a backup eliminates every risk. Ask who can perform a recovery and what business input they would need.</p><h2>Check customer-facing functions</h2><p>The report should cover the functions your business depends on. For a service site, that may mean the phone link, contact form and booking route. For a store, it may include product selection and checkout testing within an agreed safe test process. Identify the exact checks instead of accepting an unexplained “all working”.</p><p>Confirm how a failed check is handled. Is there an alert, an owner and a response process? A provider cannot control every external service, but they should explain what was observed and what action is being taken.</p><h2>Review open issues and upcoming renewals</h2><p>The remaining two proof points are unresolved issues and future dependencies. Ask for a short list of risks, decisions and renewals that need attention, with clear responsibility. A renewal reminder should identify the service and consequences of letting it lapse.</p><p>Use the report to make one or two practical decisions each month. You may approve a necessary update, replace an unsupported integration or decide that a requested feature is not worth maintaining. The value of maintenance is in reliable operation and informed decisions, not in the length of the activity log.</p><h2>Put this into practice</h2><p>Share the affected page and what happened so a website review can focus on the actual failure. <a href=\"/services/website-maintenance-melbourne/\">Explore how CodeMax can help</a>, or <a href=\"/#enquiry\">send us your website and the problem you want to solve</a>.</p><h2>Sources and further reading</h2><p><a href=\"https://www.cyber.gov.au/learn-basics/explore-basics/small-business\">Australian Cyber Security Centre: Small business basics</a>. Checked 30 September 2026.</p>",
+  "publishDate": "2026-10-13",
+  "primaryKeyword": "website maintenance report checklist",
+  "secondaryKeywords": [
+    "website maintenance inclusions",
+    "small business website support"
+  ],
+  "researchDate": "2026-09-30"
+}

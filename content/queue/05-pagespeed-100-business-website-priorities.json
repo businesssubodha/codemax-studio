@@ -1,0 +1,23 @@
+{
+  "path": "/pagespeed-100-business-website-priorities/",
+  "sourceUrl": "https://codemax.com.au/pagespeed-100-business-website-priorities/",
+  "title": "Do You Need a 100 PageSpeed Score? What to Fix First",
+  "seoTitle": "PageSpeed Scores: What Small Businesses Should Fix | CodeMax",
+  "description": "Understand what a PageSpeed score can tell you and prioritise improvements that help customers load pages, interact and complete enquiries.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-05",
+  "modified": null,
+  "categories": [
+    "Website performance"
+  ],
+  "featuredImage": null,
+  "html": "<p>A PageSpeed report is useful, but a score alone cannot tell you whether a customer can book, buy or request a quote. Before paying for a promise of “100 everywhere”, identify the slow or unreliable part of the actual customer journey. A fast site with a broken enquiry form still fails the business task.</p><h2>Separate a test run from visitor experience</h2><p>A laboratory test measures a page under a particular set of conditions. Field data reflects eligible real-world visits where that data is available. Results can differ because devices, connections, third-party scripts and user behaviour differ. Compare like with like when checking whether a change helped.</p><p>Google’s Web Vitals guidance focuses on loading, responsiveness and visual stability through LCP, INP and CLS. Those measurements help describe parts of the experience. They are not a substitute for testing your navigation, service information and contact process.</p><h2>Start with the main mobile journey</h2><p>Choose your homepage, highest-value service page and enquiry page. Load each on a phone and perform the intended task. Write down where you wait, where the layout moves and where a control responds slowly. This gives a developer a focused brief rather than an instruction to chase every warning equally.</p><p>For example, a large decorative video may delay the information customers need. A booking widget may appear quickly but respond slowly once opened. These require different fixes. Record the page, device, approximate connection and steps so the issue can be reproduced.</p><h2>Rank fixes by customer impact and effort</h2><p>Review oversized images, unnecessary scripts, late-loading layout elements and expensive animations. Some changes are simple, such as serving a sensibly sized image. Others require design or integration decisions. Ask what a fix will change for the customer and what functionality might be affected.</p><p>Preserve useful features unless there is evidence they cause a problem. Removing every image or interactive element can produce a less helpful page. A better approach is to load non-essential media later and keep the main content and primary action available promptly.</p><h2>Verify the improvement with the same task</h2><p>Repeat the original journey after deployment. Check that the form, menus and tracking still work. Compare the same test configuration, and give field reports time to reflect new visits rather than expecting an immediate reset. Keep a short change log so the next result can be interpreted.</p><p>Your acceptance checklist should include functional outcomes: readable service details, a stable mobile layout, responsive controls and a completed test enquiry. A score can support that review. It should not become the only definition of a successful business website.</p><h2>Put this into practice</h2><p>Start with a defined question and a small set of pages so the review produces decisions you can act on. <a href=\"/services/website-analysis-melbourne/\">Explore how CodeMax can help</a>, or <a href=\"/#enquiry\">send us your website and the problem you want to solve</a>.</p><h2>Sources and further reading</h2><p><a href=\"https://web.dev/articles/vitals\">web.dev: Web Vitals</a>. Checked 30 September 2026.</p>",
+  "publishDate": "2026-10-05",
+  "primaryKeyword": "PageSpeed score small business website",
+  "secondaryKeywords": [
+    "Core Web Vitals business website",
+    "website speed priorities"
+  ],
+  "researchDate": "2026-09-30"
+}
