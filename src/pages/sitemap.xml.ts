@@ -3,6 +3,7 @@ import { posts, pageCount, archiveUrl } from '../lib/blog';
 export function GET() {
  const entries = [
   { path: '/', modified: null },
+  { path: '/blog/ai/', modified: null },
   ...services.map(service => ({ path: '/services/' + service.slug + '/', modified: null })),
   ...(posts.length ? [...Array.from({length:pageCount},(_,i) => ({path:archiveUrl(i+1),modified:null})), ...posts.map(post => ({ path: post.path, modified: post.modified }))] : [])
  ];

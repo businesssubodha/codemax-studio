@@ -14,6 +14,7 @@ export const servicePaths = new Set([
 // Published WordPress articles imported at their existing canonical paths.
 export const blogPageSize = 12;
 export const archivePaths = new Set(blogPosts.length ? Array.from({length: Math.ceil(blogPosts.length / blogPageSize)}, (_, i) => i ? `/blog/page/${i + 1}/` : '/blog/') : []);
+archivePaths.add('/blog/ai/');
 export const articlePaths = new Set(blogPosts.map(post => post.path));
 export const articleLastModified = new Map(blogPosts.map(post => [post.path, post.modified]));
 // Confirmed retired URLs with a close, live replacement on the new site.

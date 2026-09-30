@@ -1,0 +1,30 @@
+---
+import { aiPosts, displayDate } from '../lib/blog';
+---
+<section class="ai-section" id="ai-insights" aria-labelledby="ai-heading">
+ <div class="wrap section">
+  <div class="section-head">
+   <div><p class="eyebrow">CodeMax / AI news & insights</p><h2 id="ai-heading">Ideas for an<br /><em>AI-powered world.</em></h2></div>
+   <div class="ai-intro"><p>Explore AI news, tools and ideas shaping how we create, work and live.</p><a class="text-link" href="/blog/ai/">Explore AI insights <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg></a></div>
+  </div>
+  <p class="ai-topics">Generative AI <span aria-hidden="true">/</span> Creative tools <span aria-hidden="true">/</span> AI models <span aria-hidden="true">/</span> Technology & everyday life</p>
+  <div class="journal-grid">
+   {aiPosts.slice(0,3).map(post => <a class="journal" href={post.path}><small>AI insights · <time datetime={post.displayDate}>{displayDate(post.displayDate)}</time></small><h3>{post.title}</h3><p>{post.description}</p><span>Read article <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg></span></a>)}
+  </div>
+ </div>
+</section>
+<style>
+.ai-section{background:#20231f;color:#f5f3e9;border-top:1px solid #55594c}
+.ai-section .section-head{border-color:#55594c;gap:32px}
+.ai-section h2 em{color:#d7ff3f}
+.ai-section .eyebrow,.ai-section .text-link{color:#d7ff3f}
+.ai-intro{max-width:340px}.ai-intro p{color:#d0d3c8;margin:0 0 22px;line-height:1.65}
+.ai-topics{color:#c3c9b7;display:flex;flex-wrap:wrap;gap:10px 18px;font-size:13px;margin:0 0 28px;line-height:1.6}
+.ai-section .journal{color:#f5f3e9;border-color:#616754;min-width:0}
+.ai-section .journal p,.ai-section .journal small{color:#c9cebf}
+.ai-section .journal h3{overflow-wrap:anywhere}
+.ai-section .journal>span{border-color:#55594c;color:#d7ff3f}
+.ai-section a:focus-visible{outline:3px solid #d7ff3f;outline-offset:5px}
+@media(max-width:700px){.ai-section .section-head{display:block}.ai-intro{margin-top:24px}.ai-section h2{font-size:clamp(34px,8.3vw,58px)}.ai-topics{gap:8px 12px}}
+@media(prefers-reduced-motion:reduce){.ai-section .journal{transition:none}}
+</style>

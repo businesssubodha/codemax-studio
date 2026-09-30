@@ -32,3 +32,6 @@ export function relatedPosts(post: BlogPost) {
  const topic = words(post.title);
  return posts.filter(p => p.path !== post.path).map(p => ({post:p, score:[...words(p.title)].filter(w => topic.has(w)).length})).sort((a,b) => b.score-a.score).slice(0,3).map(p => p.post);
 }
+
+// Only published content belongs in the AI section.
+export const aiPosts = posts.filter(post => /\bAI\b|artificial intelligence|chatgpt|generative/i.test(post.title) || post.categories.some(category => /^(AI|Artificial Intelligence)$/i.test(category)));

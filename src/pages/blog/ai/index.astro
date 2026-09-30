@@ -1,0 +1,10 @@
+---
+import Journal from '../../../layouts/Journal.astro';
+import { aiPosts, displayDate } from '../../../lib/blog';
+---
+<Journal title="AI News, Tools & Insights | CodeMax" description="Explore CodeMax's AI article archive: generative AI, creative tools, AI models and the ways artificial intelligence changes work and everyday life.">
+<section class="blog-heading wrap"><p class="eyebrow">CodeMax / AI news & insights</p><h1>Ideas for an<br /><em>AI-powered world.</em></h1><p class="lead">AI news, tools and ideas shaping how we create, work and live.</p><p>Explore our AI archive. Original publication dates are shown; older articles may describe earlier versions of tools and models.</p><a href="/blog/">Explore all blog topics</a></section>
+<section class="blog-list wrap" aria-label="AI articles">
+{aiPosts.map(post => <article class="blog-card"><p class="eyebrow">AI insights</p><h2><a href={post.path}>{post.title}</a></h2><p>{post.description}</p><p class="blog-meta">By {post.author} · <time datetime={post.displayDate}>{displayDate(post.displayDate)}</time></p><a class="blog-read" href={post.path}>Read article<span class="sr-only">: {post.title}</span></a></article>)}
+</section>
+</Journal>
