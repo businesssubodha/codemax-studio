@@ -20,5 +20,5 @@ for (const p of queue) {
   assert.ok(url==='/' || url.startsWith('/services/'),'Unexpected local link');
  }
 }
-assert.equal(queue.length,15);
-console.log('15 complete CodeMax drafts validated: unique URLs and dates, keywords, sources, media and contact links.');
+assert.equal(queue.length,20);
+console.log('20 complete CodeMax drafts validated: unique URLs and dates, keywords, sources, media and contact links.');

@@ -1,10 +1,10 @@
 # CodeMax daily article series
 
-15 complete posts for Melbourne small business website buyers and owners. Researched on 30 September 2026.
+20 complete posts for Melbourne small business website buyers and owners. Researched on 30 September 2026.
 
 ## Publication calendar
 
-Target: one article per day from 1–15 October 2026, eligible for publication after 9 am Australia/Sydney. GitHub checks at 09:07 local time, with a second UTC-offset check for daylight saving. Queue delays and website deployment can make the live time later. No new paid service is required.
+Target: one article per day from 1–20 October 2026, eligible for publication after 9 am Australia/Sydney. GitHub checks at 09:07 local time, with a second UTC-offset check for daylight saving. Queue delays and website deployment can make the live time later. No new paid service is required.
 
 | Date | Complete draft | Primary keyword |
 | --- | --- | --- |
@@ -24,9 +24,15 @@ Target: one article per day from 1–15 October 2026, eligible for publication a
 | 2026-10-14 | [Your Website Has Traffic. How Many Real Enquiries Does It Generate?](14-measure-website-leads-beyond-pageviews.md) | track website enquiries GA4 |
 | 2026-10-15 | [Should You Create a Page for Every Suburb? A Better Local Content Test](15-suburb-pages-local-business-useful-content.md) | suburb pages local SEO |
 
+| 2026-10-16 | [Free Website Hosting: What Does Your Business Still Need to Pay For?](16-free-website-hosting-business-fit.md) | free website hosting |
+| 2026-10-17 | [Website Templates: 7 Tests Before You Buy the Pretty Demo](17-website-templates-test-before-buying.md) | website templates |
+| 2026-10-18 | [Can Customers Use Your Website? 5 Tasks That Reveal the Gaps](18-small-business-website-user-testing-tasks.md) | user testing |
+| 2026-10-19 | [Searching “Website Designer Near Me”? How to Build a Melbourne Shortlist](19-website-designer-near-me-shortlist-melbourne.md) | website designer near me |
+| 2026-10-20 | [Planning a WordPress Website? Write This Content Brief First](20-wordpress-website-content-workflow-brief.md) | wordpress website |
+
 ## Research and editorial choices
 
-Keyword targets are based on service relevance, the existing article inventory and current official guidance. No paid search-volume or difficulty data was used, so these are not claims about the most searched terms. AI search is the current-topic strand; the other articles answer practical buying, maintenance and enquiry questions.
+The first 15 keyword targets are based on service relevance, the existing article inventory and current official guidance. The five additional posts use the supplied Keyword Stats 2026-09-30 at 10_22_48.csv export, covering September 2025–August 2026. See [keyword research notes](keyword-export-september-2026.md). These are not claims about organic ranking difficulty or guaranteed traffic. AI search is the current-topic strand; the other articles answer practical buying, maintenance and enquiry questions.
 
 Sources include Google Search Central, business.gov.au, W3C, web.dev, Google Analytics, Cloudflare, Resend and the Australian Cyber Security Centre. Each article links its relevant sources. Four original diagrams explain quote comparison, enquiry handling, email delivery and lead measurement.
 
@@ -36,7 +42,7 @@ Each post has a distinct URL, SEO title, description, a CodeMax service link and
 
 `content/queue` contains the approved series. The GitHub workflow runs the release script, publishes at most one due article per Melbourne calendar day, builds the site, checks SEO output and commits only the published content and route manifest. Cloudflare receives that commit through its existing Git integration. The blog archive, article routing and sitemap update with each release.
 
-If a run is missed, the next successful day publishes the oldest due article rather than releasing several at once. Manual workflow runs obey the same date and once-a-day rules. Once all 15 are published, no further content is released. Disable the **Daily CodeMax article** workflow to pause the series.
+If a run is missed, the next successful day publishes the oldest due article rather than releasing several at once. Manual workflow runs obey the same date and once-a-day rules. Once all 20 are published, no further content is released. Disable the **Daily CodeMax article** workflow to pause the series.
 
 ## Verification
 
