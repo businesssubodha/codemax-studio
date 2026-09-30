@@ -1,4 +1,5 @@
 ---
+import Analytics from "../../components/Analytics.astro";
 import Brand from '../../components/Brand.astro';
 import Seo from '../../components/Seo.astro';
 import services from '../../data/services.json';
@@ -22,4 +23,5 @@ const enquiryHref = "/?service=" + encodeURIComponent(service.enquiryService) + 
 <section class="related-services wrap"><h2>Related services</h2><div>{services.filter(item => item.slug !== service.slug).map(item => <a href={'/services/' + item.slug + '/'}>{item.name}</a>)}</div></section>
 <section class="service-contact wrap"><h2>Let’s discuss your website.</h2><p>CodeMax · 1341 Dandenong Rd, Malvern East VIC 3145</p><p><a href="tel:+61494597993">0494 597 993</a> · <a href="mailto:info@codemax.com.au">info@codemax.com.au</a></p><a class="button" href={enquiryHref}>Start an enquiry</a></section>
 </main><footer class="wrap footer"><Brand href="/" /><a href="/blog/">Read our articles</a><span>© {new Date().getFullYear()} CodeMax</span></footer>
+<Analytics />
 </body></html>
