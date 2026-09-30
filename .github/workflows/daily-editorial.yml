@@ -11,6 +11,9 @@ on:
       - '.github/workflows/daily-editorial.yml'
       - 'content/queue/**'
       - 'scripts/publish-editorial*'
+      - 'content/ai-queue/**'
+      - 'content/ai-calendar.json'
+      - 'scripts/*ai*.mjs'
 permissions:
   contents: write
 concurrency:
@@ -31,6 +34,8 @@ jobs:
       - run: node --test scripts/publish-editorial.test.mjs
       - name: Validate prepared articles
         run: node scripts/check-editorial.mjs
+      - name: Validate AI series
+        run: node scripts/check-ai-editorial.mjs && node --test scripts/publish-ai.test.mjs
       - name: Release one due article
         if: github.event_name != 'push'
         run: node scripts/publish-editorial.mjs

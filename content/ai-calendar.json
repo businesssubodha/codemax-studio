@@ -1,0 +1,297 @@
+[
+  {
+    "file": "01-ai-explained-prediction-generation-action.json",
+    "draft": "01-ai-explained-prediction-generation-action.md",
+    "date": "2026-09-30",
+    "path": "/ai-explained-prediction-generation-action/",
+    "title": "AI Explained: Prediction, Creation and Action Are Different Jobs",
+    "keywords": [
+      "ai"
+    ]
+  },
+  {
+    "file": "02-ai-ops-alerts-incident-response.json",
+    "draft": "02-ai-ops-alerts-incident-response.md",
+    "date": "2026-10-01",
+    "path": "/ai-ops-alerts-incident-response/",
+    "title": "AIOps Explained: Can AI Make Sense of Too Many IT Alerts?",
+    "keywords": [
+      "ai ops"
+    ]
+  },
+  {
+    "file": "03-google-cloud-ai-vertex-ai-explained.json",
+    "draft": "03-google-cloud-ai-vertex-ai-explained.md",
+    "date": "2026-10-02",
+    "path": "/google-cloud-ai-vertex-ai-explained/",
+    "title": "Google Cloud AI: How Vertex AI Differs from a Chatbot",
+    "keywords": [
+      "google cloud ai"
+    ]
+  },
+  {
+    "file": "04-best-ai-tools-personal-comparison-test.json",
+    "draft": "04-best-ai-tools-personal-comparison-test.md",
+    "date": "2026-10-03",
+    "path": "/best-ai-tools-personal-comparison-test/",
+    "title": "What Is the Best AI? Build a Shortlist Around Your Actual Tasks",
+    "keywords": [
+      "best ai",
+      "good ai"
+    ]
+  },
+  {
+    "file": "05-ai-assistant-tasks-permissions-review.json",
+    "draft": "05-ai-assistant-tasks-permissions-review.md",
+    "date": "2026-10-05",
+    "path": "/ai-assistant-tasks-permissions-review/",
+    "title": "AI Assistant: What to Delegate and What to Keep in Your Hands",
+    "keywords": [
+      "ai assistant"
+    ]
+  },
+  {
+    "file": "06-applied-artificial-intelligence-pilot-guide.json",
+    "draft": "06-applied-artificial-intelligence-pilot-guide.md",
+    "date": "2026-10-06",
+    "path": "/applied-artificial-intelligence-pilot-guide/",
+    "title": "Applied Artificial Intelligence: Turn an Idea into a Testable Project",
+    "keywords": [
+      "applied artificial intelligence"
+    ]
+  },
+  {
+    "file": "07-ai-computer-cpu-gpu-npu-guide.json",
+    "draft": "07-ai-computer-cpu-gpu-npu-guide.md",
+    "date": "2026-10-07",
+    "path": "/ai-computer-cpu-gpu-npu-guide/",
+    "title": "Do You Need an AI Computer? Understand CPU, GPU and NPU First",
+    "keywords": [
+      "ai computer"
+    ]
+  },
+  {
+    "file": "08-chatgpt-ai-chatbot-model-product-difference.json",
+    "draft": "08-chatgpt-ai-chatbot-model-product-difference.md",
+    "date": "2026-10-09",
+    "path": "/chatgpt-ai-chatbot-model-product-difference/",
+    "title": "ChatGPT AI Chatbot: Understand the Product Before Choosing a Feature",
+    "keywords": [
+      "chatgpt ai chatbot",
+      "openai chatbot gpt"
+    ]
+  },
+  {
+    "file": "09-tesla-optimus-robot-demo-evidence.json",
+    "draft": "09-tesla-optimus-robot-demo-evidence.md",
+    "date": "2026-10-12",
+    "path": "/tesla-optimus-robot-demo-evidence/",
+    "title": "Tesla Optimus Robot: How to Read a Humanoid Demo Critically",
+    "keywords": [
+      "tesla optimus robot"
+    ]
+  },
+  {
+    "file": "10-ai-for-oceans-learning-data-bias.json",
+    "draft": "10-ai-for-oceans-learning-data-bias.md",
+    "date": "2026-10-14",
+    "path": "/ai-for-oceans-learning-data-bias/",
+    "title": "AI for Oceans: A Simple Activity with a Bigger Lesson About Data",
+    "keywords": [
+      "ai for oceans"
+    ]
+  },
+  {
+    "file": "11-ai-deep-learning-neural-networks-explained.json",
+    "draft": "11-ai-deep-learning-neural-networks-explained.md",
+    "date": "2026-10-16",
+    "path": "/ai-deep-learning-neural-networks-explained/",
+    "title": "AI and Deep Learning: A Plain-English Guide to Neural Networks",
+    "keywords": [
+      "ai deep learning"
+    ]
+  },
+  {
+    "file": "12-nvidia-dgx-ai-infrastructure-guide.json",
+    "draft": "12-nvidia-dgx-ai-infrastructure-guide.md",
+    "date": "2026-10-17",
+    "path": "/nvidia-dgx-ai-infrastructure-guide/",
+    "title": "NVIDIA DGX Explained: Why AI Infrastructure Is More Than a GPU",
+    "keywords": [
+      "nvidia dgx"
+    ]
+  },
+  {
+    "file": "13-cognitiveclass-ai-learning-path-guide.json",
+    "draft": "13-cognitiveclass-ai-learning-path-guide.md",
+    "date": "2026-10-18",
+    "path": "/cognitiveclass-ai-learning-path-guide/",
+    "title": "Cognitive Class AI: Choose a Course You Will Actually Finish",
+    "keywords": [
+      "cognitiveclass ai"
+    ]
+  },
+  {
+    "file": "14-konverge-ai-services-evaluation-guide.json",
+    "draft": "14-konverge-ai-services-evaluation-guide.md",
+    "date": "2026-10-20",
+    "path": "/konverge-ai-services-evaluation-guide/",
+    "title": "Konverge AI: Understanding an AI Services Company Before a Pilot",
+    "keywords": [
+      "konverge ai"
+    ]
+  },
+  {
+    "file": "15-chatgpt-use-practical-source-based-workflow.json",
+    "draft": "15-chatgpt-use-practical-source-based-workflow.md",
+    "date": "2026-10-21",
+    "path": "/chatgpt-use-practical-source-based-workflow/",
+    "title": "How to Use ChatGPT: A Better Brief, a Checkable Result",
+    "keywords": [
+      "chatgpt use"
+    ]
+  },
+  {
+    "file": "16-dramatron-ai-scriptwriting-research.json",
+    "draft": "16-dramatron-ai-scriptwriting-research.md",
+    "date": "2026-10-24",
+    "path": "/dramatron-ai-scriptwriting-research/",
+    "title": "Dramatron: What an AI Scriptwriting Research Project Can Teach Writers",
+    "keywords": [
+      "dramatron"
+    ]
+  },
+  {
+    "file": "17-ai-summit-agenda-evaluation-guide.json",
+    "draft": "17-ai-summit-agenda-evaluation-guide.md",
+    "date": "2026-10-25",
+    "path": "/ai-summit-agenda-evaluation-guide/",
+    "title": "Going to an AI Summit? Read the Agenda Before Buying a Ticket",
+    "keywords": [
+      "ai summit"
+    ]
+  },
+  {
+    "file": "18-conversational-ai-how-dialogue-works.json",
+    "draft": "18-conversational-ai-how-dialogue-works.md",
+    "date": "2026-10-26",
+    "path": "/conversational-ai-how-dialogue-works/",
+    "title": "Conversational AI: Why a Good Reply Is Only Half the Experience",
+    "keywords": [
+      "conversational ai"
+    ]
+  },
+  {
+    "file": "19-google-ai-chatbot-gemini-guide.json",
+    "draft": "19-google-ai-chatbot-gemini-guide.md",
+    "date": "2026-10-27",
+    "path": "/google-ai-chatbot-gemini-guide/",
+    "title": "Google AI Chatbot: Where Gemini Fits and How to Try It",
+    "keywords": [
+      "google ai chatbot",
+      "ai google"
+    ]
+  },
+  {
+    "file": "20-symphony-ai-enterprise-ai-explainer.json",
+    "draft": "20-symphony-ai-enterprise-ai-explainer.md",
+    "date": "2026-10-29",
+    "path": "/symphony-ai-enterprise-ai-explainer/",
+    "title": "SymphonyAI Explained: What Makes Enterprise AI Different?",
+    "keywords": [
+      "symphony ai"
+    ]
+  },
+  {
+    "file": "21-artificial-general-intelligence-meaning-evidence.json",
+    "draft": "21-artificial-general-intelligence-meaning-evidence.md",
+    "date": "2026-10-30",
+    "path": "/artificial-general-intelligence-meaning-evidence/",
+    "title": "Artificial General Intelligence: What Would Count as Evidence?",
+    "keywords": [
+      "artificial general intelligence"
+    ]
+  },
+  {
+    "file": "22-karpathy-neural-networks-learning-guide.json",
+    "draft": "22-karpathy-neural-networks-learning-guide.md",
+    "date": "2026-11-01",
+    "path": "/karpathy-neural-networks-learning-guide/",
+    "title": "Learning AI with Karpathy: A Practical Route Through Zero to Hero",
+    "keywords": [
+      "karpathy"
+    ]
+  },
+  {
+    "file": "23-open-source-ai-weights-code-data.json",
+    "draft": "23-open-source-ai-weights-code-data.md",
+    "date": "2026-11-02",
+    "path": "/open-source-ai-weights-code-data/",
+    "title": "Open Source AI: Why Downloadable Weights Are Only Part of the Story",
+    "keywords": [
+      "open source ai"
+    ]
+  },
+  {
+    "file": "24-wombo-dream-ai-art-prompt-guide.json",
+    "draft": "24-wombo-dream-ai-art-prompt-guide.md",
+    "date": "2026-11-03",
+    "path": "/wombo-dream-ai-art-prompt-guide/",
+    "title": "WOMBO Dream AI: Turn a Vague Idea into a Clear Image Brief",
+    "keywords": [
+      "wombo dream ai"
+    ]
+  },
+  {
+    "file": "25-openai-gpt-3-history-few-shot-learning.json",
+    "draft": "25-openai-gpt-3-history-few-shot-learning.md",
+    "date": "2026-11-04",
+    "path": "/openai-gpt-3-history-few-shot-learning/",
+    "title": "GPT-3 Explained: The Earlier Model Behind a Lasting AI Idea",
+    "keywords": [
+      "openai gpt 3",
+      "ai gpt 3"
+    ]
+  },
+  {
+    "file": "26-demis-hassabis-alphafold-scientific-ai.json",
+    "draft": "26-demis-hassabis-alphafold-scientific-ai.md",
+    "date": "2026-11-05",
+    "path": "/demis-hassabis-alphafold-scientific-ai/",
+    "title": "Demis Hassabis and AlphaFold: Why Scientific AI Matters",
+    "keywords": [
+      "demis hassabis"
+    ]
+  },
+  {
+    "file": "27-claude-ai-first-project-guide.json",
+    "draft": "27-claude-ai-first-project-guide.md",
+    "date": "2026-11-09",
+    "path": "/claude-ai-first-project-guide/",
+    "title": "Claude AI: A Practical First Project for New Users",
+    "keywords": [
+      "claude ai"
+    ]
+  },
+  {
+    "file": "28-ai-sites-evaluate-before-signing-up.json",
+    "draft": "28-ai-sites-evaluate-before-signing-up.md",
+    "date": "2026-11-10",
+    "path": "/ai-sites-evaluate-before-signing-up/",
+    "title": "AI Sites: How to Find a Useful Tool Without Collecting Subscriptions",
+    "keywords": [
+      "ai sites",
+      "ai site"
+    ]
+  },
+  {
+    "file": "29-robot-chat-chatbot-physical-robot.json",
+    "draft": "29-robot-chat-chatbot-physical-robot.md",
+    "date": "2026-11-11",
+    "path": "/robot-chat-chatbot-physical-robot/",
+    "title": "Robot Chat: Are You Talking to a Chatbot or a Physical Robot?",
+    "keywords": [
+      "robot chat"
+    ]
+  }
+]

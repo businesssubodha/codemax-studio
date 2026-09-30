@@ -1,0 +1,32 @@
+{
+  "path": "/ai-deep-learning-neural-networks-explained/",
+  "sourceUrl": "https://codemax.com.au/ai-deep-learning-neural-networks-explained/",
+  "title": "AI and Deep Learning: A Plain-English Guide to Neural Networks",
+  "seoTitle": "AI and Deep Learning: Neural Networks Explained | CodeMax",
+  "description": "Understand where deep learning fits within AI, how neural networks learn from examples, and why training performance is different from real-world usefulness.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-16",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>Deep learning is a branch of machine learning that uses neural networks with multiple layers. Machine learning sits within the broader field of AI. The terms are related, but they are not interchangeable: not every AI system uses deep learning, and not every machine-learning method is a neural network.</p><figure><img src=\"/editorial/ai/learning.svg\" alt=\"Learn through a small experiment. UNDERSTAND: Explain the idea in your words. PREDICT: Write what you expect to happen. TEST: Change one condition at a time. REFLECT: Compare the result and expectation.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>Learn through a small experiment. Original CodeMax illustration.</figcaption></figure><h2>Think in terms of input and output</h2><p>A model receives an input and produces an output. In an image-classification example, the input represents an image and the output may be a set of category scores. In another task, the output could be a number or a sequence of text.</p><p>A neural network contains layers of adjustable calculations. During training, those parameters are changed to improve performance according to an objective. Google&#x27;s machine-learning course explains components such as nodes, hidden layers and activation functions in more detail.</p><h2>Training is not simply memorising a rule written by a person</h2><p>A developer chooses the model structure, data and training process, but the learned parameters emerge through optimisation. That can help with patterns that would be difficult to describe through a short hand-written rule.</p><p>However, learning from examples also creates dependencies on those examples. If the training material misses an important condition, the model may perform poorly when that condition appears later. More complicated architecture does not automatically solve a poor data problem.</p><h2>Keep training and evaluation separate</h2><p>A model can perform well on examples it has already seen and less well on new ones. Evaluation uses separate data to investigate how well the learned behaviour transfers. The separation must be meaningful, not merely two folders containing almost identical examples.</p><p>For an intuitive exercise, imagine learning to recognise birds from photographs taken against one background. If every new photograph uses a different setting, the task may become harder. The model could have relied on an accidental pattern that the original examples did not expose.</p><h2>Understand the objective before reading a score</h2><p>A training objective tells the system what is being optimised. A useful application may require more than that single measure. Accuracy, latency, resource use and the consequences of different errors can all matter.</p><p>Ask whether the reported metric reflects the real task. A system that gets most easy cases right may still fail on the cases that matter most to users. Inspect examples of errors rather than looking only at a summary percentage.</p><h2>Learn through a small experiment</h2><p>If you want to study the mechanics, begin with an introductory course and a small model you can inspect. Change one condition at a time and record the result. Start with a simple baseline before adding layers or more complex training choices.</p><p>You do not need to become a researcher to read AI claims more carefully. Knowing the difference between training, evaluation and deployment already helps. Deep learning is a powerful family of methods, but its usefulness depends on the problem, data and evidence surrounding the model.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://developers.google.com/machine-learning/crash-course/neural-networks\">Google: Neural networks course module</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-16",
+  "primaryKeyword": "ai deep learning",
+  "secondaryKeywords": [
+    "ai deep learning neural networks explained"
+  ],
+  "targetKeywords": [
+    "ai deep learning"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "Google: Neural networks course module",
+      "url": "https://developers.google.com/machine-learning/crash-course/neural-networks"
+    }
+  ]
+}

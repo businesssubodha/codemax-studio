@@ -1,0 +1,46 @@
+# Open Source AI: Why Downloadable Weights Are Only Part of the Story
+
+Planned date (Australia/Sydney): 2026-11-02
+
+Target keywords: open source ai
+
+SEO title: Open Source AI: Weights, Code and Data Explained | CodeMax
+
+Meta description: Understand the difference between open-source AI and open weights, what the OSI definition covers, and which materials to check before using a model.
+
+Open source AI is often used loosely to describe any model whose files can be downloaded. That shortcut leaves out important questions about permissions, code and information about training data. If you want to use, study or modify a model, inspect what is actually available rather than relying on the label.
+
+![Learn through a small experiment. UNDERSTAND: Explain the idea in your words. PREDICT: Write what you expect to happen. TEST: Change one condition at a time. REFLECT: Compare the result and expectation.](../../../public/editorial/ai/learning.svg)
+
+## Start with the definition being used
+The Open Source Initiative's Open Source AI Definition 1.0 describes freedoms to use, study, modify and share an AI system. It also addresses the materials needed to make modifications, including parameters, code and data information. A model described as open weights is not automatically equivalent to a system meeting that definition.
+
+This is a terminology guide, not legal advice about a particular licence. Different projects use different licences and release practices. Read the actual terms and obtain appropriate advice when your planned use depends on interpreting them.
+
+## Separate the model from the surrounding application
+A downloadable model may be one component in a larger service. The interface, retrieval system, hosting and moderation layers can be separate pieces. Access to model parameters does not necessarily provide everything needed to recreate the provider's online product.
+
+Before starting a project, list the components you need. Can you obtain the model files? Is the inference code available? What additional services does the demonstration use? This prevents a common disappointment: downloading a model and expecting the entire hosted experience to appear with it.
+
+## Read the model documentation
+Look for a model card or equivalent explanation of intended use, evaluation and known limitations. Check the exact version, not just the family name. Record the source of the files and any instructions needed to reproduce the example configuration.
+
+When comparing releases, examine the tasks used in their evaluations. A higher score on one benchmark does not establish superiority for every language or application. Try a small set of inputs that reflect your own needs and inspect the outputs carefully.
+
+## Consider what local use changes
+Running a model locally can give you more control over the environment, but it also gives you operational work. You may need to manage dependencies, hardware, updates and access. The complete application can still communicate with external services, so local model files alone do not prove that all data stays on the device.
+
+Start with non-sensitive sample inputs and observe the workflow. Document which parts run locally and which make network requests. Keep enough information to reproduce the setup before relying on it for important work.
+
+## Ask four questions before committing
+What freedoms does the licence grant? What materials are included? What can the model demonstrably do? What will it take to operate it? Answering those questions is more useful than treating open as a single yes-or-no property.
+
+The value of openness depends on what you want to accomplish. Learning from a model, adapting it and deploying a dependable application are different goals. A clear inventory of permissions and materials helps you choose a release that supports yours.
+
+## Sources and further reading
+
+- [Open Source Initiative: Open Source AI Definition 1.0](https://opensource.org/ai/open-source-ai-definition)
+
+Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+
+[Explore AI insights](https://codemax.com.au/blog/ai/)

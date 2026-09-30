@@ -1,0 +1,32 @@
+{
+  "path": "/ai-assistant-tasks-permissions-review/",
+  "sourceUrl": "https://codemax.com.au/ai-assistant-tasks-permissions-review/",
+  "title": "AI Assistant: What to Delegate and What to Keep in Your Hands",
+  "seoTitle": "AI Assistant: Tasks, Permissions and Review | CodeMax",
+  "description": "Choose useful tasks for an AI assistant, set clear permissions and check completed work with a practical delegation guide for everyday users.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-05",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>An AI assistant helps with tasks through a conversational interface. Depending on the product, it may draft text, analyse material or use connected tools. The useful question is not whether you should delegate everything, but which parts of a task benefit from assistance and which decisions you want to retain.</p><figure><img src=\"/editorial/ai/workflow.svg\" alt=\"From request to checked result. INPUT: Give the relevant material. PROPOSAL: Inspect what the model suggests. ACTION: Use clear permissions. CHECK: Verify the final destination.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>From request to checked result. Original CodeMax illustration.</figcaption></figure><h2>Begin with work that is easy to inspect</h2><p>A good starting task has a clear input and a result you can review. Reorganising your own notes into headings is easier to check than asking for an authoritative answer to an unfamiliar technical question. Comparing two drafts is easier to inspect than silently changing an account setting.</p><p>Write down what a successful result should contain. If you ask for a summary, specify the audience, length and whether the assistant should use only the supplied material. This reduces ambiguity and gives you a concrete basis for feedback.</p><h2>Divide the task into three permissions</h2><p>Think separately about reading, preparing and acting. Reading a file gives access to its contents. Preparing creates a proposed result. Acting changes something outside the conversation. These permissions need not be granted together.</p><p>For example, an assistant might read a public event programme and draft a personal itinerary. Booking tickets is a separate action. Keeping the steps distinct makes it easier to approve a specific outcome rather than a vague promise that the assistant will handle everything.</p><h2>Supply constraints before the first draft</h2><p>Include the information that would change the answer: the audience, available time, preferred format and relevant limitations. If you are working from a source document, identify the version. If you want a draft in Australian English, say so once rather than fixing the spelling repeatedly.</p><p>Ask the assistant to flag missing information. A neat output can conceal a guess, particularly when a task refers to a person or file that is not clearly identified. It is better to resolve that uncertainty before the result becomes part of another workflow.</p><h2>Inspect the destination after an action</h2><p>When a connected tool is used, check the saved file, updated record or other destination. Read the content and confirm that it appears in the intended place. A message saying done is not sufficient evidence if the underlying action matters.</p><p>Keep a reversible first experiment. A disposable test document can reveal how the assistant names files, handles edits and reports failures without putting important work at risk. This is also a useful way to learn the current product&#x27;s boundaries.</p><h2>Judge assistance by the whole task</h2><p>Time spent checking and correcting is part of the cost. If the assistant saves drafting time but creates extensive rework, simplify the task or change the instructions. Keep examples of both useful outputs and failures so the comparison is fair.</p><p>The best delegation pattern may change as the tools improve, but responsibility remains clear when you define the input, proposed output and approval point. Start with a small repeatable task and expand only when the evidence supports it.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://www.nist.gov/itl/ai-risk-management-framework\">NIST: AI Risk Management Framework</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-05",
+  "primaryKeyword": "ai assistant",
+  "secondaryKeywords": [
+    "ai assistant tasks permissions review"
+  ],
+  "targetKeywords": [
+    "ai assistant"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "NIST: AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    }
+  ]
+}

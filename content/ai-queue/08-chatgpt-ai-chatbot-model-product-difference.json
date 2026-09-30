@@ -1,0 +1,37 @@
+{
+  "path": "/chatgpt-ai-chatbot-model-product-difference/",
+  "sourceUrl": "https://codemax.com.au/chatgpt-ai-chatbot-model-product-difference/",
+  "title": "ChatGPT AI Chatbot: Understand the Product Before Choosing a Feature",
+  "seoTitle": "ChatGPT AI Chatbot: Product and Features Explained | CodeMax",
+  "description": "Understand ChatGPT as an AI assistant, how a product differs from a model, and how to check which features are available in your own account.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-09",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>ChatGPT is OpenAI&#x27;s AI assistant for tasks such as writing, studying, planning and working with information. Search phrases like ChatGPT AI chatbot and OpenAI chatbot GPT point towards the same broad product, but they can also mix up the application with the models and tools behind it.</p><figure><img src=\"/editorial/ai/conversation.svg\" alt=\"A conversation has more than one step. REQUEST: State the task and context. CLARIFY: Resolve missing information. RESPOND: Give a useful, checkable answer. HAND OVER: Provide a next step when needed.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>A conversation has more than one step. Original CodeMax illustration.</figcaption></figure><h2>A product is more than a model name</h2><p>A model generates or interprets information. A product supplies the interface, account settings and tools around that model. When an assistant searches the web, reads a file or works with another application, those capabilities depend on the tools available in the current experience.</p><p>Do not assume an old screenshot describes your account. Check the interface and current official documentation for the feature you intend to use. Access can vary, and a feature mentioned in a product announcement may have conditions attached to it.</p><h2>Choose the right kind of task</h2><p>For drafting, give the audience, purpose and source material. For explanation, describe your current level of understanding and ask for an example. For a file-based task, identify the relevant document and what you want extracted or changed.</p><p>A request such as summarise this document should also specify whether you want key decisions, an outline or a detailed account. These are different outputs. Providing that distinction at the start reduces avoidable revision and helps you judge whether the result meets the request.</p><h2>Check which evidence supports an answer</h2><p>Some answers use only the conversation and model knowledge. Others may use retrieved sources or files. Look for the actual evidence provided, then open important citations and compare the claim with the source. A link is useful only if it supports the nearby statement.</p><p>For your own documents, check names, figures and dates against the original. Ask for uncertainty to be made explicit. A fluent answer can still omit a qualification or merge details from different parts of a document.</p><h2>Treat tool actions as separate outcomes</h2><p>If the assistant can edit or create something, inspect the resulting file or application state. Distinguish a proposed draft from a saved change, and a saved change from something shared with another person. The same conversational wording can otherwise hide very different consequences.</p><p>Use clear instructions about the intended destination and approval point. This is particularly helpful when a task involves several files with similar names or more than one connected account. Specific instructions make the result easier to verify.</p><h2>Learn from one repeatable example</h2><p>Choose a short task and keep the original input, instructions and output. Note what helped and what you corrected. That gives you a reference for future changes without treating one response as a permanent measure of the product.</p><p>This overview does not claim that every feature is included in every plan. Use OpenAI&#x27;s current help pages for account-specific setup and availability. The enduring skill is knowing what you asked for, what evidence was used and what was actually completed.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq\">OpenAI: What is ChatGPT?</a></li><li><a href=\"https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview\">OpenAI: ChatGPT capabilities overview</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-09",
+  "primaryKeyword": "chatgpt ai chatbot",
+  "secondaryKeywords": [
+    "openai chatbot gpt"
+  ],
+  "targetKeywords": [
+    "chatgpt ai chatbot",
+    "openai chatbot gpt"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "OpenAI: What is ChatGPT?",
+      "url": "https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq"
+    },
+    {
+      "title": "OpenAI: ChatGPT capabilities overview",
+      "url": "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+    }
+  ]
+}

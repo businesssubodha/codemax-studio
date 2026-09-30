@@ -6,7 +6,7 @@ export function localClock(now) {
 }
 export function choosePost(queue, published, now, existingPaths = []) {
  const clock=localClock(now);
- if (clock.hour<9 || published.some(p=>p.displayDate===clock.date)) return null;
+ if (clock.hour<9 || published.some(p=>p.publicationSeries!=='ai-growth' && p.displayDate===clock.date)) return null;
  const used=new Set([...existingPaths,...published.map(p=>p.path)]);
  return queue.filter(p=>p.publishDate<=clock.date && !used.has(p.path)).sort((a,b)=>a.publishDate.localeCompare(b.publishDate))[0] || null;
 }

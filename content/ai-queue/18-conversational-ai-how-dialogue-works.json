@@ -1,0 +1,32 @@
+{
+  "path": "/conversational-ai-how-dialogue-works/",
+  "sourceUrl": "https://codemax.com.au/conversational-ai-how-dialogue-works/",
+  "title": "Conversational AI: Why a Good Reply Is Only Half the Experience",
+  "seoTitle": "Conversational AI: How Useful Dialogue Works | CodeMax",
+  "description": "Learn how conversational AI handles dialogue, why context and handover matter, and how to test an assistant with realistic follow-up questions.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-26",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>Conversational AI is technology designed to interact through language, often using text or speech. A useful conversation involves more than producing a plausible sentence. The system also needs to handle context, ambiguity and a sensible next step when it cannot help.</p><figure><img src=\"/editorial/ai/conversation.svg\" alt=\"A conversation has more than one step. REQUEST: State the task and context. CLARIFY: Resolve missing information. RESPOND: Give a useful, checkable answer. HAND OVER: Provide a next step when needed.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>A conversation has more than one step. Original CodeMax illustration.</figcaption></figure><h2>Conversation is a sequence, not one answer</h2><p>Consider someone asking about an exhibition, then asking whether it is accessible, and finally asking about Sunday. The later questions depend on information from earlier turns. A system that treats each message in isolation may answer about the wrong place or date.</p><p>IBM describes conversational AI as drawing on language-processing and machine-learning techniques. Products implement those capabilities in different ways: some follow defined flows, others generate flexible responses, and some combine both. A natural-sounding voice does not reveal which approach is underneath.</p><h2>Make ambiguity part of your test</h2><p>Ask a question with more than one possible meaning. A useful system may request clarification rather than selecting an interpretation silently. Try correcting it in the next message and watch whether the correction carries through the conversation.</p><p>For example, say that you meant the evening session, not the morning one. Does the system update the relevant detail while preserving the rest? This exposes problems that a collection of isolated frequently asked questions may miss. Record the full exchange so another person can reproduce what happened.</p><h2>Check the boundary between knowledge and action</h2><p>An assistant can explain how to change a booking without having permission to change it. Another may connect to a booking tool. The interface should make that difference understandable. A statement that a request is possible is not confirmation that the request was completed.</p><p>When a tool is involved, inspect the final state in the original system. Ask what happens if the tool fails or the session disconnects. A graceful failure message and a way to continue are part of the experience, not secondary technical details.</p><h2>Plan a human handover</h2><p>For a public-facing service, identify situations that require a person. These might include disputed information, a repeated misunderstanding or a request outside the assistant&#x27;s authority. The handover should preserve enough context that the user does not have to start again unnecessarily.</p><p>You can test this without creating real support work. Use a controlled scenario and check whether the interface offers a usable next step. Avoid reporting a successful handover solely because the assistant says a human will respond; confirm the request reaches the intended channel.</p><h2>Measure useful completion</h2><p>Count whether people reach the right outcome, not simply how many messages the assistant generates. A short conversation with a clear answer may be better than a long, friendly exchange that circles around the problem. Review examples of failure alongside examples of success.</p><p>For everyday users, the same principle applies: treat conversation as a tool for completing a task. Ask follow-up questions, correct mistakes and verify important results. Fluency is valuable, but reliability depends on the entire interaction.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://www.ibm.com/think/topics/conversational-ai\">IBM: Conversational AI</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-26",
+  "primaryKeyword": "conversational ai",
+  "secondaryKeywords": [
+    "conversational ai how dialogue works"
+  ],
+  "targetKeywords": [
+    "conversational ai"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "IBM: Conversational AI",
+      "url": "https://www.ibm.com/think/topics/conversational-ai"
+    }
+  ]
+}

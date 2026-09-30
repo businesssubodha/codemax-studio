@@ -1,0 +1,36 @@
+{
+  "path": "/claude-ai-first-project-guide/",
+  "sourceUrl": "https://codemax.com.au/claude-ai-first-project-guide/",
+  "title": "Claude AI: A Practical First Project for New Users",
+  "seoTitle": "Claude AI: A Practical First Project | CodeMax",
+  "description": "Explore Claude AI through a small writing and analysis project, with guidance on context, verification and the difference between a draft and a completed action.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-11-09",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>Claude is an AI assistant developed by Anthropic. Its official material describes uses including writing, analysis, coding and working with information. For a new user, a small project you can evaluate is a better introduction than trying every feature at once.</p><figure><img src=\"/editorial/ai/review.svg\" alt=\"Four questions for an AI claim. TASK: What was the system asked to do?. EVIDENCE: What supports the result?. CONDITIONS: Which tools and help were used?. LIMITS: What has not been established?.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>Four questions for an AI claim. Original CodeMax illustration.</figcaption></figure><h2>Start with a document you understand</h2><p>Choose a short, non-sensitive piece of writing, such as your own notes for an event or a draft article. Ask Claude to identify the main points and any missing information. Compare the response with what you actually wrote.</p><p>This gives you a way to observe useful behaviour and mistakes. If you begin with a topic you cannot assess, fluent output may be difficult to distinguish from accurate output. Familiar material makes the first experiment more informative.</p><h2>Explain the purpose of the work</h2><p>Give the intended audience and result. For example, ask for an event description for people attending for the first time, with a short paragraph followed by practical details. Specify which facts must remain unchanged.</p><p>Ask for uncertainty to be visible. If the source notes do not include a time or venue, the draft should not invent one. You can use clearly marked placeholders while gathering the missing details, then verify the completed version before publishing it.</p><h2>Review structure and facts separately</h2><p>First check whether the draft communicates the main idea clearly. Then compare factual details against the source. This two-pass review helps you avoid accepting an incorrect date simply because the wording reads well.</p><p>For analysis tasks, ask the assistant to point to the part of the supplied material supporting its conclusion. Inspect that material yourself. A plausible interpretation is still an interpretation, especially when the source is incomplete or ambiguous.</p><h2>Explore additional features deliberately</h2><p>The features available in Claude depend on the current product and account. Use Anthropic&#x27;s official documentation to confirm supported interfaces and capabilities. Do not assume that a tutorial using one model or plan matches your own setup.</p><p>If a feature creates files or connects to another tool, begin with a disposable example. Check what was saved, where it went and what permissions were used. This is more useful than granting broad access before understanding the workflow.</p><h2>Keep a useful record of the experiment</h2><p>Save the original notes, the instruction and your corrected result. Note what Claude helped with and what required your judgement. If you later compare another assistant, use the same task and make the comparison conditions explicit.</p><p>This article is an introductory workflow, not a hands-on benchmark or a claim that Claude is best for every use. The aim is to help you form your own evidence from a bounded task. A good first project leaves you with a useful result and a clearer understanding of what to check next.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://www.anthropic.com/claude\">Anthropic: Meet Claude</a></li><li><a href=\"https://support.anthropic.com/en/articles/7996845-what-are-some-things-i-can-use-claude-for\">Anthropic: Things you can use Claude for</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-11-09",
+  "primaryKeyword": "claude ai",
+  "secondaryKeywords": [
+    "claude ai first project guide"
+  ],
+  "targetKeywords": [
+    "claude ai"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "Anthropic: Meet Claude",
+      "url": "https://www.anthropic.com/claude"
+    },
+    {
+      "title": "Anthropic: Things you can use Claude for",
+      "url": "https://support.anthropic.com/en/articles/7996845-what-are-some-things-i-can-use-claude-for"
+    }
+  ]
+}

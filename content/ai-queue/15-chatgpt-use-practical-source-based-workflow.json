@@ -1,0 +1,36 @@
+{
+  "path": "/chatgpt-use-practical-source-based-workflow/",
+  "sourceUrl": "https://codemax.com.au/chatgpt-use-practical-source-based-workflow/",
+  "title": "How to Use ChatGPT: A Better Brief, a Checkable Result",
+  "seoTitle": "How to Use ChatGPT: Brief, Review and Verify | CodeMax",
+  "description": "Improve everyday ChatGPT use with a clear task brief, source material, output requirements and a practical review process you can repeat.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-21",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>Useful ChatGPT use starts with a task you can describe and a result you can check. You do not need a complicated prompt formula for every request. Give the assistant the context that changes the answer, state what you want produced and inspect the result before relying on it.</p><figure><img src=\"/editorial/ai/workflow.svg\" alt=\"From request to checked result. INPUT: Give the relevant material. PROPOSAL: Inspect what the model suggests. ACTION: Use clear permissions. CHECK: Verify the final destination.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>From request to checked result. Original CodeMax illustration.</figcaption></figure><h2>Write a brief with four parts</h2><p>Include the task, audience, source material and output format. For example: turn these exhibition notes into a 120-word introduction for first-time visitors, use only the supplied facts, and keep the tone welcoming. That instruction provides a purpose and boundaries.</p><p>If something is missing, ask the assistant to flag it rather than fill the gap silently. This is particularly useful for names, dates and claims that you will publish. A placeholder is easier to correct than a plausible invented detail hidden inside polished prose.</p><h2>Use a small first draft</h2><p>Request an outline or short example before asking for a large document. Check whether the approach matches the intended audience. Correct the direction early, then expand the parts that are useful.</p><p>This is not about making every interaction slow. It is about avoiding a long output built on the wrong assumption. For a straightforward task, one clear request may be enough; for an ambiguous one, a brief first pass can save substantial editing.</p><h2>Compare factual claims with their source</h2><p>When you supply a document, check that the output preserves its meaning. Inspect names, numbers, dates and important exceptions. If the assistant uses external sources, open the relevant links and confirm that they support the claims.</p><p>Do not treat a request to double-check as independent verification. A second answer can repeat the same mistake. For information you do not understand, consult an appropriate authoritative source or someone qualified to assess it.</p><h2>Give feedback about the actual problem</h2><p>Instead of saying make it better, identify what needs changing: the opening is too vague, the audience already knows this background, or the table is missing a comparison criterion. Specific feedback tells the assistant what to preserve and what to revise.</p><p>Keep the successful version and the final instructions if you repeat the task. They can form a useful starting point next time, although the content still needs review. A reusable brief is more dependable than trying to remember a long conversation.</p><h2>Check files and actions separately</h2><p>Available features depend on your current account and tools. If the assistant creates or edits a file, open it and check the requested content. If it performs an action in another application, verify the destination rather than relying only on the response text.</p><p>Start with a low-stakes example while learning a new feature. OpenAI&#x27;s current help documentation is the right place to confirm how that feature works. The practical habit is consistent across features: provide the relevant context, request a concrete output and verify the parts that matter.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview\">OpenAI: ChatGPT capabilities overview</a></li><li><a href=\"https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq\">OpenAI: What is ChatGPT?</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-21",
+  "primaryKeyword": "chatgpt use",
+  "secondaryKeywords": [
+    "chatgpt use practical source based workflow"
+  ],
+  "targetKeywords": [
+    "chatgpt use"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "OpenAI: ChatGPT capabilities overview",
+      "url": "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+    },
+    {
+      "title": "OpenAI: What is ChatGPT?",
+      "url": "https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "path": "/google-cloud-ai-vertex-ai-explained/",
+  "sourceUrl": "https://codemax.com.au/google-cloud-ai-vertex-ai-explained/",
+  "title": "Google Cloud AI: How Vertex AI Differs from a Chatbot",
+  "seoTitle": "Google Cloud AI and Vertex AI Explained | CodeMax",
+  "description": "Understand Google Cloud AI and Vertex AI, the difference between using a chatbot and building an AI application, and the questions to answer before a pilot.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-02",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>Google Cloud AI covers tools for building and operating AI applications. Vertex AI is Google&#x27;s machine-learning platform for work such as training, deploying and using models. That is a different role from opening a consumer chatbot and typing a question, even when related model technology appears in both.</p><figure><img src=\"/editorial/ai/workflow.svg\" alt=\"From request to checked result. INPUT: Give the relevant material. PROPOSAL: Inspect what the model suggests. ACTION: Use clear permissions. CHECK: Verify the final destination.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>From request to checked result. Original CodeMax illustration.</figcaption></figure><h2>Start with the application you want to build</h2><p>Describe the input, expected output and person using the result. A document-search tool, an image classifier and a writing assistant have different requirements. Calling the project an AI platform does not make those requirements disappear.</p><p>For a first pilot, keep the scope small enough to evaluate. A search tool over a limited set of approved documents can be easier to test than an assistant expected to know everything across an organisation. Write down what it should do when an answer is missing.</p><h2>Understand what Vertex AI provides</h2><p>Google&#x27;s documentation describes Vertex AI as bringing together machine-learning workflows and tools for generative AI applications. Its Model Garden supports discovering and working with models. The available models and interfaces change, so check the current documentation before following a tutorial.</p><p>A platform can provide infrastructure without supplying a finished user experience. Your project still needs the surrounding application: how people enter a request, how access is controlled, how results are displayed and how failures are reported.</p><h2>Keep data access explicit</h2><p>List which documents or records the application may use. Decide who owns that data and how users are authorised to see it. A search result should not reveal a document simply because it exists in the same storage system.</p><p>Test the access rules with accounts representing different permissions. Use non-sensitive sample data during the first experiment. Correct answers for an administrator do not demonstrate that the application handles a restricted user correctly.</p><h2>Compare results against a baseline</h2><p>Create a small evaluation set with expected answers and examples where no answer should be returned. Compare the AI workflow with the existing search or manual process. Note errors, missing information and the time required to review the output.</p><p>Include the full cost of the experiment: model use, storage, related services and development effort. Provider pricing and quotas can change, so use the current calculator and billing controls rather than a number copied from an old article. This guide does not assume a free production deployment.</p><h2>Plan operation before expanding</h2><p>Someone needs to monitor failures, respond to access problems and update the application when its dependencies change. Record the model and configuration used for each evaluation so later changes can be assessed fairly.</p><p>Google Cloud AI is relevant when you need an application built around AI capabilities and managed infrastructure. If your goal is occasional drafting or brainstorming, a ready-made assistant may be a simpler starting point. Choose according to the work, not the size of the platform catalogue.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://cloud.google.com/vertex-ai/docs\">Google Cloud: Vertex AI documentation</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-02",
+  "primaryKeyword": "google cloud ai",
+  "secondaryKeywords": [
+    "google cloud ai vertex ai explained"
+  ],
+  "targetKeywords": [
+    "google cloud ai"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "Google Cloud: Vertex AI documentation",
+      "url": "https://cloud.google.com/vertex-ai/docs"
+    }
+  ]
+}

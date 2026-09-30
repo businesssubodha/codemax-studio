@@ -1,0 +1,36 @@
+{
+  "path": "/dramatron-ai-scriptwriting-research/",
+  "sourceUrl": "https://codemax.com.au/dramatron-ai-scriptwriting-research/",
+  "title": "Dramatron: What an AI Scriptwriting Research Project Can Teach Writers",
+  "seoTitle": "Dramatron: AI Scriptwriting Research Explained | CodeMax",
+  "description": "Explore Dramatron’s approach to structured script generation, its research context and a practical way to use outlines without handing over creative judgement.",
+  "author": "CodeMax",
+  "published": null,
+  "displayDate": "2026-10-24",
+  "modified": null,
+  "categories": [
+    "AI"
+  ],
+  "featuredImage": null,
+  "html": "<p>Dramatron is a research project exploring the co-writing of scripts with language models. Google DeepMind&#x27;s publication describes a structured process involving elements such as characters, story beats, locations and dialogue. It is useful to read as a research example, rather than assume it is a current supported screenwriting service.</p><figure><img src=\"/editorial/ai/creative.svg\" alt=\"A deliberate AI creative process. BRIEF: Define subject, purpose and constraints. EXPLORE: Generate a small set of alternatives. REVIEW: Check detail, meaning and continuity. REFINE: Make intentional creative choices.\" width=\"1200\" height=\"760\" loading=\"lazy\" decoding=\"async\"><figcaption>A deliberate AI creative process. Original CodeMax illustration.</figcaption></figure><h2>Structure comes before dialogue</h2><p>A script needs more than interesting sentences. Characters have motivations, scenes change the situation and later events depend on earlier choices. Dramatron&#x27;s research approach uses structural context through chained prompts to help organise generation.</p><p>The general creative lesson is that a model can be given intermediate material rather than asked to produce an entire story at once. An outline, character description and scene purpose provide constraints that a vague request for a screenplay does not.</p><h2>Research availability is not product support</h2><p>The project has a public repository and associated research materials. Before trying old code, inspect its status, dependencies and setup instructions. A notebook referring to an earlier model or service may require work to run today.</p><p>This article does not claim that the original demonstration remains available or that every dependency is supported. If your goal is learning about the method, you can study the paper and repository without treating them as a ready-made production tool.</p><h2>Try a small structural writing exercise</h2><p>Create a one-paragraph premise and identify a character&#x27;s goal, obstacle and choice. Write three scene beats yourself. Then, using a tool you already have, ask for alternative ways to express one beat while preserving those constraints.</p><p>Compare the suggestions with your intended story. Does the proposed dialogue reveal character, change the situation or merely restate the outline? This original exercise borrows the idea of working in stages; it is not a recreation or performance test of Dramatron.</p><h2>Keep continuity under human review</h2><p>Check names, motivations, relationships and the sequence of events. A locally convincing scene can contradict an earlier one. Keep a brief story record so you can compare each draft with the decisions you want to preserve.</p><p>Also consider voice and originality. Accepting every generated suggestion can produce a script that is coherent but lacks a distinct point of view. The writer&#x27;s judgement includes deciding what to leave out, which tensions matter and where a predictable suggestion should be challenged.</p><h2>Read the evaluation, not just the sample output</h2><p>The paper reports evaluation by industry professionals. When reading it, look at how the study was organised and what limitations the authors discuss. A selected sample does not describe every output or establish that human revision is unnecessary.</p><p>Dramatron is interesting because it makes the writing process itself part of the AI system&#x27;s design. For a general reader, the takeaway is practical: break a creative task into meaningful stages, evaluate each stage and retain responsibility for the finished work.</p><h2>Sources and further reading</h2><ul><li><a href=\"https://deepmind.google/research/publications/13609/\">Google DeepMind: Co-writing scripts research</a></li><li><a href=\"https://github.com/google-deepmind/dramatron\">Google DeepMind: Dramatron repository</a></li></ul><p>Source-based explainer researched on 30 September 2026. Product features and availability can change. Examples are illustrative unless identified as reported research.</p><p><a href=\"/blog/ai/\">Explore more AI news and insights</a> or <a href=\"/blog/\">browse the CodeMax journal</a>.</p>",
+  "publishDate": "2026-10-24",
+  "primaryKeyword": "dramatron",
+  "secondaryKeywords": [
+    "dramatron ai scriptwriting research"
+  ],
+  "targetKeywords": [
+    "dramatron"
+  ],
+  "researchDate": "2026-09-30",
+  "publicationSeries": "ai-growth",
+  "sources": [
+    {
+      "title": "Google DeepMind: Co-writing scripts research",
+      "url": "https://deepmind.google/research/publications/13609/"
+    },
+    {
+      "title": "Google DeepMind: Dramatron repository",
+      "url": "https://github.com/google-deepmind/dramatron"
+    }
+  ]
+}
