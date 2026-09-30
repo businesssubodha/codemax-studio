@@ -42,6 +42,6 @@ AIOps is most useful when it helps operators reason from evidence and complete a
 - [IBM: AIOps use cases](https://www.ibm.com/think/topics/aiops-use-cases)
 - [IBM: AIOps versus MLOps](https://www.ibm.com/think/topics/aiops-vs-mlops)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 1 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
