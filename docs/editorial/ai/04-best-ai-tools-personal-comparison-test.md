@@ -35,12 +35,12 @@ You may decide that two specialised tools are useful, or that one familiar assis
 ## Keep your conclusion narrow and useful
 Write a result such as: this tool helped with these tasks, under these conditions, with these corrections. That is more informative than declaring a permanent winner. Revisit the comparison when your needs or the products change.
 
-Good AI is not defined only by the quality of a demonstration. It includes whether you can verify the result, control the data and complete the work with less friction. NIST's evaluation guidance reinforces the importance of assessing systems in context; your small comparison is a practical starting point, not a formal certification.
+Good AI is not defined only by the quality of a demonstration. It includes whether you can verify the result, control the data and complete the work with less friction. NIST's current draft TEVV-Athlon framework describes customised assessments built around organisational objectives and real-world outcomes; your small comparison is a practical starting point, not a formal certification.
 
 ## Sources and further reading
 
 - [NIST: Evaluating AI systems](https://www.nist.gov/artificial-intelligence/ai-research/tevv-athlon-framework-evaluating-ai-systems)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 3 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
