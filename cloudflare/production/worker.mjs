@@ -21,7 +21,8 @@ export function studioPath(request) {
 
 export async function handleRequest(request, env, fetcher = fetch) {
   const incoming = new URL(request.url);
-  const replacement = legacyRedirects.get(incoming.pathname);
+  const normalizedLegacyPath = incoming.pathname.endsWith('/') ? incoming.pathname : incoming.pathname + '/';
+  const replacement = legacyRedirects.get(normalizedLegacyPath);
   if (env.ENABLED === 'true' && replacement && productionHosts.has(incoming.hostname) && ['GET', 'HEAD'].includes(request.method) &&
       !wordpressQueryKeys.some(key => incoming.searchParams.has(key)) &&
       !/(?:^|;\s*)wordpress_logged_in_[^=]*=/.test(request.headers.get('Cookie') || '')) {

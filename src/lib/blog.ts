@@ -8,11 +8,17 @@ const legacyContentLinks: Record<string, string> = {
  '/website_9b0af0dc/': '/', '/website_9b0af0dc/blog/': '/blog/',
  '/website_9b0af0dc/services/': '/#services', '/about/': '/#about',
  '/about-us/': '/#about', '/web-design/': '/services/web-design-melbourne/',
+ '/blog/exploring-the-latest-innovations-in-ai-technologies/': '/exploring-latest-innovations-in-ai-technologies/',
+ '/blog/wordpress-management-services-by-codemax/': '/wordpress-management-services-by-codemax/',
+ '/blog/melbourne-wordpress-management-services/': '/melbourne-wordpress-management-services/',
  '/modern-website-redesign-boost-business-drive-growth/': '/website-redesign-drives-growth/'
 };
 function cleanArticleHtml(html: string) {
  return html.replace(/<p>\s*\[YOUTUBE:\s*https?:\/\/(?:www\.)?youtube\.com\/watch\?v=ABCDEFGHI\s*\]\s*<\/p>/gi, '')
   .replace(/href="([^"]+)"/g, (attribute, value: string) => {
+   // One legacy embed was imported as href="&lt;div style=". Keep its
+   // readable content/video link without exposing a markup fragment as a URL.
+   if (/[<>]|&(?:lt|gt|quot);|&#(?:0*(?:34|60|62)|x0*(?:22|3c|3e));/i.test(value)) return '';
    let url: URL;
    try { url = new URL(value, 'https://codemax.com.au'); } catch { return attribute; }
    if (url.hostname !== 'codemax.com.au' && url.hostname !== 'www.codemax.com.au') return attribute;

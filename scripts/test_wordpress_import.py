@@ -91,5 +91,25 @@ class ImportTests(unittest.TestCase):
         self.assertNotIn('ABCDEFGHI', posts[0]['html'])
         self.assertIn('Useful prose.', posts[0]['html'])
 
+    def test_exact_article_aliases_use_original_published_paths(self):
+        for old, new in [
+            ('/blog/exploring-the-latest-innovations-in-ai-technologies/', '/exploring-latest-innovations-in-ai-technologies/'),
+            ('/blog/wordpress-management-services-by-codemax/', '/wordpress-management-services-by-codemax/'),
+            ('/blog/melbourne-wordpress-management-services/', '/melbourne-wordpress-management-services/'),
+        ]:
+            for path in [old, old.rstrip('/')]:
+                self.assertEqual(module.safe_url('https://codemax.com.au' + path), 'https://codemax.com.au' + new)
+        self.assertEqual(module.safe_url('/blog/unknown-article/'), '/blog/unknown-article/')
+
+    def test_markup_cannot_become_a_crawlable_url(self):
+        for value in ['&lt;div style=', '<div style=', '/bad&gt;path', 'https://example.com/"bad']:
+            self.assertIsNone(module.safe_url(value))
+        content = '<p>Keep this text.</p><a href="&lt;div style=">Invalid link</a><a href="https://www.youtube.com/watch?v=FRc98KdkTG8">Watch the video</a>'
+        posts, report = module.convert(export(item(content=content)))
+        self.assertNotIn('href="&lt;', posts[0]['html'])
+        self.assertIn('Invalid link', posts[0]['html'])
+        self.assertIn('https://www.youtube.com/watch?v=FRc98KdkTG8', posts[0]['html'])
+        self.assertIn('Removed unsafe URL', str(report['review']))
+
 if __name__ == '__main__':
     unittest.main()

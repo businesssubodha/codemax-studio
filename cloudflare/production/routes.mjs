@@ -19,6 +19,9 @@ export const articlePaths = new Set(blogPosts.map(post => post.path));
 export const articleLastModified = new Map(blogPosts.map(post => [post.path, post.modified]));
 // Confirmed retired URLs with a close, live replacement on the new site.
 export const legacyRedirects = new Map([
+  ['/about/', '/#about'],
+  ['/contact/', '/#enquiry'],
+  ['/services/', '/#services'],
   ['/modern-website-redesign-boost-business-drive-growth/', '/website-redesign-drives-growth/'],
   ['/web-design/', '/services/web-design-melbourne/']
 ]);

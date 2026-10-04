@@ -97,13 +97,46 @@ test("All archive pages are routed; unknown archive pages stay at WordPress", ()
 
 test('Only confirmed retired URLs redirect to a relevant live destination', async () => {
   for (const [oldPath, newPath] of legacyRedirects) {
-    assert.ok(servicePaths.has(newPath) || articlePaths.has(newPath));
-    const response = await handleRequest(req(oldPath + '?utm_source=google'), env, () => { throw new Error('Must redirect directly'); });
-    assert.equal(response.status, 301);
-    assert.equal(response.headers.get('Location'), 'https://codemax.com.au' + newPath + '?utm_source=google');
+    const destination = new URL(newPath, 'https://codemax.com.au');
+    assert.ok(destination.pathname === '/' || servicePaths.has(destination.pathname) || articlePaths.has(destination.pathname));
+    destination.search = '?utm_source=google';
+    for (const path of [oldPath, oldPath.replace(/\/$/, '')]) {
+      for (const method of ['GET', 'HEAD']) {
+        const response = await handleRequest(req(path + '?utm_source=google', { method }), env, () => { throw new Error('Must redirect directly'); });
+        assert.equal(response.status, 301);
+        assert.equal(response.headers.get('Location'), destination.href);
+        assert.equal(await response.text(), '');
+      }
+    }
     const loggedIn = req(oldPath, { headers: { Cookie: 'wordpress_logged_in_example=1' } });
     assert.equal(await handleRequest(loggedIn, env, request => { assert.equal(request, loggedIn); return new Response('original'); }).then(r => r.text()), 'original');
   }
   const missing = req('/is-seo-still-relevant-in-2024-the-enduring-power-of-search-engine-optimisation/');
   assert.equal(await handleRequest(missing, env, request => { assert.equal(request, missing); return new Response('WordPress'); }).then(r => r.text()), 'WordPress');
+});
+
+test('Legacy marketing redirects preserve WordPress editing, forms and query routes', async () => {
+  for (const path of ['/about/', '/contact/', '/services/']) {
+    const untouched = [
+      req(path, { method: 'POST', body: 'form=unchanged' }),
+      req(path + '?preview=true'),
+      req(path + '?page_id=12'),
+      req(path, { headers: { Cookie: 'wordpress_logged_in_example=1' } })
+    ];
+    for (const request of untouched) {
+      const response = await handleRequest(request, env, passed => {
+        assert.equal(passed, request);
+        return new Response('WordPress');
+      });
+      assert.equal(await response.text(), 'WordPress');
+    }
+    const request = req(path);
+    const disabled = await handleRequest(request, { ...env, ENABLED: 'false' }, passed => {
+      assert.equal(passed, request);
+      return new Response('WordPress');
+    });
+    assert.equal(await disabled.text(), 'WordPress');
+    const www = await handleRequest(new Request('https://www.codemax.com.au' + path + '?utm_source=google'), env, () => { throw new Error('Must redirect directly'); });
+    assert.equal(new URL(www.headers.get('Location')).hostname, 'codemax.com.au');
+  }
 });

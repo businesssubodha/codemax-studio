@@ -23,6 +23,9 @@ LEGACY_CONTENT_LINKS = {
     '/about/': '/#about',
     '/about-us/': '/#about',
     '/web-design/': '/services/web-design-melbourne/',
+    '/blog/exploring-the-latest-innovations-in-ai-technologies/': '/exploring-latest-innovations-in-ai-technologies/',
+    '/blog/wordpress-management-services-by-codemax/': '/wordpress-management-services-by-codemax/',
+    '/blog/melbourne-wordpress-management-services/': '/melbourne-wordpress-management-services/',
     '/modern-website-redesign-boost-business-drive-growth/': '/website-redesign-drives-growth/',
 }
 NS = {'wp': 'http://wordpress.org/export/1.2/', 'content': 'http://purl.org/rss/1.0/modules/content/', 'dc': 'http://purl.org/dc/elements/1.1/'}
@@ -36,7 +39,7 @@ def plain(value):
 
 def safe_url(value, image=False):
     value = html.unescape(value).strip()
-    if any(ord(c) < 32 for c in value):
+    if any(ord(c) < 32 for c in value) or any(c in value for c in '<>"'):
         return None
     u = urlsplit(value)
     if not image and u.hostname in {'ztk.cjf.mybluehost.me', 'www.codemax.com.au'}:
