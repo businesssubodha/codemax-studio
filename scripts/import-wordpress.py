@@ -162,6 +162,16 @@ def date_value(item, field):
             return None
     return None
 
+def public_modified_date(published, modified):
+    if not published or not modified:
+        return None
+    try:
+        if datetime.fromisoformat(modified.replace('Z', '+00:00')) < datetime.fromisoformat(published.replace('Z', '+00:00')):
+            return None
+    except (ValueError, TypeError):
+        return None
+    return modified
+
 def convert(data):
     if b'<!DOCTYPE' in data.upper() or b'<!ENTITY' in data.upper():
         raise ValueError('DTD/entity declarations are not supported')
@@ -260,7 +270,7 @@ def main():
         temporary = path.with_suffix(path.suffix + '.tmp')
         temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         temporary.replace(path)
-    manifest = [{'path': p['path'], 'modified': p['modified']} for p in posts]
+    manifest = [{'path': p['path'], 'modified': public_modified_date(p['published'], p['modified'])} for p in posts]
     (args.output.parent / 'blog-routes.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     print(f'Imported {len(posts)} published articles. Review {len(report["mediaUrls"])} media URLs and {len(report["review"])} content warnings before launch.')
 

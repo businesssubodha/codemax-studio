@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-10-04",
+  "description": "Conservative source-link repairs for 31 confirmed dead URLs, 38 occurrences across 17 articles. Exact path keys deliberately retain the audited slash variants. No redirect rules or publication metadata changes.",
+  "repairs": [
+    {
+      "path": "/services/seo/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/beyond-keywords-unveiling-power-advanced-magento-seo-services-australian-brands/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/benefits-of-digital-marketing/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/stop-wasting-time-quality-over-quantity-good-backlinks-for-seo/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/services/magento-development/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/beyond-keywords-unveiling-power-advanced-magento-seo-services-australian-brands/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/seo-services/",
+      "action": "unlink",
+      "expectedOccurrences": 7,
+      "sourcePaths": [
+        "/7-smart-strategies-propel-australian-enterprise-expert-global-seo-services/",
+        "/avoid-3-pitfalls-choosing-right-seo-consulting-firm-for-business/",
+        "/the-secret-weapon-local-search-engine-optimization-skyrocket-business-visibility/",
+        "/stop-overpaying-for-seo-budget-friendly-packages/",
+        "/the-1-mistake-aussie-businesses-make-with-seo-and-how-to-fix-it-organically/",
+        "/are-you-overpaying-decoding-the-best-seo-packages-for-small-business-in-australia/",
+        "/is-your-aussie-store-missing-out-ecommerce-seo-agency/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/local-seo-australia/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/stop-wasting-time-quality-over-quantity-good-backlinks-for-seo/"
+      ],
+      "destination": "/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation/",
+      "reason": "Local link-building, Australian directories, citations and sponsorships match the source context."
+    },
+    {
+      "path": "/digital-marketing-solutions/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/avoid-3-pitfalls-choosing-right-seo-consulting-firm-for-business/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/what-is-digital-marketing/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/best-search-engine-optimization-company-australian-business/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/digital-marketing/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/the-secret-weapon-local-search-engine-optimization-skyrocket-business-visibility/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/website-maintenance/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/is-your-monthly-seo-package-delivering-7-signs-winning-strategy-australia/"
+      ],
+      "destination": "/website-maintenance-essential-how-to-guide/",
+      "reason": "Updates, speed monitoring and search optimisation match the maintenance context."
+    },
+    {
+      "path": "/blog/website-redesign-checklist/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/is-your-monthly-seo-package-delivering-7-signs-winning-strategy-australia/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/responsive-web-design/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/is-your-monthly-seo-package-delivering-7-signs-winning-strategy-australia/"
+      ],
+      "destination": "/the-advantages-of-responsive-web-design/",
+      "reason": "Responsive layouts, mobile performance and SEO benefits match the source context."
+    },
+    {
+      "path": "/local-seo-vs-global-seo-whats-the-difference-and-why-does-it-matter/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/why-isnt-your-local-biz-ranking-australian-seo-secrets-you-need-to-know/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/mastering-google-my-business-your-local-seo-powerhouse/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/why-isnt-your-local-biz-ranking-australian-seo-secrets-you-need-to-know/"
+      ],
+      "destination": "/boost-local-rankings-google-my-business-optimization-australian-growth/",
+      "text": "Google My Business optimisation strategies",
+      "reason": "Profile optimisation guide covers posts, reviews and Q&A discussed by the source; replace the unavailable article title."
+    },
+    {
+      "path": "/unleashing-the-power-of-local-seo-a-guide-for-australian-businesses/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/why-isnt-your-local-biz-ranking-australian-seo-secrets-you-need-to-know/"
+      ],
+      "destination": "/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation/",
+      "text": "our guide to local search engine optimisation",
+      "reason": "Australian local-visibility guide covers keywords, citations, on-page content and reviews; replace the unavailable article title."
+    },
+    {
+      "path": "/blog/the-ultimate-guide-to-local-seo-for-small-businesses/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/stop-overpaying-for-seo-budget-friendly-packages/"
+      ],
+      "destination": "/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation/",
+      "text": "our guide to local search engine optimisation",
+      "reason": "Beginner-oriented local-business guide covers Google Business Profile and citations; replace the unavailable article title."
+    },
+    {
+      "path": "/is-seo-still-relevant-in-2024-the-enduring-power-of-search-engine-optimisation/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/why-isnt-your-local-biz-ranking-australian-seo-secrets-you-need-to-know/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/the-power-of-google-my-business-for-local-seo-success/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/stop-overpaying-for-seo-budget-friendly-packages/"
+      ],
+      "destination": "/boost-local-rankings-google-my-business-optimization-australian-growth/",
+      "text": "Google My Business optimisation strategies",
+      "reason": "Dedicated practical profile-optimisation guide with local SEO integration; replace the unavailable article title."
+    },
+    {
+      "path": "/blog/how-long-does-seo-take-to-show-results-a-comprehensive-guide/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/stop-overpaying-for-seo-budget-friendly-packages/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/ecommerce-solutions/",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/is-your-aussie-store-missing-out-ecommerce-seo-agency/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/digital-marketing-services/",
+      "action": "unlink",
+      "expectedOccurrences": 2,
+      "sourcePaths": [
+        "/stop-overpaying-for-seo-budget-friendly-packages/",
+        "/boost-local-rankings-google-my-business-optimization-australian-growth/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/solutions/scalable-web-australian-businesses",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/funding-fever-navigating-investment-landscape-australian-startups/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/services/custom-software-australian-startups",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/funding-fever-navigating-investment-landscape-australian-startups/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/australian-startups-online-presence",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/funding-fever-navigating-investment-landscape-australian-startups/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/the-importance-of-local-seo-australia",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/how-to-rank-google-maps-australia-local-seo/"
+      ],
+      "destination": "/the-secret-weapon-local-search-engine-optimization-skyrocket-business-visibility/",
+      "text": "why local SEO matters for Australian businesses",
+      "reason": "Explains why Google Maps and near-me search matter to Australian businesses; replace the unavailable article title."
+    },
+    {
+      "path": "/blog/tech-boost-australian-startup-growth",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/funding-fever-navigating-investment-landscape-australian-startups/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/blog/mastering-google-business-profile-optimization",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/how-to-rank-google-maps-australia-local-seo/"
+      ],
+      "destination": "/boost-local-rankings-google-my-business-optimization-australian-growth/",
+      "text": "Google Business Profile optimisation strategies",
+      "reason": "Covers profile completeness, categories and offerings discussed by the source; replace the unavailable article title."
+    },
+    {
+      "path": "/blog/digital-marketing-trends-australia",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/how-to-rank-google-maps-australia-local-seo/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/wordpress-management/",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/get-found-locally-google-maps-seo-australia-checklist/"
+      ],
+      "destination": "/wordpress-management-by-codemax/",
+      "reason": "Exact match for the named WordPress Management by Codemax article."
+    },
+    {
+      "path": "/blog/advanced-seo-strategies-small-business",
+      "action": "replace",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/how-to-rank-google-maps-australia-local-seo/"
+      ],
+      "destination": "/beyond-keywords-advanced-search-engine-optimisation-strategies-australian-success/",
+      "text": "advanced search engine optimisation strategies",
+      "reason": "LocalBusiness/Service schema and technical SEO sections match the advanced-schema context; replace the unavailable article title."
+    },
+    {
+      "path": "/digital-marketing",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/mastering-google-down-under-effective-link-building-seo-service-australia/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    },
+    {
+      "path": "/seo-services",
+      "action": "unlink",
+      "expectedOccurrences": 1,
+      "sourcePaths": [
+        "/mastering-google-down-under-effective-link-building-seo-service-australia/"
+      ],
+      "reason": "Confirmed 404 with no verified equivalent. Preserve the readable content and remove only its hyperlink."
+    }
+  ]
+}

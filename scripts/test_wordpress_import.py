@@ -21,6 +21,11 @@ def export(items):
     <wp:author><wp:author_login>subodha</wp:author_login><wp:author_display_name>Subodha De</wp:author_display_name><wp:author_email>private@example.com</wp:author_email></wp:author>'''+items+'</channel></rss>').encode()
 
 class ImportTests(unittest.TestCase):
+    def test_public_manifest_dates_do_not_advertise_prepublication_edits(self):
+        self.assertIsNone(module.public_modified_date('2025-12-14T00:00:00Z', '2025-10-21T00:00:00Z'))
+        self.assertIsNone(module.public_modified_date('2025-12-14T00:00:00Z', None))
+        self.assertEqual(module.public_modified_date('2025-12-14T00:00:00Z', '2025-12-15T01:00:00Z'), '2025-12-15T01:00:00Z')
+
     def test_original_url_dates_and_author(self):
         posts, report = module.convert(export(item('/2026/01/original-slug/')))
         self.assertEqual(posts[0]['path'], '/2026/01/original-slug/')

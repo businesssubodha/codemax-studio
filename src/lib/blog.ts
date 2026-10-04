@@ -1,5 +1,7 @@
 import data from '../data/blog-posts.json';
 import editorial from '../data/editorial-posts.json';
+import { publicModifiedDate } from './article-dates.mjs';
+import { repairLegacyLinks } from './repair-legacy-links.mjs';
 export interface BlogPost { path: string; sourceUrl: string; title: string; seoTitle: string; description: string; author: string; published: string; displayDate: string; modified: string | null; categories: string[]; featuredImage?: {url: string; alt: string} | null; html: string; }
 // Keep old imports usable while the WordPress export is reviewed and corrected.
 // Only map addresses with an unambiguous live destination.
@@ -14,7 +16,7 @@ const legacyContentLinks: Record<string, string> = {
  '/modern-website-redesign-boost-business-drive-growth/': '/website-redesign-drives-growth/'
 };
 function cleanArticleHtml(html: string) {
- return html.replace(/<p>\s*\[YOUTUBE:\s*https?:\/\/(?:www\.)?youtube\.com\/watch\?v=ABCDEFGHI\s*\]\s*<\/p>/gi, '')
+ return repairLegacyLinks(html).replace(/<p>\s*\[YOUTUBE:\s*https?:\/\/(?:www\.)?youtube\.com\/watch\?v=ABCDEFGHI\s*\]\s*<\/p>/gi, '')
   .replace(/href="([^"]+)"/g, (attribute, value: string) => {
    // One legacy embed was imported as href="&lt;div style=". Keep its
    // readable content/video link without exposing a markup fragment as a URL.
@@ -27,7 +29,7 @@ function cleanArticleHtml(html: string) {
    return `href="https://codemax.com.au${replacement}${url.hash && !replacement.includes('#') ? url.hash : ''}"`;
   });
 }
-export const posts = ([...data, ...editorial] as BlogPost[]).map(post => ({ ...post, html: cleanArticleHtml(post.html) })).sort((a,b) => b.published.localeCompare(a.published));
+export const posts = ([...data, ...editorial] as BlogPost[]).map(post => ({ ...post, modified: publicModifiedDate(post.published, post.modified), html: cleanArticleHtml(post.html) })).sort((a,b) => b.published.localeCompare(a.published));
 export function displayDate(value: string) { return new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(value)); }
 
 export const pageSize = 12;
