@@ -37,10 +37,12 @@ Time spent checking and correcting is part of the cost. If the assistant saves d
 
 The best delegation pattern may change as the tools improve, but responsibility remains clear when you define the input, proposed output and approval point. Start with a small repeatable task and expand only when the evidence supports it.
 
+NIST describes its AI Risk Management Framework as voluntary guidance for bringing trustworthiness considerations into the design, development, use and evaluation of AI systems. That supports a practical habit: set the context, review the result and manage risk throughout the task rather than treating one good output as proof that every use is safe. NIST also notes that AI RMF 1.0 is being revised, so organisations using it formally should consult the current framework materials.
+
 ## Sources and further reading
 
 - [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 5 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
