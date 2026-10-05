@@ -1,0 +1,18 @@
+---
+import services from '../data/services.json';
+---
+<nav class="service-navigation" aria-label="Services">
+ <h2>Explore our services</h2>
+ <ul>{services.map(service => <li><a href={'/services/' + service.slug + '/'}>{service.name}</a></li>)}</ul>
+</nav>
+<style>
+ :global(.footer){flex-wrap:wrap}
+ .service-navigation{flex-basis:100%;padding-block:12px 28px;border-bottom:1px solid #55584c}
+ .service-navigation h2{font-size:18px;line-height:1.4;margin-bottom:12px}
+ .service-navigation ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 24px;list-style:none;padding:0;margin:0}
+ .service-navigation a{display:inline-block;padding-block:10px;font-size:14px;line-height:1.6;text-decoration:underline;text-underline-offset:4px}
+ .service-navigation a:hover{color:#ffac94}
+ .service-navigation a:focus-visible{outline:2px solid #ffac94;outline-offset:4px}
+ @media(max-width:700px){.service-navigation ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 20px}}
+ @media(max-width:420px){.service-navigation ul{grid-template-columns:1fr}}
+</style>
