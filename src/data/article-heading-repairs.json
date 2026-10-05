@@ -1,0 +1,283 @@
+{
+  "reason": "These audited article bodies start at H3 and contain only H3/H4. Shift every body heading one level to follow the page H1, preserving relative nesting and original visual styles.",
+  "articles": [
+    {
+      "path": "/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/beyond-the-big-smoke-local-search-rankings-regional-businesses/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/beyond-keywords-unveiling-power-advanced-magento-seo-services-australian-brands/",
+      "sourceHeadingCounts": {
+        "h3": 5,
+        "h4": 6
+      }
+    },
+    {
+      "path": "/stop-wasting-time-quality-over-quantity-good-backlinks-for-seo/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/7-smart-strategies-propel-australian-enterprise-expert-global-seo-services/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/avoid-3-pitfalls-choosing-right-seo-consulting-firm-for-business/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/stop-guessing-5-minute-guide-smarter-site-keyword-analysis-aussie-smbs/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/is-your-on-page-seo-holding-back-your-aussie-traffic/",
+      "sourceHeadingCounts": {
+        "h3": 5,
+        "h4": 8
+      }
+    },
+    {
+      "path": "/unlock-local-supremacy-effective-seo-digital-marketing-australian-brands/",
+      "sourceHeadingCounts": {
+        "h3": 5,
+        "h4": 13
+      }
+    },
+    {
+      "path": "/why-your-digital-agency-needs-white-label-seo-game-changer-local-growth/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/unmasking-true-seo-price-australian-businesses-pay/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/best-search-engine-optimization-company-australian-business/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/hiring-search-engine-optimization-company-australian-businesses-guide/",
+      "sourceHeadingCounts": {
+        "h3": 7
+      }
+    },
+    {
+      "path": "/beyond-googles-first-page-australian-marketers-dominating-search-engine-optimisation-seo/",
+      "sourceHeadingCounts": {
+        "h3": 7
+      }
+    },
+    {
+      "path": "/5-essential-seo-search-engine-strategies-australian-business-growth/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/lost-in-outback-search-results-smart-seo-marketing-guide/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/ultimate-aussie-playbook-5-ways-to-boost-google-seo-optimization/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/choosing-right-seo-tools-australian-startups-guide/",
+      "sourceHeadingCounts": {
+        "h3": 7,
+        "h4": 6
+      }
+    },
+    {
+      "path": "/the-secret-sauce-uncovering-best-seo-partner-digital-dominance-seo/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/is-your-aussie-business-invisible-online-unlock-seo-secrets-today/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/boost-your-bottom-line-australian-accounting-firm-seo-strategy/",
+      "sourceHeadingCounts": {
+        "h3": 5,
+        "h4": 17
+      }
+    },
+    {
+      "path": "/the-great-seo-debate-in-house-vs-outsourcing-best-for-your-brand-seo/",
+      "sourceHeadingCounts": {
+        "h3": 5,
+        "h4": 7
+      }
+    },
+    {
+      "path": "/google-seo-ranking-lagging-australian-business-guide/",
+      "sourceHeadingCounts": {
+        "h3": 8,
+        "h4": 20
+      }
+    },
+    {
+      "path": "/the-1-mistake-aussie-businesses-make-with-seo-and-how-to-fix-it-organically/",
+      "sourceHeadingCounts": {
+        "h3": 7
+      }
+    },
+    {
+      "path": "/are-you-overpaying-decoding-the-best-seo-packages-for-small-business-in-australia/",
+      "sourceHeadingCounts": {
+        "h3": 8
+      }
+    },
+    {
+      "path": "/5-google-maps-seo-hacks-dominate-local-search-attract-aussie-customers/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/is-your-aussie-store-missing-out-ecommerce-seo-agency/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/dont-get-left-behind-search-engine-marketing-australian-smes/",
+      "sourceHeadingCounts": {
+        "h3": 8
+      }
+    },
+    {
+      "path": "/dont-get-it-wrong-definitive-guide-australian-business-card-size/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/why-sage-green-websites-trending-down-under-australian-guide/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/aussie-models-ultimate-guide-stunning-modelling-portfolio-website/",
+      "sourceHeadingCounts": {
+        "h3": 7
+      }
+    },
+    {
+      "path": "/beyond-looks-strategic-seo-website-design-growth-hack-down-under/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/ready-to-launch-high-potential-ideas-for-small-business-in-australia/",
+      "sourceHeadingCounts": {
+        "h3": 7
+      }
+    },
+    {
+      "path": "/future-proof-income-good-business-to-start-in-australia/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/dominate-local-search-rank-higher-google-maps-maphighe-now/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/dominate-search-results-google-ads-melbourne-customers/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/get-found-locally-google-maps-seo-australia-checklist/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/more-patients-less-pain-australian-dental-seo-dental-expert/",
+      "sourceHeadingCounts": {
+        "h3": 5
+      }
+    },
+    {
+      "path": "/how-to-achieve-best-results-seo-content-marketing-perth-australia/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/what-is-freelance-seo-mate-aussie-guide-to-unlocking-digital-success/",
+      "sourceHeadingCounts": {
+        "h3": 7
+      }
+    },
+    {
+      "path": "/beyond-word-of-mouth-dental-seo-impact/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/grow-your-brand-affordable-websites-small-businesses-australian-success/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/top-5-reasons-australian-ecommerce-needs-professional-ecommerce-seo-services-today/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/ecommerce-web-design-services-australian-businesses-success/",
+      "sourceHeadingCounts": {
+        "h3": 6
+      }
+    },
+    {
+      "path": "/beyond-the-pipes-unlocking-googles-secrets-expert-seo-for-plumbers-australia/",
+      "sourceHeadingCounts": {
+        "h3": 6,
+        "h4": 5
+      }
+    }
+  ]
+}

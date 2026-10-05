@@ -1,16 +1,21 @@
 ---
+import { getArticleImageVariants, optimizeArticleImages } from '../lib/article-image-variants.mjs';
 import Journal from '../layouts/Journal.astro';
 import { posts, displayDate, relatedPosts } from '../lib/blog';
+import { getArticleImageMetadata, addArticleImageDimensions } from '../lib/article-image-metadata.mjs';
 export function getStaticPaths() { return posts.map(post => ({ params: { slug: post.path.slice(1, -1) }, props: { post } })); }
 const { post } = Astro.props;
 const related = relatedPosts(post);
+const featuredMetadata = getArticleImageMetadata(post.path, post.featuredImage?.url);
+const featuredVariants = getArticleImageVariants(post.path, post.featuredImage?.url);
+const articleHtml = optimizeArticleImages(post.path, addArticleImageDimensions(post.path, post.html));
 ---
 <Journal title={post.seoTitle} description={post.description} article={post}>
 <article class="blog-article wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">{post.title}</span></nav>
 <header class="article-heading"><p class="eyebrow">{post.categories.join(' / ') || 'CodeMax Journal'}</p><h1>{post.title}</h1><p class="blog-meta">By {post.author} · Published <time datetime={post.published}>{displayDate(post.displayDate)}</time></p></header>
-{post.featuredImage?.url && <img class="article-featured" src={post.featuredImage.url} alt={post.featuredImage.alt || ""} width="1200" height="675" decoding="async" />}
-<div class="article-body" set:html={post.html} />
+{post.featuredImage?.url && <img class="article-featured" src={featuredVariants?.src ?? post.featuredImage.url} srcset={featuredVariants?.srcset} sizes={featuredVariants?.sizes} alt={post.featuredImage.alt || ""} width={featuredMetadata?.width ?? 1200} height={featuredMetadata?.height ?? 675} decoding="async" fetchpriority={featuredMetadata?.fetchpriority} />}
+<div class="article-body" set:html={articleHtml} />
 </article>
 {related.length > 0 && <section class="related-services wrap"><h2>Keep reading</h2><div>{related.map(item => <a href={item.path}>{item.title}</a>)}</div></section>}
 </Journal>

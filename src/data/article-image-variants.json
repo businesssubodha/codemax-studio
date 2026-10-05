@@ -1,0 +1,14 @@
+{
+  "/dont-miss-out-crucial-mobile-seo-services-australian-website-needs/": {
+    "https://codemax.com.au/wp-content/uploads/2025/10/dont-miss-out-crucial-mobile-seo-services-australian-website-needs-featured-1.jpeg": {
+      "src": "/article-media/mobile-seo-featured-1024.webp",
+      "srcset": "/article-media/mobile-seo-featured-480.webp 480w, /article-media/mobile-seo-featured-768.webp 768w, /article-media/mobile-seo-featured-1024.webp 1024w",
+      "sizes": "(max-width: 700px) 90vw, (max-width: 1022px) 92vw, 940px"
+    },
+    "https://codemax.com.au/wp-content/uploads/2025/10/dont-miss-out-crucial-mobile-seo-services-australian-website-needs-image-1.jpeg": {
+      "src": "/article-media/mobile-seo-inline-1024.webp",
+      "srcset": "/article-media/mobile-seo-inline-480.webp 480w, /article-media/mobile-seo-inline-768.webp 768w, /article-media/mobile-seo-inline-1024.webp 1024w",
+      "sizes": "(max-width: 700px) 90vw, (max-width: 1022px) 92vw, 940px"
+    }
+  }
+}

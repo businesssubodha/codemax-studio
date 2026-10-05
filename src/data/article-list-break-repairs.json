@@ -1,0 +1,17 @@
+{
+  "reason": "Imported line breaks directly inside these lists are invalid list children. Remove only bare BR tags at audited list/item boundaries, keeping item content and intra-item line breaks unchanged.",
+  "articles": [
+    {
+      "path": "/grow-your-brand-affordable-websites-small-businesses-australian-success/",
+      "breaks": 15
+    },
+    {
+      "path": "/dont-get-stranded-down-under-pro-wordpress-web-maintenance-for-peak-performance/",
+      "breaks": 26
+    },
+    {
+      "path": "/copyscape-explained-your-ultimate-guide-to-website-plagiarism-detection/",
+      "breaks": 63
+    }
+  ]
+}

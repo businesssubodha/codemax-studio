@@ -6,3 +6,8 @@
 .blog-pagination{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:48px}.blog-pagination a{display:flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:8px 12px;border:1px solid #65675f;border-radius:4px}.blog-pagination a[aria-current=page],.blog-pagination a:hover{background:#ff5428;color:#111210;border-color:#ff5428}.archive-page-label{display:block;font-size:24px;margin-top:18px}
 
 .article-featured{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;margin-bottom:32px;border-radius:4px}
+
+/* Semantic heading repairs retain the imported article's visual hierarchy. */
+.article-body h2[data-original-heading-level="3"]{font-size:26px;font-weight:800}
+.article-body h3[data-original-heading-level="4"]{font-size:22px;font-weight:bold}
+@media(max-width:700px){.article-body h2[data-original-heading-level="3"]{font-size:23px}}

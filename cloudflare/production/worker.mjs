@@ -1,3 +1,4 @@
+import { repairPublicLegacyResponse } from './legacy-call-button.mjs';
 import { servicePaths, archivePaths, articlePaths, articleLastModified, legacyRedirects, assetPaths } from './routes.mjs';
 const productionHosts = new Set(['codemax.com.au', 'www.codemax.com.au']);
 const wordpressQueryKeys = ['p', 'page_id', 'attachment_id', 'preview', 'preview_id', 'preview_nonce', 'rest_route', 'feed', 's', 'author', 'cat', 'tag', 'paged', 'post_type', 'customize_changeset_uuid'];
@@ -33,7 +34,8 @@ export async function handleRequest(request, env, fetcher = fetch) {
   const path = studioPath(request);
   // fetch(original request) on a Worker Route goes to the existing DNS origin.
   // Never attach this Worker as a Custom Domain; WordPress remains the origin.
-  if (env.ENABLED !== 'true' || path === null) return fetcher(request);
+  if (env.ENABLED !== 'true') return fetcher(request);
+  if (path === null) return repairPublicLegacyResponse(request, await fetcher(request));
   let origin;
   try {
     origin = new URL(env.PAGES_ORIGIN);

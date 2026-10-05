@@ -26,6 +26,13 @@ export const legacyRedirects = new Map([
   ['/web-design/', '/services/web-design-melbourne/']
 ]);
 export const assetPaths = new Set([
+  "/article-media/mobile-seo-featured-1024.webp",
+  "/article-media/mobile-seo-featured-480.webp",
+  "/article-media/mobile-seo-featured-768.webp",
+  "/article-media/mobile-seo-inline-1024.webp",
+  "/article-media/mobile-seo-inline-480.webp",
+  "/article-media/mobile-seo-inline-768.webp",
+
   "/editorial/ai/workflow.svg",
   "/editorial/ai/review.svg",
   "/editorial/ai/conversation.svg",

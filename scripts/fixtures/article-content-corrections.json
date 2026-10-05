@@ -1,0 +1,784 @@
+{
+  "baseCommit": "62fe8eb37fd548521c147aed263e0a1ae6ee5219",
+  "reviewedArticleCount": 392,
+  "sourceArticleCorrections": 27,
+  "substantiveEdits": 23,
+  "formattingOnlyEdits": 4,
+  "articles": [
+    {
+      "path": "/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation/",
+        "author": "Subodha De",
+        "published": "2026-01-01T21:00:00Z",
+        "displayDate": "2026-01-02",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/outrank-rivals-smart-aussie-guide-local-search-engine-optimisation-featured.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2026-01-01T21:00:00Z",
+      "modified": "2026-10-05T00:03:52Z",
+      "expected": {
+        "modified": "2026-10-05T00:03:52Z"
+      },
+      "oldHtmlSha256": "b366ce088c44e2eb900bf8c348a7da9e378896fb1883945a93aa0bf4efdf8825",
+      "htmlSha256": "bee263537f61d898181125b3d4ef3f59a717f1227f558f59278d41b62f8b6c1a"
+    },
+    {
+      "path": "/the-aussie-secret-how-to-create-seo-content-that-ranks-1-on-google/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/the-aussie-secret-how-to-create-seo-content-that-ranks-1-on-google/",
+        "author": "Subodha De",
+        "published": "2025-11-18T11:00:00Z",
+        "displayDate": "2025-11-18",
+        "categories": [
+          "Search Engine Optimization"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-76.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-21T02:11:40Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "title": "How to Create Useful SEO Content for Australian Customers",
+        "seoTitle": "Useful SEO Content for Australian Customers | CodeMax",
+        "description": "Plan clear, useful website content for Australian customers, from search intent and local details to internal links and measuring enquiries.",
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "2805cd75e227806d693921175ce287251bbb68e90fc553d7c4eb771ebbb89470",
+      "htmlSha256": "f65fb9f49f8d3b6093ee461723a36622544d2f514637246fbfe206a4c4c3891c"
+    },
+    {
+      "path": "/secret-to-style-success-australian-bloggers-uploadblog-for-fashion-shine-online/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/secret-to-style-success-australian-bloggers-uploadblog-for-fashion-shine-online/",
+        "author": "Subodha De",
+        "published": "2025-11-06T22:00:00Z",
+        "displayDate": "2025-11-07",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-57.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-14T03:14:33Z",
+      "modified": "2026-10-05T00:16:12Z",
+      "expected": {
+        "title": "How to Build an Australian Fashion Blog",
+        "seoTitle": "How to Build an Australian Fashion Blog | CodeMax",
+        "description": "Plan an Australian fashion blog with a suitable platform, clear visual identity, useful content and a practical publishing workflow.",
+        "modified": "2026-10-05T00:16:12Z"
+      },
+      "oldHtmlSha256": "848f18c9e9d26852cae0b71a5bdfdbb537aed063607374b19e3dea57c5e97a9d",
+      "htmlSha256": "e025b8a2e824b0a83df084013b8adf1075867927ef9dad2f9fc4f442452376a6"
+    },
+    {
+      "path": "/australian-generate-leads-service-marketing-success/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/australian-generate-leads-service-marketing-success/",
+        "author": "Subodha De",
+        "published": "2025-11-02T04:00:00Z",
+        "displayDate": "2025-11-02",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-51.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-14T02:01:03Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "039783bef4f36d4b2ed5c164b75a03fc8f3a721c1b6611b7a96bb3a8d72652fe",
+      "htmlSha256": "1e454b840bb80de3aef97f76136d395c7192570a1a7ff3efb313479a1923cb05"
+    },
+    {
+      "path": "/dominate-local-search-rank-higher-google-maps-maphighe-now/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/dominate-local-search-rank-higher-google-maps-maphighe-now/",
+        "author": "Subodha De",
+        "published": "2025-10-29T21:30:00Z",
+        "displayDate": "2025-10-30",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-46.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-13T22:46:27Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "title": "Dominate Local Search: Why You Need to Rank Higher on Google Maps Now",
+        "seoTitle": "Dominate Local Search: Why You Need to Rank Higher on Google Maps Now | CodeMax",
+        "description": "In today's fast-paced digital world, for any Australian business aiming to truly thrive, understanding how to rank higher on Google Maps isn't just…",
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "466c0a868b068e815c0fb4843b9a00bbf76acff63b965f3ce48a3e115aa59e5e",
+      "htmlSha256": "0001f34ad7824dfd4860c71d2df6e2da6e392f745a99ff953285a51a01cee9f7"
+    },
+    {
+      "path": "/more-patients-less-pain-australian-dental-seo-dental-expert/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/more-patients-less-pain-australian-dental-seo-dental-expert/",
+        "author": "Subodha De",
+        "published": "2025-10-23T21:00:00Z",
+        "displayDate": "2025-10-24",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-36.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-13T05:47:19Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "a3a6686d0ec7537bf5e3de5dcfa81f80c863854058e484b93f49bbccb68dd9ea",
+      "htmlSha256": "30a01b07c8999e301da32feaec00075988ad24f232336bc783baf69b73e2f705"
+    },
+    {
+      "path": "/budgeting-for-success-how-to-get-top-tier-seo-at-a-price-for-seo-20-per-article-in-australia/",
+      "changedFields": [
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/budgeting-for-success-how-to-get-top-tier-seo-at-a-price-for-seo-20-per-article-in-australia/",
+        "author": "Subodha De",
+        "published": "2025-10-22T23:00:00Z",
+        "displayDate": "2025-10-23",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-29.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-22T23:00:00Z",
+      "modified": "2025-10-22T23:00:00Z",
+      "expected": {},
+      "oldHtmlSha256": "e79e27b0cffa50b992708b25244ae3108401b69b4b138c31ab2040e92c6e0686",
+      "htmlSha256": "7760ae83c6a906aa82ab02e788ab7b7cd4d461119c2725869bd6adc5046508c8"
+    },
+    {
+      "path": "/aussie-businesses-level-up-impact-professional-web-page-development-services/",
+      "changedFields": [
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/aussie-businesses-level-up-impact-professional-web-page-development-services/",
+        "author": "Subodha De",
+        "published": "2025-10-20T23:00:00Z",
+        "displayDate": "2025-10-21",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-23.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-20T23:00:00Z",
+      "modified": "2025-10-20T23:00:00Z",
+      "expected": {},
+      "oldHtmlSha256": "527a341218bd032e6c79ab66f6ba53cda9e6d7729862e5d22723141ca8c223cc",
+      "htmlSha256": "343e880c52662023c2ab1ecbd76fb5ac255da6d4e4c0ee6b6ac572d813fa0434"
+    },
+    {
+      "path": "/grow-your-brand-affordable-websites-small-businesses-australian-success/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/grow-your-brand-affordable-websites-small-businesses-australian-success/",
+        "author": "Subodha De",
+        "published": "2025-10-19T23:00:00Z",
+        "displayDate": "2025-10-20",
+        "categories": [
+          "Branding",
+          "Design",
+          "Development",
+          "Digital Marketing",
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-22.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-19T23:01:54Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "a1dd722cefacee825f587f51551883df0f048e79e9a2f614d0b009e7f7327467",
+      "htmlSha256": "d3859c0feb83424a8639d6c53c89d4018134cedaaecacc35bb56cd7102fc693c"
+    },
+    {
+      "path": "/dont-get-stranded-down-under-pro-wordpress-web-maintenance-for-peak-performance/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/dont-get-stranded-down-under-pro-wordpress-web-maintenance-for-peak-performance/",
+        "author": "Subodha De",
+        "published": "2025-10-16T22:00:00Z",
+        "displayDate": "2025-10-17",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-15.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-16T23:03:14Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "b5f8d423b459b42dfa3f5e59be0c4089efe7b343b894fae9801885891b3c77b1",
+      "htmlSha256": "6490550fba49fd69f7eb628fe18517acd9a64407c76949f174849fabc8f4802c"
+    },
+    {
+      "path": "/master-your-market-comprehensive-small-business-course-guide/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/master-your-market-comprehensive-small-business-course-guide/",
+        "author": "Subodha De",
+        "published": "2025-10-15T11:00:00Z",
+        "displayDate": "2025-10-15",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-12.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-15T11:05:47Z",
+      "modified": "2026-10-05T00:03:52Z",
+      "expected": {
+        "title": "How to Choose a Small Business Course: A Practical Checklist",
+        "seoTitle": "How to Choose a Small Business Course | CodeMax",
+        "description": "Compare small business courses by your goal, syllabus, instructor support, total cost and terms. Use practical questions before enrolling.",
+        "modified": "2026-10-05T00:03:52Z"
+      },
+      "oldHtmlSha256": "a0f2b199d006bc01ff7c11b7573051fbf22638262ebc5a46b74333d07bcbdcfe",
+      "htmlSha256": "33f3933a4147fcbf0cd6a6ec5f20162996d7af247c98a7f2914b263532af7ff4"
+    },
+    {
+      "path": "/maximise-roi-australia-wordpress-website-maintenance-services/",
+      "changedFields": [
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/maximise-roi-australia-wordpress-website-maintenance-services/",
+        "author": "Subodha De",
+        "published": "2025-10-13T11:00:00Z",
+        "displayDate": "2025-10-13",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-25.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-13T11:19:28Z",
+      "modified": "2025-10-13T11:19:28Z",
+      "expected": {},
+      "oldHtmlSha256": "bf7a64051a870ce0b7d614673c79715741eb7b00c108d8ae60fe178a0127989b",
+      "htmlSha256": "5bab68877b74033bc1259d8ed2b26e82453b38e7b51b117930584304632cefc2"
+    },
+    {
+      "path": "/unlock-growth-why-affordable-websites-for-small-businesses-are-essential/",
+      "changedFields": [
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/unlock-growth-why-affordable-websites-for-small-businesses-are-essential/",
+        "author": "Subodha De",
+        "published": "2025-10-12T09:11:15Z",
+        "displayDate": "2025-10-12",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-8.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-10T09:15:41Z",
+      "modified": "2025-10-10T09:15:41Z",
+      "expected": {},
+      "oldHtmlSha256": "d6823d6180ee2589f9a28d961ce9954de642db7ec1a28fe7347fada16bca9af8",
+      "htmlSha256": "9e63330d0dcdb69dbb967f18814f24a83b91139eec01622758406250d2b5ad40"
+    },
+    {
+      "path": "/website-cost-calculator-how-much-does-this-website-cost-for-your-project/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/website-cost-calculator-how-much-does-this-website-cost-for-your-project/",
+        "author": "Subodha De",
+        "published": "2025-10-11T08:46:22Z",
+        "displayDate": "2025-10-11",
+        "categories": [
+          "Responsive Design"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/10/featured-image-6.jpeg",
+          "alt": ""
+        }
+      },
+      "previousModified": "2025-10-11T08:46:22Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "title": "How to Plan a Website Budget: Scope, Features and Ongoing Costs",
+        "seoTitle": "How to Plan a Website Budget | CodeMax",
+        "description": "Build a website budget around scope, design, content, integrations, hosting and support, then compare detailed quotes on the same requirements.",
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "75c4675dc3102951b4d7c7efc533128bb64edcbe9ca9794392e5eea0e1a96337",
+      "htmlSha256": "ef11bf3892a762c56960d60c7367c4ee35e3b7c99ba0919ba2e405d92da7159e"
+    },
+    {
+      "path": "/australias-premier-social-media-marketing-agency/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/australias-premier-social-media-marketing-agency/",
+        "author": "Admin",
+        "published": "2025-08-09T00:15:52Z",
+        "displayDate": "2025-08-09",
+        "categories": [
+          "Social Media Integration"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2025/08/top_australian_social_media_agency_jhdqp.jpg",
+          "alt": "top australian social media agency"
+        }
+      },
+      "previousModified": "2025-08-09T00:15:52Z",
+      "modified": "2026-10-05T00:17:40Z",
+      "expected": {
+        "title": "How to Choose a Social Media Marketing Agency in Australia",
+        "seoTitle": "Choosing a Social Media Marketing Agency in Australia | CodeMax",
+        "description": "Compare social media agencies by their proposed work, relevant campaign evidence, total costs, reporting, account access and approval process.",
+        "modified": "2026-10-05T00:17:40Z"
+      },
+      "oldHtmlSha256": "9b41e37efbf0e8638b0efae60f56ba0fc02e34582e3cac57ea08aa64d49f706b",
+      "htmlSha256": "c7c41d2bda69c343b116d33d003297088aaf9c3d3b664c40c28f126839821bc8"
+    },
+    {
+      "path": "/top-10-creative-website-designers-in-australia-2025-codemax-leads-the-way/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/top-10-creative-website-designers-in-australia-2025-codemax-leads-the-way/",
+        "author": "CodeMax",
+        "published": "2025-08-06T03:55:46Z",
+        "displayDate": "2025-08-06",
+        "categories": [
+          "Affordable Websites"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/04/creating_a_professional_online_portfolio.jpg",
+          "alt": "creating a professional online portfolio"
+        }
+      },
+      "previousModified": "2025-08-06T03:55:48Z",
+      "modified": "2026-10-05T00:09:45Z",
+      "expected": {
+        "title": "How to Compare Creative Website Designers in Australia",
+        "seoTitle": "How to Compare Creative Website Designers in Australia | CodeMax",
+        "description": "Compare website designers by relevant work, project scope, customer experience, search deliverables, ongoing costs and handover responsibilities.",
+        "modified": "2026-10-05T00:09:45Z"
+      },
+      "oldHtmlSha256": "46eb47863a4d41ba6073b293986ee1f7d3865ff973ccc9be311d867318ebfe59",
+      "htmlSha256": "fce81f288c011ffcdb27b5a571273d84de44eb11b8d840ddeec1b96fde6f68c3"
+    },
+    {
+      "path": "/set-up-a-company/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/set-up-a-company/",
+        "author": "Admin",
+        "published": "2024-02-20T04:47:33Z",
+        "displayDate": "2024-02-20",
+        "categories": [
+          "E-commerce"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/start_a_new_business.jpeg",
+          "alt": "start a new business"
+        }
+      },
+      "previousModified": "2024-02-20T04:47:33Z",
+      "modified": "2026-10-05T00:17:40Z",
+      "expected": {
+        "title": "Planning to Set Up an Australian Company: What to Check",
+        "seoTitle": "Setting Up an Australian Company: Planning Checklist | CodeMax",
+        "description": "Plan the decisions and checks involved in an Australian company setup, including structure, naming, registrations, operating costs and professional advice.",
+        "modified": "2026-10-05T00:17:40Z"
+      },
+      "oldHtmlSha256": "b9efc3887f74610facbc9772bb46c68a18a2e183d8e37f6b8f4d22010c647e71",
+      "htmlSha256": "359af3262b76675a0cf48e87d32bfd7b535dccad4c9296477c26710a366b90d6"
+    },
+    {
+      "path": "/simple-guide-analyzing-ab-test-results-for-website-optimization/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/simple-guide-analyzing-ab-test-results-for-website-optimization/",
+        "author": "Admin",
+        "published": "2024-02-01T22:59:50Z",
+        "displayDate": "2024-02-02",
+        "categories": [
+          "A/B Testing"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/a_b_test_results_analysis.jpg",
+          "alt": "a b test results analysis"
+        }
+      },
+      "previousModified": "2024-02-01T22:59:50Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "956bfc52d0f28c327f452efdff15dda70dfd2f2d23534d8bc9084cdd8d16b472",
+      "htmlSha256": "e1390f3fca3ee0ca57f5b9960317a5bf7f65dc0d2c6db3ab3f98c308d56e6bb2"
+    },
+    {
+      "path": "/why-analyze-ab-testing-results-for-website-optimization/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/why-analyze-ab-testing-results-for-website-optimization/",
+        "author": "Admin",
+        "published": "2024-02-01T22:52:55Z",
+        "displayDate": "2024-02-02",
+        "categories": [
+          "A/B Testing"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/importance_of_a_b_testing.jpg",
+          "alt": "importance of a b testing"
+        }
+      },
+      "previousModified": "2024-02-01T22:52:55Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "676e331f6b483f47b210bff0ddd9d647075a93001ca635417998ecc501de7695",
+      "htmlSha256": "8c2b437b99622cf68b84bf8871a858d24826c48cafb31263f1a4b2f6edbee6f9"
+    },
+    {
+      "path": "/8-essential-tips-for-ab-testing-website-conversion-rates/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/8-essential-tips-for-ab-testing-website-conversion-rates/",
+        "author": "Admin",
+        "published": "2024-02-01T22:48:00Z",
+        "displayDate": "2024-02-02",
+        "categories": [
+          "A/B Testing"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/improving_website_conversion_rates.jpg",
+          "alt": "improving website conversion rates"
+        }
+      },
+      "previousModified": "2024-02-01T22:48:00Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "cfa730e3685755738feb143d743c6c425d028b4fcf73e317ac6d015a5c7f180f",
+      "htmlSha256": "34a38ef4493ee424a23160c8017c7bcdfdc5201ea99adf3b530ef5bc852651dc"
+    },
+    {
+      "path": "/10-best-tips-for-ab-testing-website-conversion-rates/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/10-best-tips-for-ab-testing-website-conversion-rates/",
+        "author": "Admin",
+        "published": "2024-02-01T22:41:53Z",
+        "displayDate": "2024-02-02",
+        "categories": [
+          "A/B Testing"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/optimizing_website_conversion_rates.jpg",
+          "alt": "optimizing website conversion rates"
+        }
+      },
+      "previousModified": "2024-02-01T22:41:53Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "528b3b7a20113b276ea12a9ebbebeede837383809f3692e3fc53e9aee9ceab05",
+      "htmlSha256": "458053d5eea1f6a492014acfb0581c503bd095640f8d796e6300b15d14885d47"
+    },
+    {
+      "path": "/creating-accessible-websites-a-step-by-step-guide/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/creating-accessible-websites-a-step-by-step-guide/",
+        "author": "Admin",
+        "published": "2024-02-01T08:59:16Z",
+        "displayDate": "2024-02-01",
+        "categories": [
+          "Website Maintenance"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/step_by_step_guide_for_accessibility.jpg",
+          "alt": "step by step guide for accessibility"
+        }
+      },
+      "previousModified": "2024-02-01T08:59:16Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "b89109b983b9b8763f04ea240e6f3b530cc841727bc62e848fcd72c31f1b309b",
+      "htmlSha256": "8ba2b3a447fec043c73842edf7d3347244bb52ab28a429235fed52e11aba0c70"
+    },
+    {
+      "path": "/9-tips-for-enhancing-website-accessibility-for-visually-impaired-users/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/9-tips-for-enhancing-website-accessibility-for-visually-impaired-users/",
+        "author": "Admin",
+        "published": "2024-02-01T08:13:52Z",
+        "displayDate": "2024-02-01",
+        "categories": [
+          "Accessibility"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/improving_website_accessibility_for_visually_impaired_users.jpg",
+          "alt": "improving website accessibility for visually impaired users"
+        }
+      },
+      "previousModified": "2024-02-01T08:37:37Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "05904c2354a6d65d17491205db4b60495cc7d24384251e034f9254aceb7bbaec",
+      "htmlSha256": "d9f2a947fd2f9ea9d918f367e898f33429846476d287538e002fc4be0f288c4f"
+    },
+    {
+      "path": "/what-are-effective-ways-to-make-websites-accessible-for-visually-impaired-users/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/what-are-effective-ways-to-make-websites-accessible-for-visually-impaired-users/",
+        "author": "Admin",
+        "published": "2024-02-01T07:56:38Z",
+        "displayDate": "2024-02-01",
+        "categories": [
+          "Accessibility"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/website_accessibility_for_visually_impaired.jpg",
+          "alt": "website accessibility for visually impaired"
+        }
+      },
+      "previousModified": "2024-02-01T08:37:56Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "e02b15d8e9079b83bcba6a5949036aa873e2b67d81b04316b3eec38f8de7beda",
+      "htmlSha256": "f6690928fbc86d69184c87ce7cc04bb7488bb57197c1a9abfa83d7649ba3079b"
+    },
+    {
+      "path": "/avoid-these-website-maintenance-mistakes/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/avoid-these-website-maintenance-mistakes/",
+        "author": "Admin",
+        "published": "2024-02-01T07:45:41Z",
+        "displayDate": "2024-02-01",
+        "categories": [
+          "Website Maintenance"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/02/website_maintenance_mistakes_to_avoid.jpg",
+          "alt": "website maintenance mistakes to avoid"
+        }
+      },
+      "previousModified": "2024-02-01T07:45:41Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "4ce7bf440736b944dda3480de0de445af6e91e672729e52ea8ee5dc6364025f6",
+      "htmlSha256": "b727fb4c9eb37fbb9f8a2a24a3a700868837bfd669903ee16fb1c5b7127d93b8"
+    },
+    {
+      "path": "/essential-website-security-checklist-for-small-businesses/",
+      "changedFields": [
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/essential-website-security-checklist-for-small-businesses/",
+        "author": "Admin",
+        "published": "2024-01-30T22:05:50Z",
+        "displayDate": "2024-01-30",
+        "categories": [
+          "Security"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/01/website_security_checklist_importance.jpg",
+          "alt": "website security checklist importance"
+        }
+      },
+      "previousModified": "2024-01-31T06:51:42Z",
+      "modified": "2026-10-05T00:15:14Z",
+      "expected": {
+        "modified": "2026-10-05T00:15:14Z"
+      },
+      "oldHtmlSha256": "a3c24ea598b37bd22d12e4a65190e551d420fc33aab579ecd1d7be6fcd0c0cee",
+      "htmlSha256": "d3e3bd6b766b92935072578e3aa95f6ca787880a89878610faf494a24388bab8"
+    },
+    {
+      "path": "/top-3-foolproof-website-security-tips/",
+      "changedFields": [
+        "title",
+        "seoTitle",
+        "description",
+        "modified",
+        "html"
+      ],
+      "protectedFields": {
+        "sourceUrl": "https://codemax.com.au/top-3-foolproof-website-security-tips/",
+        "author": "Admin",
+        "published": "2024-01-30T21:46:16Z",
+        "displayDate": "2024-01-30",
+        "categories": [
+          "Security"
+        ],
+        "featuredImage": {
+          "url": "https://codemax.com.au/wp-content/uploads/2024/01/foolproof_tips_for_website_security.jpg",
+          "alt": "foolproof tips for website security"
+        }
+      },
+      "previousModified": "2024-01-31T06:51:22Z",
+      "modified": "2026-10-05T00:20:57Z",
+      "expected": {
+        "title": "3 Website Security Tips to Reduce Risk",
+        "seoTitle": "3 Website Security Tips to Reduce Risk | CodeMax",
+        "description": "Review software updates, unique passwords and hosting responsibilities as three parts of an ongoing website security plan.",
+        "modified": "2026-10-05T00:20:57Z"
+      },
+      "oldHtmlSha256": "988e826d5dcd82ef9a4454683d0028f7ddd02a7fb01374f39e86866df5fa8d97",
+      "htmlSha256": "c5eb3876904196394c006d1a296a836336b044672205dd1597aa51bd38a2f5a2"
+    }
+  ]
+}

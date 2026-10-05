@@ -78,6 +78,12 @@ for (const post of sourcePosts) {
  const expected = publicModifiedDate(post.published, post.modified);
  assert.equal(sitemapDates.get(origin + post.path), expected, `Sitemap modified date: ${post.path}`);
  const html = pageHtml.get(post.path);
+ let previousHeadingLevel = 0;
+ for (const [, levelText] of html.matchAll(/<h([1-6])(?:\s[^>]*|)>/gi)) {
+  const level = Number(levelText);
+  assert.ok(level <= previousHeadingLevel + 1, `Skipped heading level: ${post.path} H${previousHeadingLevel} -> H${level}`);
+  previousHeadingLevel = level;
+ }
  const graph = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(([,schema]) => { const parsed = JSON.parse(schema); return parsed['@graph'] || [parsed]; });
  const article = graph.find(entry => entry['@type'] === 'BlogPosting');
  assert.ok(article, `Missing article schema: ${post.path}`);
