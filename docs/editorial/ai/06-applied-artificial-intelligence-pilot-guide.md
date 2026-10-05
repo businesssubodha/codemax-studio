@@ -30,7 +30,7 @@ Describe what happens when the system is uncertain or fails. A useful fallback m
 ## Evaluate the complete workflow
 Include the steps around the model: preparing input, reviewing output, moving information and correcting errors. A model may be fast while the overall workflow remains cumbersome. The person using the result should be part of the evaluation.
 
-NIST's AI guidance emphasises evaluation in context. In a pilot, that means asking whether the system works for the intended users and conditions. A benchmark from an unrelated task can inform your expectations, but it cannot replace this check.
+NIST's AI guidance emphasises evaluation in context. In a pilot, that means asking whether the system works for the intended users and conditions. A benchmark from an unrelated task can inform your expectations, but it cannot replace this check. The AI Risk Management Framework is voluntary, and NIST says version 1.0 is being revised, so organisations using it formally should consult the current materials.
 
 ## Set a stopping point
 Before expanding the project, decide what evidence would justify continuing. Also define what would make you revise the approach or stop. This prevents a small experiment from becoming a permanent obligation simply because effort has already been spent.
@@ -41,6 +41,6 @@ Write a short conclusion containing the observed benefit, remaining limitations 
 
 - [NIST: AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 6 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
