@@ -41,6 +41,6 @@ This guide deliberately avoids a current shopping shortlist or price claim. Hard
 
 - [Microsoft: CPU, GPU and NPU guide](https://www.microsoft.com/en-us/windows/learning-center/cpu-gpu-npu-windows)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 7 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
