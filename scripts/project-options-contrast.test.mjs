@@ -20,5 +20,8 @@ test('project-option and case-study descriptions meet normal text contrast on th
  assert.ok(contrast(foreground, '#111210') >= 4.5);
  // The light-background service sections keep their existing dark text.
  assert.ok(contrast('#55564f', '#f3f2ec') >= 4.5);
- assert.match(component, /<section class="section wrap rebuild"/);
+ const proof = readFileSync(new URL('../src/components/ProjectProof.astro', import.meta.url), 'utf8');
+ assert.match(proof, /In-house project \/ The CodeMax website/);
+ assert.match(proof, /\.section-head>p\{color:#c4c8bc\}/);
+ assert.ok(contrast('#ff9578', '#111210') >= 4.5);
 });
