@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 const html = readFileSync('dist/index.html', 'utf8');
+// Check customer-facing claims, not infrastructure hostnames in form attributes.
+const pageText = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g, '').replace(/<[^>]*>/g, ' ');
 const section = html.match(/<section\b[^>]*id="project-proof"[^>]*>[\s\S]*?<\/section>/)?.[0];
 test('homepage leads with an accurately labelled CodeMax-only working example', () => {
  assert.ok(section);
@@ -9,7 +11,7 @@ test('homepage leads with an accurately labelled CodeMax-only working example', 
  assert.doesNotMatch(section.replace(/<[^>]*>/g, ' '), /client results|guaranteed|increased (traffic|rankings|enquiries)|\d+%|testimonials/i);
  assert.ok(html.indexOf('id="project-proof"') < html.indexOf('id="work"'));
  assert.equal((html.match(/id="project-proof"/g) || []).length, 1);
- assert.doesNotMatch(html, /PowerPlumbers|CitizenshipExam|16 client|Search rankings and lead growth are still being measured/i);
+ assert.doesNotMatch(pageText, /PowerPlumbers|CitizenshipExam|16 client|Search rankings and lead growth are still being measured/i);
 });
 test('proof links point to existing pages and the intact enquiry section', () => {
  const links = [...section.matchAll(/href="([^"]+)"/g)].map(m => m[1]);
