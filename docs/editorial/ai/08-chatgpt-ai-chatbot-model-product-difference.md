@@ -35,13 +35,13 @@ Use clear instructions about the intended destination and approval point. This i
 ## Learn from one repeatable example
 Choose a short task and keep the original input, instructions and output. Note what helped and what you corrected. That gives you a reference for future changes without treating one response as a permanent measure of the product.
 
-This overview does not claim that every feature is included in every plan. Use OpenAI's current help pages for account-specific setup and availability. The enduring skill is knowing what you asked for, what evidence was used and what was actually completed.
+This overview does not claim that every feature is included in every plan. Use OpenAI's current official documentation for account-specific setup and availability. The enduring skill is knowing what you asked for, what evidence was used and what was actually completed.
 
 ## Sources and further reading
 
-- [OpenAI: What is ChatGPT?](https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq)
-- [OpenAI: ChatGPT capabilities overview](https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview)
+- [OpenAI: Use ChatGPT](https://learn.chatgpt.com/docs/use-chatgpt)
+- [OpenAI: Model selection](https://learn.chatgpt.com/docs/model-selection)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 9 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
