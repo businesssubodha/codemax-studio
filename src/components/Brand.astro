@@ -2,9 +2,9 @@
 interface Props { href?: string; }
 const { href = '/' } = Astro.props;
 ---
-<a class="brand codemax-brand" href={href} aria-label="CodeMax home"><img src="/brand/codemax-logo.webp" width="52" height="52" alt="" decoding="async" /><span>CODEMAX</span></a>
+<a class="brand codemax-brand" href={href} aria-label="CodeMax home"><img src="/brand/codemax-logo-static.webp" width="52" height="52" alt="" decoding="async" /><span>CODEMAX</span></a>
 <style>
 .codemax-brand{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;white-space:nowrap}
-.codemax-brand img{width:52px;height:52px;object-fit:contain;flex:none;border-radius:6px}
+.codemax-brand img{width:52px;height:52px;object-fit:contain;flex:none}
 @media(max-width:600px){.codemax-brand{gap:8px;font-size:18px}.codemax-brand img{width:44px;height:44px}}
 </style>

@@ -5,7 +5,7 @@ interface Props { article?: BlogPost; title: string; description: string; noinde
 const { title, description, noindex = false, service, article } = Astro.props;
 const origin = 'https://codemax.com.au';
 const canonical = new URL(Astro.url.pathname, origin).href;
-const business = { '@type': 'ProfessionalService', '@id': origin + '/#business', name: 'CodeMax', logo: origin + '/brand/codemax-logo.webp', url: origin + '/', telephone: '+61494597993', email: 'info@codemax.com.au', address: { '@type': 'PostalAddress', streetAddress: '1341 Dandenong Rd', addressLocality: 'Malvern East', addressRegion: 'VIC', postalCode: '3145', addressCountry: 'AU' }, areaServed: { '@type': 'City', name: 'Melbourne' }, founder: { '@type': 'Person', name: 'Subodha De' } };
+const business = { '@type': 'ProfessionalService', '@id': origin + '/#business', name: 'CodeMax', logo: origin + '/brand/codemax-official-static.png', url: origin + '/', telephone: '+61494597993', email: 'info@codemax.com.au', address: { '@type': 'PostalAddress', streetAddress: '1341 Dandenong Rd', addressLocality: 'Malvern East', addressRegion: 'VIC', postalCode: '3145', addressCountry: 'AU' }, areaServed: { '@type': 'City', name: 'Melbourne' }, founder: { '@type': 'Person', name: 'Subodha De' } };
 const graph: Record<string, unknown>[] = [business, { '@type': 'WebSite', '@id': origin + '/#website', url: origin + '/', name: 'CodeMax', inLanguage: 'en-AU', publisher: { '@id': business['@id'] } }, { '@type': 'WebPage', '@id': canonical + '#webpage', url: canonical, name: title, description, inLanguage: 'en-AU', isPartOf: { '@id': origin + '/#website' }, about: { '@id': business['@id'] } }];
 if (service) graph.push({ '@type': 'Service', name: service, url: canonical, provider: { '@id': business['@id'] }, areaServed: { '@type': 'City', name: 'Melbourne' } });
 if (article) graph.push({ '@type': 'BlogPosting', '@id': canonical + '#article', headline: article.title, ...(article.featuredImage?.url ? {image: [article.featuredImage.url]} : {}), description, datePublished: article.published, ...(article.modified ? { dateModified: article.modified } : {}), author: { '@type': article.author === 'CodeMax' ? 'Organization' : 'Person', name: article.author }, publisher: { '@id': business['@id'] }, mainEntityOfPage: { '@id': canonical + '#webpage' } });
@@ -24,17 +24,18 @@ const breadcrumbs = service ? { '@context': 'https://schema.org', '@type': 'Brea
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:image" content={article?.featuredImage?.url || origin + "/brand/codemax-logo.webp"} />
+<meta property="og:image" content={article?.featuredImage?.url || origin + "/brand/codemax-social-static.jpg"} />
 <meta property="og:image:alt" content={article?.featuredImage ? article.featuredImage.alt || article.title : "CodeMax logo"} />
-{!article?.featuredImage && <meta property="og:image:width" content="256" />}
-{!article?.featuredImage && <meta property="og:image:height" content="256" />}
-<meta name="twitter:image" content={article?.featuredImage?.url || origin + "/brand/codemax-logo.webp"} />
-<meta name="twitter:card" content="summary" />
+{!article?.featuredImage && <meta property="og:image:width" content="1200" />}
+{!article?.featuredImage && <meta property="og:image:height" content="630" />}
+<meta name="twitter:image" content={article?.featuredImage?.url || origin + "/brand/codemax-social-static.jpg"} />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="48x48" />
-<link rel="icon" href="/favicon.ico?v=2" sizes="any" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" sizes="180x180" />
+<link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="48x48" />
+<link rel="icon" href="/favicon.ico?v=3" sizes="any" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180" />
+<link rel="manifest" href="/site.webmanifest" />
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')} />
 {breadcrumbs && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbs).replace(/</g, '\\u003c')} />}
