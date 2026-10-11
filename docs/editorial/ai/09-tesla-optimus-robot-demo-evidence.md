@@ -41,6 +41,6 @@ For the general reader, Optimus is a useful example of why AI progress needs car
 
 - [Tesla: AI and robotics](https://www.tesla.com/en_au/AI)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer researched 12 October 2026. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
