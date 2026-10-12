@@ -50,6 +50,16 @@ A source that cannot be verified or an important unresolved factual change shoul
 
 Every article has a distinct purpose, original explanatory text, descriptive title, unique metadata, primary-source hyperlinks and internal AI archive links. Six original orange-and-charcoal SVG illustrations explain workflows, evidence review, conversations, hardware, learning and creative work. They are diagrams, not fabricated screenshots. Existing article templates add canonical URLs, BlogPosting structured data and publication dates. No unsupported ratings, client outcomes or ranking guarantees are included.
 
+## Required real images for new articles
+
+Updated 13 October 2026 at the user's request. Every newly published CodeMax blog article must include 2–5 relevant real photographs or authentic source images placed throughout the article, following the layout and treatment in https://codemax.com.au/ai-image-recognition-nasa-website-galleries/. This supersedes earlier 2–4-image guidance. Retain the approved orange/charcoal SVG when useful, but generated illustrations, SVG diagrams and repeated copies of one image do not count toward the 2–5 real images.
+
+Prefer images from the verified original article, official media libraries or other reliable sources with documented permission for this use. Check the rights for each individual image, including third-party credits; source attribution alone is not permission. If source images cannot be reused, find relevant public-domain or appropriately licensed real alternatives and label contextual images honestly. Do not use paid assets or invent a screenshot, event, endorsement or relationship.
+
+Each image needs accurate descriptive alt text, a useful visible caption, creator/source credit and a working original-source hyperlink. Preserve historical dates and context. Save optimised local WebP or JPEG assets with explicit width/height and appropriate lazy loading; verify images load on the deployed article and work on mobile. Record image source URLs, creator credits, reuse terms and the actual date checked in the reviewed article documentation. Match the NASA sample's integrated figures rather than putting all images in a decorative gallery.
+
+This is a publication requirement: if fewer than two suitable real images can be sourced, licensed and verified, hold the article and report the specific blocker. Do not silently publish an illustration-only article. Include the reviewed image assets and source/rights documentation among the intended changes committed with the publication manifests. Preserve the existing publishing calendar, daily limits and all previous posts.
+
 ## Keyword evidence
 
 See `content/ai-keyword-evidence.json` for all 34 source rows and `content/ai-calendar.json` for the machine-readable mapping. Search-volume rows may include close variants and must not be summed as unique demand. The location settings are absent from this export; the previous website-keyword file's Melbourne targeting is not automatically attributed to this file.
