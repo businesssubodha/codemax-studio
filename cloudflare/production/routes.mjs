@@ -26,6 +26,8 @@ export const legacyRedirects = new Map([
   ['/web-design/', '/services/web-design-melbourne/']
 ]);
 export const assetPaths = new Set([
+  "/article-media/deep-learning-chickadee-2008.webp",
+  "/article-media/deep-learning-chickadee-2016.webp",
   "/article-media/oceans-noaa-toy.webp",
   "/article-media/oceans-noaa-lighters.webp",
   "/article-media/oceans-noaa-reef-net.webp",
