@@ -26,6 +26,8 @@ export const legacyRedirects = new Map([
   ['/web-design/', '/services/web-design-melbourne/']
 ]);
 export const assetPaths = new Set([
+  "/article-media/konverge-pilot-planning-2017.webp",
+  "/article-media/konverge-server-room-context-2015.webp",
   "/article-media/cognitiveclass-study-desk.webp",
   "/article-media/cognitiveclass-python-workshop-2016.webp",
   "/article-media/dgx-b200-board-2025.webp",
