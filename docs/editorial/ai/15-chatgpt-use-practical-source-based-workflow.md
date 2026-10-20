@@ -17,6 +17,11 @@ Include the task, audience, source material and output format. For example: turn
 
 If something is missing, ask the assistant to flag it rather than fill the gap silently. This is particularly useful for names, dates and claims that you will publish. A placeholder is easier to correct than a plausible invented detail hidden inside polished prose.
 
+<figure>
+  <img src="../../../public/article-media/chatgpt-brief-notes-context-2014.webp" alt="A person writing notes in a notebook beside an open laptop" width="1200" height="800" loading="lazy" decoding="async">
+  <figcaption>Contextual photograph: writing the task, audience and limits down can make a brief easier to review. This 2014 stock photograph does not show ChatGPT or an OpenAI session. Credit: Pixel.la Free Stock Photos, <a href="https://commons.wikimedia.org/wiki/File:Man_writing_while_using_his_laptop_2.jpg">original photograph and licence record</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Resized and converted to WebP.</figcaption>
+</figure>
+
 ## Use a small first draft
 Request an outline or short example before asking for a large document. Check whether the approach matches the intended audience. Correct the direction early, then expand the parts that are useful.
 
@@ -32,6 +37,11 @@ Instead of saying make it better, identify what needs changing: the opening is t
 
 Keep the successful version and the final instructions if you repeat the task. They can form a useful starting point next time, although the content still needs review. A reusable brief is more dependable than trying to remember a long conversation.
 
+<figure>
+  <img src="../../../public/article-media/chatgpt-review-workspace-context-2017.webp" alt="An open laptop on a tidy desk beside a desktop computer" width="1200" height="800" loading="lazy" decoding="async">
+  <figcaption>Contextual photograph: review files and final destinations outside the chat before relying on the result. The screens are blank and do not depict ChatGPT. Credit: Norbert Levajsics, <a href="https://commons.wikimedia.org/wiki/File:Laptop_on_a_neat_desk_(Unsplash).jpg">original photograph and licence record</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>. Resized and converted to WebP.</figcaption>
+</figure>
+
 ## Check files and actions separately
 Available features depend on your current account and tools. If the assistant creates or edits a file, open it and check the requested content. If it performs an action in another application, verify the destination rather than relying only on the response text.
 
@@ -42,6 +52,13 @@ Start with a low-stakes example while learning a new feature. OpenAI's current h
 - [OpenAI: ChatGPT capabilities overview](https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview)
 - [OpenAI: What is ChatGPT?](https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer first researched 30 September 2026; OpenAI documentation and image reuse terms rechecked 21 October 2026. Product features and availability can vary by plan, settings and region, and can change. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
+
+## Image rights record
+
+Checked 21 October 2026.
+
+- **A person writing notes beside a laptop.** Original source and licence record: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Man_writing_while_using_his_laptop_2.jpg). Creator/source credit: Pixel.la Free Stock Photos; the file metadata also identifies Sculpt, LLC. Original date: 8 October 2014. Reuse terms: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). The Commons record says the Flickr licence was reviewed and confirmed as CC0. Local derivative: `public/article-media/chatgpt-brief-notes-context-2014.webp`, resized to 1200 × 800 and converted to WebP.
+- **A laptop on a tidy desk.** Original source and licence record: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Laptop_on_a_neat_desk_(Unsplash).jpg). Creator: Norbert Levajsics. Publication date: 4 April 2017. Reuse terms: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/); the Commons record documents that it was published under Unsplash's pre-5 June 2017 CC0 terms. Local derivative: `public/article-media/chatgpt-review-workspace-context-2017.webp`, resized to 1200 × 800 and converted to WebP.
