@@ -10,6 +10,11 @@ Meta description: Explore Dramatron’s approach to structured script generation
 
 Dramatron is a research project exploring the co-writing of scripts with language models. Google DeepMind's publication describes a structured process involving elements such as characters, story beats, locations and dialogue. It is useful to read as a research example, rather than assume it is a current supported screenwriting service.
 
+<figure>
+  <img src="../../../public/article-media/dramatron-project-logo-2022.webp" alt="Official Dramatron project wordmark inside an open rectangular frame" width="854" height="550" loading="lazy" decoding="async">
+  <figcaption>The official Dramatron project wordmark from the Google DeepMind source repository. This is project identity, not a screenshot of a current supported product. Credit: Google DeepMind, <a href="https://github.com/google-deepmind/dramatron/blob/2e7c36afadacf8321b77a468940024371b7a8c7a/dramatron_logo.png">original source image</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Converted to WebP.</figcaption>
+</figure>
+
 ![A deliberate AI creative process. BRIEF: Define subject, purpose and constraints. EXPLORE: Generate a small set of alternatives. REVIEW: Check detail, meaning and continuity. REFINE: Make intentional creative choices.](../../../public/editorial/ai/creative.svg)
 
 ## Structure comes before dialogue
@@ -17,8 +22,13 @@ A script needs more than interesting sentences. Characters have motivations, sce
 
 The general creative lesson is that a model can be given intermediate material rather than asked to produce an entire story at once. An outline, character description and scene purpose provide constraints that a vague request for a screenplay does not.
 
+<figure>
+  <img src="../../../public/article-media/dramatron-hierarchy-still-2022.webp" alt="Dramatron hierarchy diagram connecting a log line to title, characters, plot, locations and scene dialogue" width="1080" height="608" loading="lazy" decoding="async">
+  <figcaption>A still from the official Dramatron repository animation shows the project's hierarchical writing structure, from a log line to character, plot, location and dialogue material. Credit: Google DeepMind, <a href="https://github.com/google-deepmind/dramatron/blob/2e7c36afadacf8321b77a468940024371b7a8c7a/dramatron-animation.gif">original animation</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Frame extracted and converted to WebP.</figcaption>
+</figure>
+
 ## Research availability is not product support
-The project has a public repository and associated research materials. Before trying old code, inspect its status, dependencies and setup instructions. A notebook referring to an earlier model or service may require work to run today.
+The project has a public repository and associated research materials. Its current README says the Colab is provided “unplugged”: a user must implement the model interface and supply their own language-model sampling code. Before trying old code, inspect its status, dependencies and setup instructions.
 
 This article does not claim that the original demonstration remains available or that every dependency is supported. If your goal is learning about the method, you can study the paper and repository without treating them as a ready-made production tool.
 
@@ -42,6 +52,13 @@ Dramatron is interesting because it makes the writing process itself part of the
 - [Google DeepMind: Co-writing scripts research](https://deepmind.google/research/publications/13609/)
 - [Google DeepMind: Dramatron repository](https://github.com/google-deepmind/dramatron)
 
-Source-based explainer researched 30 September 2026. Examples are illustrative unless identified as reported research.
+Source-based explainer first researched 30 September 2026; research claims, repository status and image reuse terms rechecked 24 October 2026. The two repository images are authentic project source materials, not evidence that Dramatron is a current supported Google product. Examples are illustrative unless identified as reported research.
 
 [Explore AI insights](https://codemax.com.au/blog/ai/)
+
+## Image rights record
+
+Checked 24 October 2026 against Google DeepMind repository commit 2e7c36afadacf8321b77a468940024371b7a8c7a.
+
+- **Official Dramatron project wordmark.** Original source: [Google DeepMind Dramatron repository](https://github.com/google-deepmind/dramatron/blob/2e7c36afadacf8321b77a468940024371b7a8c7a/dramatron_logo.png). Creator/source credit: Google DeepMind. Reuse terms: the repository README licenses non-software materials under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Local derivative: public/article-media/dramatron-project-logo-2022.webp, 854 × 550, converted from PNG to WebP without changing the artwork.
+- **Dramatron hierarchical process diagram.** Original source: [Google DeepMind Dramatron repository](https://github.com/google-deepmind/dramatron/blob/2e7c36afadacf8321b77a468940024371b7a8c7a/dramatron-animation.gif). Creator/source credit: Google DeepMind. Reuse terms: the repository README licenses non-software materials under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Local derivative: public/article-media/dramatron-hierarchy-still-2022.webp, 1080 × 608, extracted from the official animation and converted to WebP.
